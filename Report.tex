@@ -13,7 +13,7 @@
 %%
 %%%%************************ Document Class Declaration ******************************
 %%
-\documentclass[doublesided]{Style/uwaterloothesis}% thesis template of University of Waterloo
+\documentclass[singlesided]{Style/uwaterloothesis}% thesis template of University of Waterloo
 %% Multiple optional arguments:
 %% [<singlesided|doublesided|printcopy>] % single-sided, double-sided, or print layout
 %% [draftversion] % show draft version information, default is no show
@@ -22,7 +22,7 @@
 %%
 %%%%************************* Command Define and Settings ****************************
 %%
-\usepackage[myhdr,list]{Style/commons}% common settings
+\usepackage[list]{Style/commons}% common settings
 %% usage: \usepackage[option1,option2,...,optionN]{commons}
 %% Multiple optional arguments:
 %% [<numbered|authoryear|alpha>] % citation and reference style
@@ -38,6 +38,7 @@
 %% [tikz] % enable tikz for complex diagrams, will auto enbale color package
 %% [table] % enable a table package for complex tables, default is ctable
 %% [math] % enable some extra math packages
+
 \usepackage{Style/custom}% user defined commands
 %%%%% --------------------------------------------------------------------------------
 %%
@@ -84,9 +85,10 @@
 %%%%******************************** Appendix ****************************************
 %%
 %% Some subordinate chapters.
-\cleardoublepage
-\appendix%
-\input{Tex/Appendix}%
+%%removed for the time being
+%\cleardoublepage
+%\appendix%
+%\input{Tex/Appendix}%
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%******************************* Backmatter ***************************************
