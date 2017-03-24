@@ -106,7 +106,7 @@ macros package]
 %% Sans serif - typefaces without strokes (without serif) to get high readability
 %% determine \sffamily, usually for signage, headings that demanding high readability
 %% examples: Helvetica, Gill Sans, Futura
-%\setsansfont{Gill Sans MT}%
+\setsansfont{Helvetica}%
 %% Monospaced - typefaces that every glyph is the same width (opposed to variable-width fonts).
 %% determine \ttfamily, usually for programming, tabulated data, etc.
 %% examples: Rockwell, Andale Mono, Courier, Monaco
@@ -128,16 +128,16 @@ macros package]
 \RequirePackage[utf8]{inputenc}% make sure your document is saved using the UTF-8 encoding.
 %\RequirePackage[latin1]{inputenc}% latin encoding
 %% Font encoding.
-\RequirePackage[T1]{fontenc}% enable modern font encoding
+%%\RequirePackage[T1]{fontenc}% enable modern font encoding
 %% Font package.
-\RequirePackage{newtxtext,newtxmath}
+%%\RequirePackage{newtxtext,newtxmath}
 %% Options:
 %% Text + Math: Adobe Times Roman (Recommended)
 %% - \RequirePackage{newtxtext,newtxmath}
 %% Text + Math: Palatino
 %% - \RequirePackage{palatino}
 %% Text + Math: Adobe Times Roman
-%% - \RequirePackage{mathptmx,newtxmath}
+%%\RequirePackage{mathptmx,newtxmath}
 \fi
 \fi
 %%
@@ -318,6 +318,8 @@ macros package]
     %% deactivate uppercase effect
     \renewcommand{\MakeUppercase}[1]{#1}
 %% define different kinds of header and footer for different parts
+
+%%header rules
 \fancypagestyle{frontmatterstyle}{% style for frontmatter
     \fancyhf{}% clear fields
     \fancyhead[RE]{\small \@title}% structure elements

@@ -124,6 +124,13 @@
 \renewcommand\author[1]{\def\UW@value@author{#1}}
 \newcommand\degree[1]{\def\UW@value@degree{#1}}
 \newcommand\discipline[1]{\def\UW@value@discipline{#1}}
+\newcommand\preparedfor[1]{\def\UW@value@preparedfor{#1}}
+\newcommand\preparedcity[1]{\def\UW@value@preparedcity{#1}}
+
+%create new command for page
+%\newcommand{name}[num]{definition}
+
+
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%*************************** Titlepage Configuration ******************************
@@ -139,13 +146,13 @@
 
     \vspace*{1.0cm}
 
-    \normalsize
-    by \\
+    %\normalsize
+    %by \\
 
-    \vspace*{1.0cm}
+    %\vspace*{1.0cm}
 
-    \Large
-    \UW@value@author \\
+    %\Large
+    %\UW@value@author \\
 
     \vspace*{3.0cm}
 
@@ -156,10 +163,12 @@
 
     \UW@value@school
 
-    \vspace*{1.0cm}
+    
+	
+	\vspace*{1.0cm}
 
-    \copyright\ \UW@value@author\ \the\year \\
   \end{center}
+  
   \clearpage
   \if@twoside
     \thispagestyle{empty}
