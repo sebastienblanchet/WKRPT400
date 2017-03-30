@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.23)  24 MAR 2017 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.23)  30 MAR 2017 16:25
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -790,22 +790,22 @@ Package: custom 2014/10/01 v0.1 custom macros package
 ) (Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count134
@@ -836,7 +836,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 47.
+LaTeX Info: Redefining \microtypecontext on input line 48.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -853,7 +853,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 \c@lstlisting=\count140
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 47.
+Package hyperref Info: Link coloring OFF on input line 48.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -863,87 +863,110 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 47.
-LaTeX Info: Redefining \pageref on input line 47.
-LaTeX Info: Redefining \nameref on input line 47.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
 
 (Report.out) (Report.out)
 \@outlinefile=\write3
 \openout3 = `Report.out'.
 
- (Tex/Frontpages.tex [1
+ (Tex/Frontpages.tex
+<Img/UW.jpg, id=51, 702.625pt x 282.05376pt>
+File: Img/UW.jpg Graphic file (type jpg)
+ <use Img/UW.jpg>
+Package pdftex.def Info: Img/UW.jpg used on input line 25.
+(pdftex.def)             Requested size: 351.31163pt x 141.02652pt.
+
+! Undefined control sequence.
+\UW@value@discipline ->\term 
+                             Mechanical Engineering
+l.25 \begin
+           {declaration}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[1
 
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./Img/UW.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--56
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--62
 
  []
 
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
 
  []
 
@@ -992,18 +1015,18 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ]) [8] (Tex/Main_Content.tex
 (Tex/Chap_Guide.tex
 Section 1.
-<Img/companypic.jpg, id=122, 281.05pt x 180.675pt>
+<Img/companypic.jpg, id=124, 281.05pt x 180.675pt>
 File: Img/companypic.jpg Graphic file (type jpg)
  <use Img/companypic.jpg>
-Package pdftex.def Info: Img/companypic.jpg used on input line 16.
+Package pdftex.def Info: Img/companypic.jpg used on input line 17.
 (pdftex.def)             Requested size: 260.17464pt x 167.2651pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
  [1
 
 
@@ -1020,66 +1043,66 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- <Img/ITC_Q_Criteria.jpg, id=148, 1927.2pt x 1084.05pt>
+ <Img/ITC_Q_Criteria.jpg, id=150, 1927.2pt x 1084.05pt>
 File: Img/ITC_Q_Criteria.jpg Graphic file (type jpg)
 
 <use Img/ITC_Q_Criteria.jpg>
-Package pdftex.def Info: Img/ITC_Q_Criteria.jpg used on input line 130.
+Package pdftex.def Info: Img/ITC_Q_Criteria.jpg used on input line 132.
 (pdftex.def)             Requested size: 195.12767pt x 109.75119pt.
  [5]
-<Img/HC_OASPL_A.pdf, id=159, 642.4pt x 481.8pt>
+<Img/HC_OASPL_A.pdf, id=161, 642.4pt x 481.8pt>
 File: Img/HC_OASPL_A.pdf Graphic file (type pdf)
  <use Img/HC_OASPL_A.pdf>
-Package pdftex.def Info: Img/HC_OASPL_A.pdf used on input line 172.
+Package pdftex.def Info: Img/HC_OASPL_A.pdf used on input line 174.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<Img/HC_OASPL_B.pdf, id=160, 642.4pt x 481.8pt>
+<Img/HC_OASPL_B.pdf, id=162, 642.4pt x 481.8pt>
 File: Img/HC_OASPL_B.pdf Graphic file (type pdf)
  <use Img/HC_OASPL_B.pdf>
-Package pdftex.def Info: Img/HC_OASPL_B.pdf used on input line 178.
+Package pdftex.def Info: Img/HC_OASPL_B.pdf used on input line 180.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<Img/HC_OASPL_C.pdf, id=161, 642.4pt x 481.8pt>
+<Img/HC_OASPL_C.pdf, id=163, 642.4pt x 481.8pt>
 File: Img/HC_OASPL_C.pdf Graphic file (type pdf)
  <use Img/HC_OASPL_C.pdf>
-Package pdftex.def Info: Img/HC_OASPL_C.pdf used on input line 184.
+Package pdftex.def Info: Img/HC_OASPL_C.pdf used on input line 186.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
-<Img/HC_OASPL_D.pdf, id=162, 642.4pt x 481.8pt>
+<Img/HC_OASPL_D.pdf, id=164, 642.4pt x 481.8pt>
 File: Img/HC_OASPL_D.pdf Graphic file (type pdf)
  <use Img/HC_OASPL_D.pdf>
-Package pdftex.def Info: Img/HC_OASPL_D.pdf used on input line 190.
+Package pdftex.def Info: Img/HC_OASPL_D.pdf used on input line 192.
 (pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
 
 [6 <./Img/ITC_Q_Criteria.jpg>] [7 <./Img/HC_OASPL_A.pdf> <./Img/HC_OASPL_B.pdf>
  <./Img/HC_OASPL_C.pdf> <./Img/HC_OASPL_D.pdf>]
 
 Package natbib Warning: Citation `lamport1986document' on page 8 undefined on i
-nput line 205.
+nput line 207.
 
 
 Package natbib Warning: Citation `lamport1986document' on page 8 undefined on i
-nput line 206.
+nput line 208.
 
 )) [8]
 No file Report.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
 (Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: BAFF0269EF13CCC907DAC203FEC02295;1467.
+(rerunfilecheck)             Checksum: 6449924FF5350F53487B4997F28AEC6F;1467.
  ) 
 Here is how much of TeX's memory you used:
- 15855 strings out of 493333
- 226900 string characters out of 3139155
- 342794 words of memory out of 3000000
- 19068 multiletter control sequences out of 15000+200000
- 15784 words of font info for 75 fonts, out of 3000000 for 9000
+ 15865 strings out of 493333
+ 227022 string characters out of 3139155
+ 342957 words of memory out of 3000000
+ 19074 multiletter control sequences out of 15000+200000
+ 15833 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,9n,77p,784b,603s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
@@ -1094,9 +1117,9 @@ y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (16 pages, 1629813 bytes).
+Output written on Report.pdf (16 pages, 1646976 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 15487 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 15492 words of extra memory for PDF output out of 17280 (max. 10000000)
 

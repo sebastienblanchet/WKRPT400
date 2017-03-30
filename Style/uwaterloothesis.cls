@@ -139,6 +139,16 @@
   \cleardoublepage
   \thispagestyle{empty}
   \begin{center}
+		
+	\begin{figure}[!htbp]
+		\centering
+		%scale makes picture smaller
+		\includegraphics[width=0.6\textwidth,scale=0.5]{UW}
+		\label{fig:UW}
+	\end{figure}
+	
+	Department of Mechanical and Mechatronics Engineering 
+
     \vspace*{1.0cm}
 
     \Huge
@@ -146,27 +156,16 @@
 
     \vspace*{1.0cm}
 
-    %\normalsize
-    %by \\
-
-    %\vspace*{1.0cm}
-
-    %\Large
-    %\UW@value@author \\
-
-    \vspace*{3.0cm}
-
     \normalsize
     \UW@value@statement
-
-    \vspace*{2.0cm}
-
-    \UW@value@school
-
-    
 	
-	\vspace*{1.0cm}
+    \vspace*{1.0cm}
 
+	by:\\
+	\UW@value@author\\
+	\UW@value@discipline\\
+	%\UW@value@school
+    
   \end{center}
   
   \clearpage

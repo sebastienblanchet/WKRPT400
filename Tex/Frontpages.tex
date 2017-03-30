@@ -2,18 +2,23 @@
 %% >>> Title Page
 %%
 %%\LaTeX{} is Latex printed in right way
-%%add space after altaeros
+%% Define new commands (add space after defined names0
 \newcommand{\Company}{Altaeros Energies }
 \newcommand{\Term}{3B }
 \newcommand{\Seb}{Sebastien Blanchet }
 \newcommand{\ReportTitle}{Numerical Analysis and Optimization}
 
+\newcommand*{\SignatureAndDate}[1]{%
+    \par\noindent\makebox[2.5in]{\hrulefill} \hfill\makebox[2.0in]{\hrulefill}%
+    \par\noindent\makebox[2.5in][l]{#1}      \hfill\makebox[2.0in][l]{Date}%
+}
 
 \title[WKRPT 400]{WKRPT 400\\ \ReportTitle}% \title[short title for headers]{Long title of thesis}
 \author{\Seb}
 \preparedfor{\Company}
 \preparedcity{Somerville, MA}
 \discipline{\term Mechanical Engineering}
+%make title page
 \maketitle
 %%
 %% >>> author's declaration
@@ -51,10 +56,17 @@
 	\\
 	\noindent
 	\Seb\\
+	%Hide ID num, write it when signing report
 	ID: \\
-	\Term Mechanical Engineering
+	%% Create signature line and date before handing in
+	\Term Mechanical Engineering\\
+	\SignatureAndDate{Signature}
+	
+	% Hide page num
+	\thispagestyle{empty}
 	
 \end{declaration}
+
 %%
 %% >>> abstract
 %%

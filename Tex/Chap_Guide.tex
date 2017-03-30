@@ -9,8 +9,9 @@ This is the introduction, why we are doing this analysis
 
 \Company does this as per Figure~\ref{fig:companypic} seen below.
 
+%% REFERENCE:
 %%[htbp] (here, top, bottom, page).  ! means no restriction for placement
-%http://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned help
+%%http://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned help
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{companypic}
@@ -52,9 +53,10 @@ This was used to get the results in the following Table~\ref{table:testtbl}.
 	\caption{Test table 1}
 	\centering
 	\begin{tabular}{c c c}
-		\hline \hline  Case & Method \#1 & Method \#2 \\[0.5ex]
 		%heading
-		\hline	
+		\hline \hline  Case & Method \#1 & Method \#2 \\[0.5ex]
+		\hline
+		%Main table body content	
 		1 & 10 & 50\\
 		2 & 20 & 100\\ [1ex]
 		\hline
@@ -65,7 +67,7 @@ This was used to get the results in the following Table~\ref{table:testtbl}.
 
 \chapter{Supplemental}
 \subsection{Installation} % (fold)
-LaTeX is based on open-source code, so it is available on most computing platforms as free software. If encounter some compiling problems after installation, please Google it. For example, MikTeX may complain about "mathtools.sty", a solution given on "StackExchange" is "The problem is that the package manager has somehow "desynchronized" (even though it's a fresh install). To fix it, run Miktex Package Manager as administrator---"Package Manager (Admin)". Go to Repository--Synchronize. When that completes, your TexWorks should automatically find the needed style files again."
+\LaTeX is based on open-source code, so it is available on most computing platforms as free software. If encounter some compiling problems after installation, please Google it. For example, MikTeX may complain about "mathtools.sty", a solution given on "StackExchange" is "The problem is that the package manager has somehow "desynchronized" (even though it's a fresh install). To fix it, run Miktex Package Manager as administrator---"Package Manager (Admin)". Go to Repository--Synchronize. When that completes, your TexWorks should automatically find the needed style files again."
 \begin{itemize}
     \item Linux: TeXLive distribution. 
     \item MacOS: Mactex or TeXLive.
