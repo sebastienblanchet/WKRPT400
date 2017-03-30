@@ -139,32 +139,48 @@
   \cleardoublepage
   \thispagestyle{empty}
   \begin{center}
-		
+	
+	% Add picture of UW's logo
 	\begin{figure}[!htbp]
 		\centering
-		%scale makes picture smaller
+		%scale makes picture smaller (0.5 times)
 		\includegraphics[width=0.6\textwidth,scale=0.5]{UW}
 		\label{fig:UW}
 	\end{figure}
 	
 	Department of Mechanical and Mechatronics Engineering 
-
-    \vspace*{1.0cm}
-
-    \Huge
+	
+	\vfill
+	
+	%Title of report
+    %\Huge
     {\bf \UW@value@title}
-
-    \vspace*{1.0cm}
-
-    \normalsize
+	
+	%end huge command 
+    %\normalsize
+	
+	\vfill
+	
+	% Add picture of company's logo
+	\begin{figure}[!htbp]
+		\centering
+		\includegraphics[scale=0.5]{companylogo}
+		\label{fig:companylogo}
+	\end{figure}
+	
     \UW@value@statement
 	
-    \vspace*{1.0cm}
-
+	\vfill
+	
 	by:\\
 	\UW@value@author\\
 	\UW@value@discipline\\
-	%\UW@value@school
+	
+	% could use \vspace instead of vfill (equivalent of hfill but vertical)
+	%\vspace*{2.0cm}
+	
+	\vfill
+	\UW@value@school
     
   \end{center}
   
