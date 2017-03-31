@@ -1,5 +1,7 @@
 %\renewcommand{\chaptername}{Section}
 
+%-----------------------------------------------------------------------------------------------------------------
+%% Section 1 : Introduction
 \chapter{Introduction}
 \label{chapt:intro}
 
@@ -32,39 +34,75 @@ The purpose of this report is to do this.
 
 The scope of the report will be as follows.
 
+
+%-----------------------------------------------------------------------------------------------------------------
+%% Section 2 : Preliminary Analysis
 \chapter{Preliminary Analysis}
+\label{chapt:prelim}
+
 The analysis process is discussed
+
 \section{Simplifications}
+
 The results were simplified to do.
 
+%Example of using an equation and refering to it
 \subsection{Equations}
 
-The first equation that is presented , Equation~\ref{eq:statics}
 
-\begin{equation}\label{eq:statics}
-	%\frac{\partial (\rho\mathbf{v})}{\partial t} + \nabla \cdot (\rho \mathbf{v} \mathbf{v}) = -\nabla p + \nabla \cdot\mathbf{T} + \mathbf{f}. 
-	\Sigma F_i=0	,	\Sigma	 M_0=0 
-\end{equation} 
+The first equation that is presented , Equation~\ref{eq:eqnstatics}
 
+% First equation of basic statics
+\begin{equation}
+\label{eq:eqnstatics}
+	% must use aligned to get multi line equation	
+	\begin{aligned}
+		\Sigma F_i=0\\
+		\Sigma M_i=0
+	\end{aligned}
+\end{equation}
+
+
+As per reference \cite{timoshenko1959theory}
+
+%Example of using table
 \subsection{Table}
+
 This was used to get the results in the following Table~\ref{table:testtbl}.
+	
+	\begin{table}[ht]
+		\caption{Test table 1}
+		\centering
+		\begin{tabular}{c c c}
+			%heading
+			\hline \hline  Case & Method \#1 & Method \#2 \\[0.5ex]
+			\hline
+			%Main table body content	
+			1 & 10 & 50\\
+			2 & 20 & 100\\ [1ex]
+			\hline
+		\end{tabular}
+		\label{table:testtbl}
+	\end{table}
 
-\begin{table}[ht]
-	\caption{Test table 1}
-	\centering
-	\begin{tabular}{c c c}
-		%heading
-		\hline \hline  Case & Method \#1 & Method \#2 \\[0.5ex]
-		\hline
-		%Main table body content	
-		1 & 10 & 50\\
-		2 & 20 & 100\\ [1ex]
-		\hline
-	\end{tabular}
-	\label{table:testtbl}
-\end{table}
+\section{Theory of Cylindrical Shells}
 
+As per Timoshenko's book, this section will cover the method of approximating the cylinder as a long thin shell.
 
+%-----------------------------------------------------------------------------------------------------------------
+%% Section X : Discussion
+\chapter{Discussion}
+
+%-----------------------------------------------------------------------------------------------------------------
+%% Section X : Conclusion
+\chapter{Conclusion}
+
+%-----------------------------------------------------------------------------------------------------------------
+%% Section X : Reccomendations
+\chapter{Recommendations}
+
+%-----------------------------------------------------------------------------------------------------------------
+%% Section X : As per template 
 \chapter{Supplemental}
 \subsection{Installation} % (fold)
 \LaTeX is based on open-source code, so it is available on most computing platforms as free software. If encounter some compiling problems after installation, please Google it. For example, MikTeX may complain about "mathtools.sty", a solution given on "StackExchange" is "The problem is that the package manager has somehow "desynchronized" (even though it's a fresh install). To fix it, run Miktex Package Manager as administrator---"Package Manager (Admin)". Go to Repository--Synchronize. When that completes, your TexWorks should automatically find the needed style files again."
@@ -215,5 +253,3 @@ In this template, a simple command for adding nomenclatures is provided. Therefo
     \item listofsymbols
     \item nomencl
 \end{itemize}
-% subsection Generate nomenclature automatically (end)
-% section How to use? (end)

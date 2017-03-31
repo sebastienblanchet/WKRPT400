@@ -9,6 +9,8 @@
 %% under the terms of the GNU General Public License as published by
 %% the Free Software Foundation, either version 3 of the License, or
 %% (at your option) any later version.
+%%
+%% FORKED GITHUB PROJECT:
 %% MODIFIED BY SEBASTIEN BLANCHET MARCH 2017
 %%%%% --------------------------------------------------------------------------------
 %%
@@ -41,6 +43,14 @@
 %% [math] % enable some extra math packages
 
 \usepackage{Style/custom}% user defined commands
+
+%% For multi line equations
+\usepackage{mathtools}
+%\usepackage{amsmath}
+%% For paragraph indentation, removes all indentation
+\usepackage{parskip}% http://ctan.org/pkg/parskip
+
+
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%******************************** Content *****************************************
@@ -99,8 +109,10 @@
 %%
 %%% >>> Bibliography
 %%
+%% Need to run bibtex in compiler
 \intotoc{\bibname}% add a corresponding item to the contents table and bookmark
-\bibliography{Biblio/ref}%
+\bibliographystyle{unsrt}
+\bibliography{Biblio/ref}
 %%
 \end{document}
 %%%%% --------------------------------------------------------------------------------
