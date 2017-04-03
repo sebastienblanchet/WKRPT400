@@ -1,54 +1,117 @@
 \label{chapt:prelim}
 
-The analysis process is discussed
+In this section, the methods used for the numerical approach are discussed in detail.
 
-\section{Simplifications}
+%%----------------------------------------------------------------------------------------------------------------------
+\section{Basics: Deflection}
 
-The results were simplified to do.
-
-%Example of using an equation and refering to it
-\subsection{Equations}
-
-
-The first equation that is presented , Equation~\ref{eq:eqnstatics}
+The first equation that is presented is the main relation between the internal bending moment on a beam and its curvature by Equation~\ref{eq:Mcurve} as per \citep{nisbett2014shigley}. 
 
 % First equation of basic statics
 \begin{equation}
-	\label{eq:eqnstatics}
-	% must use aligned to get multi line equation	
+	\label{eq:Mcurve}
+%	% must use aligned to get multi line equation	
+%	\begin{aligned}
+%		\Sigma F_i=0 \\
+%		\Sigma M_i=0 
+%	\end{aligned}
+	\frac{1}{\rho}=\frac{M}{EI}
+\end{equation}
+
+Where $\frac{1}{\rho}$ from mathematics is the radius of curvature defined as \ref{eq:curve}
+
+\begin{equation}
+	\label{eq:curve}
+	\frac{1}{\rho}=\frac{d^2y/dx^2}{\left( 1 +(dy/dx)^2 \right)^frac{3}{2}} \approx \frac{d^2y}{dx^2}
+\end{equation}
+
+\subsection{Relations}
+
+With \ref{eq:curve}, relations based on deflection $y(x)$ for slope \ref{eq:slope}, moment \ref{eq:mmt}, shearing force \ref{eq:shr} and load intensity \ref{eq:loadintens} as per \citep{nisbett2014shigley}.
+
+\begin{equation}
+	\label{eq:slope}
+	\theta(x) = \frac{dy}{dx}
+\end{equation}
+
+\begin{equation}
+	\label{eq:mmt}
+	M(x) = EI\ \frac{d^2y}{dx^2}
+\end{equation}
+
+\begin{equation}
+	\label{eq:shr}
+	V(x) = EI\ \frac{d^3y}{dx^3}
+\end{equation}
+
+\begin{equation}
+	\label{eq:loadintens}
+	q(x) = EI\ \frac{d^4y}{dx^4}
+\end{equation}
+
+\subsection{Boundary Conditions}
+
+From these above equations, we may present boundary conditions as follows assuming that the boundary in question is located at $x_0$.\\
+
+\textbf{Free Ends:}\\
+\begin{equation}
+	\label{eq:freeBC}
 	\begin{aligned}
-		\Sigma F_i=0 \\
-		\Sigma M_i=0 
+	y(x_0) = y_0 \\
+	\theta(x_0)= \theta_0\\
+	M(x_0) = 0\\
+	V(x_0) = 0 
 	\end{aligned}
 \end{equation}
 
+\textbf{End Supported:}\\
+\begin{equation}
+	\label{eq:freeBC}
+	\begin{aligned}
+	y(x_0)=y_0 \\
+	\theta(x_0)=\theta_0\\
+	M(x_0)=M_0\\
+	V(x_0) =V_0 
+	\end{aligned}
+\end{equation}
 
-As per reference \cite{timoshenko1959theory}
+\textbf{Fixed:}\\
+\begin{equation}
+	\label{eq:freeBC}
+	\begin{aligned}
+	y(x_0)=0 \\
+	\theta(x_0)=0\\
+	M(x_0)=M_0\\
+	V(x_0) =V_0 
+	\end{aligned}
+\end{equation}
+
+In the following section, these preliminary relations will be used to further expand on more complex analysis approaches.s
 
 %Example of using table
-\subsection{Table}
+%%\subsection{Table}
+%%
+%%This was used to get the results in the following Table~\ref{table:testtbl}.
+%%	
+%%\begin{table}[ht]
+%%	\caption{Test table 1}
+%%	\centering
+%%	\begin{tabular}{c c c}
+%%		%heading
+%%		\hline \hline  Case & Method \#1 & Method \#2 \\[0.5ex]
+%%		\hline
+%%		%Main table body content	
+%%		1                   & 10         & 50         \\
+%%		2                   & 20         & 100        \\ [1ex]
+%%		\hline
+%%	\end{tabular}
+%%	\label{table:testtbl}
+%%\end{table}
 
-This was used to get the results in the following Table~\ref{table:testtbl}.
-	
-\begin{table}[ht]
-	\caption{Test table 1}
-	\centering
-	\begin{tabular}{c c c}
-		%heading
-		\hline \hline  Case & Method \#1 & Method \#2 \\[0.5ex]
-		\hline
-		%Main table body content	
-		1                   & 10         & 50         \\
-		2                   & 20         & 100        \\ [1ex]
-		\hline
-	\end{tabular}
-	\label{table:testtbl}
-\end{table}
-
-
+%%----------------------------------------------------------------------------------------------------------------------
 \section{Theory of Cylindrical Shells}
 
-As per Timoshenko's book INSERT REF, this section will cover the method of approximating the cylinder as a long thin shell. The following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below.
+As per Timoshenko's book \citep{timoshenko1959theory}, this section will cover the method of approximating the cylinder as a long thin shell. The following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below.
 
 \begin{figure}[!htbp]
 	\centering
@@ -135,4 +198,55 @@ Similarly, with $N_\varphi$, again applying \ref{eq:strain_xphi} leaves \ref{eq:
 	N_\varphi = - \frac{Ehw}{a}
 \end{equation}
 
- 
+As a result of no change in curvature in the $\varphi$ direction, we know that $\frac{dM_\varphi}{d\varphi}= 0$ hence no change in the circumferential moments. This relation is translated to axial momments $M_x$ with \ref{eq:Mphix}.
+
+\begin{equation}
+	\label{eq:Mphix}
+	\begin{aligned}
+	M_\varphi = \nu M_x\\
+	M_x = -D \frac{d^2w}{dx^2}
+	\end{aligned}
+\end{equation}
+
+Where $D$ is the flexural rigidity of the shell \ref{eq:flexrig}.
+
+%\begin{equation}
+%	\label{eq:EQNNAME}
+%	EQUN
+%\end{equation} 
+
+\begin{equation}
+	\label{eq:flexrig}
+	D = \frac{Eh^3}{12(1-\nu^3)}
+\end{equation}
+
+Simplifying \ref{eq:eqbrm_z2} to get $Q_x = \frac{dM_x}{dx}$, the following is put in \ref{eq:eqbrm_y2} to get \ref{eq:de1}
+
+\begin{equation}
+	\label{eq:de1}
+	\begin{aligned}
+	\frac{d^2M_x}{dx^2}+\frac{1}{a} \ N_\varphi = -Z\\
+	D\ \frac{d^4w}{dx^4}+\frac{Eh}{a^2} \ w = Z\\
+	\frac{d^4w}{dx^4}+\beta^4 \ w = \frac{Z}{D}
+	\end{aligned}
+\end{equation} 
+
+Where $\beta^4$ is some parameter defined as \ref{eq:betaquad}.
+
+\begin{equation}
+	\label{eq:betaquad}
+	\beta^4 = \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
+\end{equation}
+
+The solution to this common fourth order, linear, non-homogeneous, ordinary differential equation in \ref{eq:de1} has is known to be Equation \ref{eq:solnDE}
+
+\begin{equation}
+	\label{eq:solnDE}
+	w(x)=e^{\beta x} \left(C_1 \cos \beta x +C_2 \sin \beta x \right)+e^{-\beta x} \left(C_3 \cos \beta x +C_4 \sin \beta x \right) +f(x)
+\end{equation}
+
+Where $ C_1, C_2, C_3, C_4$ are intgration constants to be solved based on BCs and $f(x)$ is the particular solution to the ODE.
+
+In the following section, the solution to this differential equation will be explored to 
+
+

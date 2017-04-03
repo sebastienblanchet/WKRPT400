@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.23)  3 APR 2017 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.23)  3 APR 2017 15:45
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -822,7 +822,14 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\parskip.sty"
 Package: parskip 2001/04/09 non-zero parskip adjustments
-) (Report.aux)
+) (Report.aux
+
+LaTeX Warning: Label `eq:freeBC' multiply defined.
+
+
+LaTeX Warning: Label `eq:freeBC' multiply defined.
+
+)
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -841,8 +848,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
 LaTeX Font Info:    ... okay on input line 58.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count138
 \scratchdimen=\dimen179
@@ -1029,13 +1035,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
-[6
+) [6
 
-] [7
-
-] [8]) [9] (Tex/Main_Content.tex (Tex/Chap_Guide.tex
+] (Tex/Main_Content.tex (Tex/Chap_Guide.tex
 Section 1.
-(Tex/Sections/Intro.tex <Img/companypic.jpg, id=151, 281.05pt x 180.675pt>
+(Tex/Sections/Intro.tex <Img/companypic.jpg, id=124, 281.05pt x 180.675pt>
 File: Img/companypic.jpg Graphic file (type jpg)
 
 <use Img/companypic.jpg>
@@ -1052,123 +1056,114 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
  <./Img/companypic.jpg>]) [2]
 Section 2.
-(Tex/Sections/Prelim.tex
+(Tex/Sections/Prelim.tex [3
 
-Package natbib Warning: Citation `timoshenko1959theory' on page 3 undefined on 
-input line 26.
-
-[3
-
-] <Img/CoordSyst.png, id=170, 252.945pt x 204.01219pt>
-File: Img/CoordSyst.png Graphic file (type png)
-
-<use Img/CoordSyst.png>
-Package pdftex.def Info: Img/CoordSyst.png used on input line 54.
-(pdftex.def)             Requested size: 260.17464pt x 209.8485pt.
- [4 <./Img/CoordSyst.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-[5]) [6]
-Section 3.
-[7
 
-]
-Section 4.
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+[4] <Img/CoordSyst.png, id=168, 252.945pt x 204.01219pt>
+File: Img/CoordSyst.png Graphic file (type png)
+
+<use Img/CoordSyst.png>
+Package pdftex.def Info: Img/CoordSyst.png used on input line 118.
+(pdftex.def)             Requested size: 260.17464pt x 209.8485pt.
+ [5 <./Img/CoordSyst.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+[6]) [7]
+Section 3.
 [8
 
 ]
+Section 4.
+(Tex/Sections/Conc.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--15
+
+ []
+
+) [9
+
+]
 Section 5.
-[9
+(Tex/Sections/Recom.tex) [10
 
 ]
 Section 6.
-(Tex/Sections/TempInfo.tex [10
+)) [11
 
-]
+] (Report.bbl
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-<Img/ITC_Q_Criteria.jpg, id=237, 1927.2pt x 1084.05pt>
-File: Img/ITC_Q_Criteria.jpg Graphic file (type jpg)
-
-<use Img/ITC_Q_Criteria.jpg>
-Package pdftex.def Info: Img/ITC_Q_Criteria.jpg used on input line 64.
-(pdftex.def)             Requested size: 195.12767pt x 109.75119pt.
- [11]
-<Img/HC_OASPL_A.pdf, id=248, 642.4pt x 481.8pt>
-File: Img/HC_OASPL_A.pdf Graphic file (type pdf)
- <use Img/HC_OASPL_A.pdf>
-Package pdftex.def Info: Img/HC_OASPL_A.pdf used on input line 106.
-(pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
-
-<Img/HC_OASPL_B.pdf, id=249, 642.4pt x 481.8pt>
-File: Img/HC_OASPL_B.pdf Graphic file (type pdf)
- <use Img/HC_OASPL_B.pdf>
-Package pdftex.def Info: Img/HC_OASPL_B.pdf used on input line 112.
-(pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
-
-<Img/HC_OASPL_C.pdf, id=250, 642.4pt x 481.8pt>
-File: Img/HC_OASPL_C.pdf Graphic file (type pdf)
- <use Img/HC_OASPL_C.pdf>
-Package pdftex.def Info: Img/HC_OASPL_C.pdf used on input line 118.
-(pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
-
-<Img/HC_OASPL_D.pdf, id=251, 642.4pt x 481.8pt>
-File: Img/HC_OASPL_D.pdf Graphic file (type pdf)
- <use Img/HC_OASPL_D.pdf>
-Package pdftex.def Info: Img/HC_OASPL_D.pdf used on input line 124.
-(pdftex.def)             Requested size: 195.12767pt x 146.34227pt.
-
-[12 <./Img/ITC_Q_Criteria.jpg>] [13 <./Img/HC_OASPL_A.pdf> <./Img/HC_OASPL_B.pd
-f> <./Img/HC_OASPL_C.pdf> <./Img/HC_OASPL_D.pdf>]
-
-Package natbib Warning: Citation `lamport1986document' on page 14 undefined on 
-input line 139.
-
-
-Package natbib Warning: Citation `lamport1986document' on page 14 undefined on 
-input line 140.
-
-))) [14]
-No file Report.bbl.
-
-Package natbib Warning: There were undefined citations.
-
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
+ [12
+
+
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
-(Report.aux)
+ (Report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 30EC9257CC9A872DB8C009961D1B0E21;2040.
+(rerunfilecheck)             Checksum: 402D2C931987CBA74BB547A06EAC4E7D;2048.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 16478 strings out of 493333
- 237574 string characters out of 3139155
- 355691 words of memory out of 3000000
- 19632 multiletter control sequences out of 15000+200000
- 15404 words of font info for 77 fonts, out of 3000000 for 9000
+ 16433 strings out of 493333
+ 236631 string characters out of 3139155
+ 353883 words of memory out of 3000000
+ 19593 multiletter control sequences out of 15000+200000
+ 12309 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,9n,77p,784b,611s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (23 pages, 1725372 bytes).
+ 49i,7n,77p,784b,428s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Report.pdf (18 pages, 261822 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
- 13486 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 311 PDF objects out of 1000 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
+ 9365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
