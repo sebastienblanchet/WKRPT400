@@ -1,8 +1,0 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: Report.aux
-The style file: elsarticle-num-names.bst
-Illegal, another \bibstyle command---line 90 of file Report.aux
- : \bibstyle
- :          {plain}
-I'm skipping whatever remains of this command
-Database file #1: Biblio/ref.bib
-(There was 1 error message)
