@@ -1,0 +1,16 @@
+# ignore MoldDesignFileHandler.Document
+*.out
+
+#AUX File (.aux)
+*.aux
+
+#BBL file
+*.bbl
+
+#Performance Monitor File (.blg)
+*.blg
+
+*.lof
+*.lot
+*.toc
+*.pdf
