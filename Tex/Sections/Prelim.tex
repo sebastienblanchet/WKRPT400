@@ -108,7 +108,62 @@ In the following section, these preliminary relations will be used to further ex
 %%	\label{table:testtbl}
 %%\end{table}
 
-%%----------------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------
+\section{Capstan Equation}
+What the results in the previous section reveal is that the solution lies in the added level of complexity in this problem. It is required to understand how one wrap of tether in tension results in an external pressure q applied to the outer surface of the cylinder.\\
+
+After much research into this problem, the solution reveals itself into the derivation of the well-known Capstan equation \ref{eq:Capstan}.
+
+\begin{equation}
+	\label{eq:Capstan}
+	T_2 = T_1 e^{-\mu\theta}
+\end{equation}
+
+
+From this equation, the free body diagram that leads to this solution is presented below in Figure~\ref{fig:Capstan}. 
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Capstan}
+	\caption{Free body diagram of differential capstan problem.}
+	\label{fig:Capstan}
+\end{figure}
+
+Based on this, what is of question is how to extrapolate a pressure $q$ from the applied tension $T$. This can be done performing a force balance in the radial direction which reduces to Equation~\ref{eq:CapstanSigRad}.
+
+\begin{equation}
+	\label{eq:CapstanSigRad}
+	dN-(T+dT)\sin \frac{d\theta}{2}+T\sin \frac{d\theta}{2}= 0
+\end{equation}
+
+By assuming a small chance in angle, the substitution of $\sin \theta \approx \theta$ can be made. Applying this relation to \ref{eq:CapstanSigRad} leaves \ref{eq:diffNormal}.
+
+\begin{equation}
+	\label{eq:diffNormal}
+	dN = T d\theta
+\end{equation}
+
+From the above equation, it is now clear that the overall normal force caused by the tension in the cable $T$ can be solved for by integration or as follows \ref{eq:CapstanNorm}
+
+\begin{equation}
+	\int_0^N dN =\int_0^{2\pi} T d\theta
+\end{equation}
+
+\begin{equation}
+	\label{eq:CapstanNorm}
+	N=2\pi T	
+\end{equation}
+
+With this resultant normal force over one revolution of tether, it is now apparent that the pressure $q$ is simply \ref{eq:CapstanPres}
+
+\begin{equation}
+	\label{eq:CapstanPres}
+	q=\frac{N}{A}=\frac{2\pi T}{d\pi D}=\frac{2T}{Dd}
+\end{equation}
+
+The result concluded in this section will reveal to be very important in the comming sections.
+
+%----------------------------------------------------------------------------------------------------------------------
 \section{Theory of Cylindrical Shells}
 
 As per Timoshenko's book \citep{timoshenko1959theory}, this section will cover the method of approximating the cylinder as a long thin shell. The following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below.
@@ -247,6 +302,4 @@ The solution to this common fourth order, linear, non-homogeneous, ordinary diff
 
 Where $ C_1, C_2, C_3, C_4$ are intgration constants to be solved based on BCs and $f(x)$ is the particular solution to the ODE.
 
-In the following section, the solution to this differential equation will be explored to 
-
-
+In the following section, the solution to this differential equation will be explored.
