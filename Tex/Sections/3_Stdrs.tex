@@ -3,18 +3,38 @@ In this section, well known standards will be investigated.
 
 \begin{itemize}
     \item American Society of Mechanical Engineers:
-	    \begin{itemize}
+	    \begin{itemize}[label=$\bullet$]
 	       	\item Section III: Part D, 2013	\citep{ASMEbvpcIID}
 	    	\item Section VII: Division 1, 2015 \citep{ASMEbvpcVII1}
 	    	\item Section VII: Division 2, 2015 \citep{ASMEbvpcVII2}
 	    \end{itemize}
     \item European Standard EN
-        \begin{itemize}
+        \begin{itemize}[label=$\bullet$]
 	       	\item EN 13445-3:2014
 	    \end{itemize}
 \end{itemize}
 
-\section{American Society of Mechanical Engineers}
+\section{ASME BPVC}
+
+\subsection{Section VII}
+As per UG-28 of \citep{ASMEbvpcVII1}, the following procedure was used to calculate the required thickness as per ASME-BVPC-VII-1 code.\\
+
+The following list of steps were following during this process
+
+\begin{enumerate}
+	\item Assume initial thickness value of $t$
+	\item Calculate $D_o/t$ ratio and assure $D_o/t \geq 10$.
+	\item Calculate $L/D_o$ ratio, if $L/D_o \geq 50 \Rightarrow =50$ or  $L/D_o \leq 0.05 \Rightarrow =0.05$
+	\item With above ratios, go to Figure G of \citep{ASMEbvpcIID} and get value for $A$
+	\item With $A$ from above go to chart CS-2 $\because S_y \geq 30 \ ksi$ to get $B$
+	\item Using $B$ use Equation \ref{eq:VII_1_stp6} to calculate allowable pressure $p_a$:
+		\begin{equation}
+			\label{eq:VII_1_stp6}
+			p_a = \frac{4B}{3 \left(\frac{D_o}{t} \right)}
+		\end{equation}
+	\item Check if $p_a \geq p_{req}$ of \ref{eq:
+	
+\end{enumerate}
 
 \section{European European Standard EN}
 

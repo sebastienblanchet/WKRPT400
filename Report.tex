@@ -42,14 +42,14 @@
 %% [table] % enable a t able package for complex tables, default is ctable
 %% [math] % enable some extra math packages
 
-\usepackage{Style/custom}% user defined commands
 
+%% Packages added by Sebastine
+\usepackage{Style/custom}% user defined commands
 %% For multi line equations
 \usepackage{mathtools}
 %\usepackage{amsmath}
 %% For paragraph indentation, removes all indentation
 \usepackage{parskip}% http://ctan.org/pkg/parskip
-
 
 %%%%% --------------------------------------------------------------------------------
 %%
@@ -112,10 +112,11 @@
 %%% >>> Bibliography
 %%
 %% Need to run bibtex in compiler 
-\intotoc{\bibname}% add a corresponding item to the contents table and bookmark
-\bibliographystyle{IEEEtran}
+\intotoc{\bibname}
+%\bibliographystyle{IEEEtran}
 \bibliography{Biblio/Refs}
 %%
+
 
 
 

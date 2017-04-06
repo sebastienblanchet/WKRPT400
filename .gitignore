@@ -10,7 +10,11 @@
 #Performance Monitor File (.blg)
 *.blg
 
+# Front matter
 *.lof
 *.lot
 *.toc
 *.pdf
+
+# log files
+*.log
