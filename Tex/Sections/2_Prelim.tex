@@ -1,6 +1,28 @@
 \label{chapt:prelim}
 
-In this section, the methods used for the numerical approach are discussed in detail.
+In this section, the methods used for the numerical approach are discussed in detail. Before any equations are presented, it is required to understand the key drum parameters.\\
+
+The most important parameter in question is the outer diameter $D_o$. For this entire report, it will be assumed that this value is constant at $D_o = 28\ in$. Based on this fixed parameter, the following relevant values which will be used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \citep{ASMEbvpcIID} for a SA-106 Grade B steel or \emph{Seamless Steel Pipe}.\\
+
+\begin{table}[ht]
+	\caption{Key drum parameters and material properties.}
+	\centering
+	\begin{tabular}{c c c c}
+		%heading
+		\hline \textbf{Description} & \textbf{Symbol} & \textbf{Value} & \textbf{Units}\\[1 ex]
+		\hline
+		%Main table body content	
+		Outer diameter		&$D_o$			& $28$		& $in$ 	\\
+		Tether diameter		&$D_{thr}$		& $0.6$		& $in$ 	\\
+		Drum length			&$D_o$			& $49$		& $in$ 	\\
+		Tether tension		&$T$			& $11,525$	& $lbf$	\\	
+		Yield strength		&$S_y$			& $35,000$	& $psi$	\\	
+		Young's Modulus		&$E$			& $2.9\cdot 10^7$ &$psi$\\
+		Poisson's ratio		&$\nu$			& $0.3$		& $ul$	\\	
+		\hline
+	\end{tabular}
+	\label{table:prelim_params}
+\end{table}
 
 %%----------------------------------------------------------------------------------------------------------------------
 \section{Basics: Deflection}

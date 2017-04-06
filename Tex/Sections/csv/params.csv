@@ -1,0 +1,9 @@
+﻿Description,Symbol,Value,Unit
+Drum OD,D,28,in
+Tether D,d_tether,0.602,in
+Drum length,l,49,in
+Tension,P,11525,lbs.
+Factor of safety,n,1.5,ul
+Yield strength,S_y,35000,psi
+Youngs Mod,E,2.90E+07,psi
+Poissons ratio,v,0.3,ul
