@@ -266,29 +266,6 @@ From Equations~\ref{eq:3_phi}, \ref{eq:3_psi}, \ref{eq:3_theta}, \ref{eq:3_zeta}
 
 It is clear from above that as $\beta x \rightarrow 6 \therefore f(\beta x) \rightarrow 0$. This is the main assumption used in for long shell analysis (i.e. $\beta x \geq 6$) \citep{roarks}.
 
-With the notation presented in Equations~\ref{eq:3_phi} - \ref{eq:3_zeta}, the derivatives of displacement $w(x)$ can be written as follows.
-
-\begin{equation}
-	\label{eq:3_w0}
-	w = - \frac{1}{2 \beta^3 D} \left( \beta M_0 \psi(\beta x) + Q_0 \theta (\beta x) \right)
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_w1}
-	\frac{dw}{dx} = \frac{1}{2 \beta^2 D} \left( 2 \beta M_0 \theta(\beta x) + Q_0 \varphi(\beta x) \right)	
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_w2}
-	\frac{d^2w}{dx^2} = - \frac{1}{2 \beta D} \left( 2 \beta M_0 \varphi(\beta x) + 2 Q_0 \zeta(\beta x) \right)
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_w3}
-	\frac{d^3w}{dx^3} = \frac{1}{D} \left( 2 \beta M_0 \zeta(\beta x) - Q_0 \psi(\beta x) \right)
-\end{equation}
-
-
 \subsection{Solution}
 
 The coordinate system in Figure~\ref{fig:3_wfxsn} is adopted.
@@ -329,11 +306,33 @@ The second, $C_4$ \ref{eq:3_c4}.
 
 Applying Equations~\ref{eq:3_c3}, \ref{eq:3_c4} to \ref{eq:3_ODE_fixed} will yield \ref{eq:3_ODE_fixed_soln}.
 
-
 \begin{equation}
 	\label{eq:3_ODE_fixed_soln}
 	w(x)= \frac{e^{-\beta x}}{2 \beta^3 D} \left( \beta M_0 (\sin \beta x -\cos \beta x) - Q_0 \cos \beta x  \right)
 \end{equation}
+
+With the notation presented in Equations~\ref{eq:3_phi} - \ref{eq:3_zeta}, the derivatives of displacement $w(x)$ can be written as follows.
+
+\begin{equation}
+	\label{eq:3_w0}
+	w = - \frac{1}{2 \beta^3 D} \left( \beta M_0 \psi(\beta x) + Q_0 \theta (\beta x) \right)
+\end{equation}
+
+\begin{equation}
+	\label{eq:3_w1}
+	\frac{dw}{dx} = \frac{1}{2 \beta^2 D} \left( 2 \beta M_0 \theta(\beta x) + Q_0 \varphi(\beta x) \right)	
+\end{equation}
+
+\begin{equation}
+	\label{eq:3_w2}
+	\frac{d^2w}{dx^2} = - \frac{1}{2 \beta D} \left( 2 \beta M_0 \varphi(\beta x) + 2 Q_0 \zeta(\beta x) \right)
+\end{equation}
+
+\begin{equation}
+	\label{eq:3_w3}
+	\frac{d^3w}{dx^3} = \frac{1}{D} \left( 2 \beta M_0 \zeta(\beta x) - Q_0 \psi(\beta x) \right)
+\end{equation}
+
 
 \section{Application Solution}
 
