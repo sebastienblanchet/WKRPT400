@@ -43,20 +43,20 @@
 %% [math] % enable some extra math packages
 
 
-%% Packages added by Sebastine
+%% Added packages
 \usepackage{Style/custom}% user defined commands
 %% For multi line equations
 \usepackage{mathtools}
 %\usepackage{amsmath}
 %% For paragraph indentation, removes all indentation
-\usepackage{parskip}% http://ctan.org/pkg/parskip
+\usepackage{parskip}
 % to import tables from csv
 \usepackage{csvsimple}
-% for code
+% for code import in appendix
 \usepackage{listings}
-% for proper figures
+% for proper figures placement
 \usepackage{float}
-
+% for properly formated section begining
 \usepackage{titlesec}
 \titleformat{\chapter}{\bf\normalfont\huge}{\bf\thechapter.}{20pt}{\huge \bf}
 %%%%% --------------------------------------------------------------------------------
@@ -124,7 +124,6 @@
 %%
 %% Need to run bibtex in compiler 
 \intotoc{\bibname}
-%\bibliographystyle{IEEEtran}
 \bibliography{Biblio/Refs}
 %%
 
@@ -133,8 +132,6 @@
 
 %%%%******************************** Appendix ****************************************
 %%
-%% Some subordinate chapters.
-%%removed for the time being
 %\cleardoublepage
 \appendix
 \input{Tex/Appendix}
