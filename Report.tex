@@ -57,6 +57,8 @@
 % for proper figures
 \usepackage{float}
 
+\usepackage{titlesec}
+\titleformat{\chapter}{\bf\normalfont\huge}{\bf\thechapter.}{20pt}{\huge \bf}
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%******************************** Content *****************************************
@@ -78,6 +80,9 @@
 %%
 %%% >>> List of Content
 %%
+%% Set TOC to record subsections
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 \intotoc{\contentsname}% add a corresponding item to the contents table and bookmark
 \tableofcontents% contents catalog
 \intotoc{\listfigurename}% add a corresponding item to the contents table and bookmark
@@ -131,7 +136,7 @@
 %% Some subordinate chapters.
 %%removed for the time being
 %\cleardoublepage
-%\appendix%
+\appendix
 \input{Tex/Appendix}
 %%%%% --------------------------------------------------------------------------------
 
