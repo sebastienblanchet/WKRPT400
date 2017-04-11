@@ -2,43 +2,6 @@
 
 In this section, the methods used for the numerical approach are discussed in detail. Before any equations are presented, it is required to understand the key drum parameters.\\
 
-The most important parameter in question is the outer diameter $D_o$. For this entire report, it will be assumed that this value is constant at $D_o = 28\ in$. Based on this fixed parameter, the following relevant values which will be used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \citep{ASMEbvpcIID} for a SA-106 Grade B steel or \emph{Seamless Steel Pipe}. Units shown in both metric (SI) and United States customary (USC).\\
-
-\begin{table}[ht]
-	\caption{Key drum parameters and material properties.}
-	\centering
-%	\begin{tabular}{c c c c}
-%		%heading
-%		\hline \textbf{Description} & \textbf{Symbol} & \textbf{Value} & \textbf{Units}\\[1 ex]
-%		\hline
-%		%Main table body content	
-%		Outer diameter		&$D_o$			& $28$		& $in$ 	\\
-%		Tether diameter		&$D_{thr}$		& $0.6$		& $in$ 	\\
-%		Drum length			&$L$			& $49$		& $in$ 	\\
-%		Tether tension		&$T$			& $11,525$	& $lbf$	\\	
-%		Yield strength		&$S_y$			& $35,000$	& $psi$	\\	
-%		Young's Modulus		&$E$			& $2.9\cdot 10^7$ &$psi$\\
-%		Poisson's ratio		&$\nu$			& $0.3$		& $ul$	\\	
-%		\hline
-%	\end{tabular}
-
-    \begin{tabular}{llcc|cc}
-          &       & \multicolumn{2}{c|}{\textbf{SI}} & \multicolumn{2}{c}{\textbf{UCS}} \\
-	\cmidrule{3-6}    \textbf{Descrtiption} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} & \textbf{Value} & \textbf{Units} \\
-    \midrule
-    Outter diameter & $D_o$ & $711.2$ & $mm$  & $28$ & $in$ \\
-    Tether diameter & $D_{thr}$ & $15.2$ & $mm$  & $0.598$ & $in$ \\
-    Drum length & $L$   & $1244.6$ & $mm$  & $49$ & $in$ \\
-    Tether tension & $T$   & $51264$ & $N$   & $11525$ & $lbf$ \\
-    Yield strength & $S_y$ & $241.3$ & $MPa$ & $35000$ & $psi$ \\
-    Young's modulus & $E$   & $200$ & $GPa$ & $2.9 10^7$ & $psi$ \\
-    Poisson's ratio & $\nu$ & $0.3$ & $ul$  & $$    & $$ \\
-    \end{tabular}%
-    
-  \label{table:prelim_params}
-\end{table}
-
-
 
 %%----------------------------------------------------------------------------------------------------------------------
 \section{Basics: Deflection}
@@ -126,60 +89,6 @@ From these above equations, we may present boundary conditions as follows assumi
 
 In the following section, these preliminary relations will be used to further expand on more complex analysis approaches.
 
-%----------------------------------------------------------------------------------------------------------------------
-\section{Capstan Equation}
-What the results in the previous section reveal is that the solution lies in the added level of complexity in this problem. It is required to understand how one wrap of tether in tension results in an external pressure q applied to the outer surface of the cylinder.\\
-
-After much research into this problem, the solution reveals itself into the derivation of the well-known Capstan equation \ref{eq:Capstan}.
-
-\begin{equation}
-	\label{eq:Capstan}
-	T_2 = T_1 e^{-\mu\theta}
-\end{equation}
-
-
-From this equation, the free body diagram that leads to this solution is presented below in Figure~\ref{fig:Capstan}. 
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.6\textwidth]{Capstan}
-	\caption{Free body diagram of differential capstan problem.}
-	\label{fig:Capstan}
-\end{figure}
-
-Based on this, what is of question is how to extrapolate a pressure $q$ from the applied tension $T$. This can be done performing a force balance in the radial direction which reduces to Equation~\ref{eq:CapstanSigRad}.
-
-\begin{equation}
-	\label{eq:CapstanSigRad}
-	dN-(T+dT)\sin \frac{d\theta}{2}+T\sin \frac{d\theta}{2}= 0
-\end{equation}
-
-By assuming a small chance in angle, the substitution of $\sin \theta \approx \theta$ can be made. Applying this relation to \ref{eq:CapstanSigRad} leaves \ref{eq:diffNormal}.
-
-\begin{equation}
-	\label{eq:diffNormal}
-	dN = T d\theta
-\end{equation}
-
-From the above equation, it is now clear that the overall normal force caused by the tension in the cable $T$ can be solved for by integration or as follows \ref{eq:CapstanNorm}
-
-\begin{equation}
-	\int_0^N dN =\int_0^{2\pi} T d\theta
-\end{equation}
-
-\begin{equation}
-	\label{eq:CapstanNorm}
-	N=2\pi T	
-\end{equation}
-
-With this resultant normal force over one revolution of tether, it is now apparent that the pressure $p$ is simply \ref{eq:2_preq}
-
-\begin{equation}
-	\label{eq:2_preq}
-	p=\frac{N}{A}=\frac{2\pi T}{d\pi D}=\frac{2T}{Dd}
-\end{equation}
-
-The result concluded in this section will reveal to be very important in the comming sections.
 
 %----------------------------------------------------------------------------------------------------------------------
 \section{Theory of Cylindrical Shells}
