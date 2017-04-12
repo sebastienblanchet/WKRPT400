@@ -59,6 +59,8 @@
 % for properly formated section begining
 \usepackage{titlesec}
 \titleformat{\chapter}{\bf\normalfont\huge}{\bf\thechapter.}{20pt}{\huge \bf}
+% for appendices
+\usepackage[toc,page]{appendix}
 %%%%% --------------------------------------------------------------------------------
 %%
 %%%%******************************** Content *****************************************
@@ -133,7 +135,7 @@
 %%%%******************************** Appendix ****************************************
 %%
 %\cleardoublepage
-\appendix
+\backmatter
 \input{Tex/Appendix}
 %%%%% --------------------------------------------------------------------------------
 
