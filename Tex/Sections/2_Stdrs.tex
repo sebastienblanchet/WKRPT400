@@ -66,9 +66,10 @@ After much research into this problem, the solution reveals itself into the deri
 
 \begin{equation}
 	\label{eq:Capstan}
-	T_2 = T_1 e^{-\mu\theta}
+	T_2 = T_1 e^{\mu\theta}
 \end{equation}
 
+Where $T_1$ is the hold force and $T_2$ is the pull force (i.e. $T_2 \geq T_1$). \\
 
 From this equation, the free body diagram that leads to this solution is presented below in Figure~\ref{fig:Capstan}. 
 
@@ -79,25 +80,42 @@ From this equation, the free body diagram that leads to this solution is present
 	\label{fig:Capstan}
 \end{figure}
 
-Based on this, what is of question is how to extrapolate a pressure $p$ from the applied tension $T$. This can be done performing a force balance in the normal direction $\hat{n}$ which reduces to Equation~\ref{eq:CapstanSigRad}.
+Based on this, what is of question is how to extrapolate a pressure $p$ from the applied tension $T$. This can be done performing a force balance ($\Sigma F_{\hat{n}} = 0 $)in the normal direction $\hat{n}$ which reduces to Equation~\ref{eq:CapstanSigRad}.
 
 \begin{equation}
 	\label{eq:CapstanSigRad}
-	dN-(T+dT)\sin \frac{d\theta}{2}+T\sin \frac{d\theta}{2}= 0
+	dN-(T+dT)\sin \frac{d\varphi}{2}+T\sin \frac{d\varphi}{2}= 0
 \end{equation}
 
-By assuming a small change in angle, the substitution of $\sin \theta \approx \theta$ and $dT d\theta/2 \approx 0$ are be made. Applying these relations to \ref{eq:CapstanSigRad} leaves \ref{eq:diffNormal}.
+By assuming a small change in angle, the substitution of $\sin \varphi \approx \varphi$ and $dT d\varphi/2 \approx 0$ are be made. Applying these relations to \ref{eq:CapstanSigRad} leaves \ref{eq:diffNormal}.
 
 \begin{equation}
 	\label{eq:diffNormal}
-	dN = T d\theta
+	dN = T d\varphi
+\end{equation}
+
+%%-----------------------------
+
+
+Similarly, a force balance ($\Sigma F_{\hat{t}} = 0 $)in the tangential direction $\hat{t}$ which reduces to Equation~\ref{eq:CapstanSigTan}.
+
+\begin{equation}
+	\label{eq:CapstanSigTan}
+	(T+dT)\cos \frac{d\varphi}{2}- T\cos \frac{d\varphi}{2} - \mu dN= 0
+\end{equation}
+
+Again, assuming a small change in angle ($\cos \varphi \approx 1$) to \ref{eq:CapstanSigTan} leads to \ref{eq:diffTens}.
+
+\begin{equation}
+	\label{eq:diffTens}
+	dT = \mu dN
 \end{equation}
 
 From the above equation, it is now clear that the overall normal force $N$ caused by the tension $T$ can be solved for by integration \ref{eq:capstan_integral} yielding \ref{eq:CapstanNorm}.
 
 \begin{equation}
 	\label{eq:capstan_integral}
-	\int_0^N dN =\int_0^{2\pi} T d\theta
+	\int_0^N dN =\int_0^{2\pi} T d\varphi
 \end{equation}
 
 \begin{equation}
