@@ -130,7 +130,48 @@ With this resultant normal force over one revolution of tether, it is now appare
 	p=\frac{N}{A}=\frac{2\pi T}{d\pi D}=\frac{2T}{Dd}
 \end{equation}
 
-Using the values from Table~\ref{table:prelim_params} and \ref{eq:2_preq}, $p=1376\  psi= 9.484\  MPa$. 
+%------------------------------------------------------------------------------------------
+\subsection{Alternate Solution}
+
+By letting $T= T_{low} = T_{hi} e^{-\mu \varphi}$, Equation~\ref{eq:capstan_integral} becomes \ref{eq:capstan_integral2} hence yielding \ref{eq:CapstanNorm2} (recall $\int e^{ax} dx = \frac{1}{a} e^{ax} + C$).
+
+\begin{equation}
+	\label{eq:capstan_integral2}
+	\begin{aligned}
+	\int_0^N dN =\int_0^{\theta} T_{hi} e^{-\mu \varphi} d\varphi \\
+	N = \left( -\frac{T_{hi}}{\mu} e^{-\mu \varphi} \right) \Big|_0^{\theta}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\label{eq:CapstanNorm2}
+	N = \frac{T_{hi}}{\mu} \left( 1 - e^{-\mu \theta} \right)
+\end{equation}
+
+With this instantaneous normal force, it is now apparent that the pressure $p$ can be solved for by distributing $N$ over this area (dependent on angle) as seen in Equation~\ref{eq:2_preq2}.
+
+\begin{equation}
+	\label{eq:2_preq2}
+	p=\frac{N}{A}= \frac{T_{hi} \left( 1 - e^{-\mu \theta} \right)}{\mu d_{thr} R \theta}
+\end{equation}
+
+Using a script from Appendix REF, the following plots in Figures~\ref{fig:2_nvar} and \ref{fig:2_pvar} show the variation in normal force $N$ and pressure $p$ for different values of coefficient of friction $\mu$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{2_nvar}
+	\caption{Variation of stored normal force $N$ versus contact angle $\theta$.}
+	\label{fig:2_nvar}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{2_pvar}
+	\caption{Variation of pressure $p$ versus contact angle $\theta$.}
+	\label{fig:2_pvar}
+\end{figure}
+
+It is clear from these plots that as the contact angle increases, the stored normal force has an asymptomatic behavior. This behavior coupled with the increase increase in area results in a pressure which goes to zero. Furthermore, as the coefficient of friction between the tether and the drum increases, the decay in pressure is quicker.  
 
 %%----------------------------------------------------------------------------------------------------------------------
 \section{ASME's BPVC}
