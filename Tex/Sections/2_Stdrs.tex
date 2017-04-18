@@ -2,7 +2,7 @@
 
 Before any complex analysis is completed, initial existing codes and standards will be investigated.\\
 
-The most important parameter in question is the outer diameter $D_o$. For this entire report, it will be assumed that this value is constant at $D_o = 711\ mm = 28\ in$. Based on this fixed parameter, the following relevant values which will be used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \citep{ASMEbvpcIID} for a SA-106 Grade B steel (most commonly used in seamless pipe). Units shown in both metric (SI) and United States customary (USC).\\
+The most important parameter in question is the outer diameter $D_o$. For this entire report, it will be assumed that this value is constant at $D_o = 711\ mm = 28\ in$. Based on this fixed parameter, the following relevant values which will be used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \cite{ASMEbvpcIID} for a SA-106 Grade B steel (most commonly used in seamless pipe). Units shown in both metric (SI) and United States customary (USC).\\
 
 \begin{table}[ht]
 	\caption{Key drum parameters and material properties.}
@@ -43,18 +43,18 @@ Next, using the above mentioned parameters and pressure, it was suggested by Joh
 \begin{itemize}
     \item American Society of Mechanical Engineers (ASME):
 	    \begin{itemize}[label=$\bullet$]
-	    	\item Boiler and Pressure Vessel Code, Section VIII, Division 1, 2015 \citep{ASMEbvpcVII1}
-	    	\item Boiler and Pressure Vessel Code, Section VIII, Division 2, 2015 \citep{ASMEbvpcVII2}
+	    	\item Boiler and Pressure Vessel Code, Section VIII, Division 1, 2015 \cite{ASMEbvpcVII1}
+	    	\item Boiler and Pressure Vessel Code, Section VIII, Division 2, 2015 \cite{ASMEbvpcVII2}
 	    \end{itemize}
     \item European Standard EN
         \begin{itemize}[label=$\bullet$]
-	       	\item EN 13445: Unfired Pressure Vessels, Part 3: Design,  2002 \citep{EN134453}
+	       	\item EN 13445: Unfired Pressure Vessels, Part 3: Design,  2002 \cite{EN134453}
 	    \end{itemize}
-	\item Det Norske Veritas(DNV) \citep{DNVOSD101}
+	\item Det Norske Veritas(DNV) \cite{DNVOSD101}
 		    \begin{itemize}[label=$\bullet$]
-	    	\item DNV-OS-D101, Marine and Machinery Systems and Equipment\citep{ASMEbvpcVII1}
+	    	\item DNV-OS-D101, Marine and Machinery Systems and Equipment\cite{ASMEbvpcVII1}
 	    \end{itemize}
-	\item Thin Walled Pressure Vessel (TWPV) Hoop Stress \citep{roarks}\\	
+	\item Thin Walled Pressure Vessel (TWPV) Hoop Stress \cite{roarks}\\	
 \end{itemize}
 
 It is to be noted that the same symbols used in the aforementioned references will be used in the foregoing sections for clarity.
@@ -62,7 +62,7 @@ It is to be noted that the same symbols used in the aforementioned references wi
 \section{Capstan Equation}
 It is required to understand how one wrap of tether in tension results in an external pressure $p$ applied to the outer surface of the cylinder.\\
 
-After much research into this problem, the solution reveals itself into the derivation of the well-known Capstan Equation~\ref{eq:Capstan} \citep{capstanman}.
+After much research into this problem, the solution reveals itself into the derivation of the well-known Capstan Equation~\ref{eq:Capstan} \cite{capstanman}.
 
 \begin{equation}
 	\label{eq:Capstan}
@@ -71,12 +71,12 @@ After much research into this problem, the solution reveals itself into the deri
 
 Where $T_1$ is the hold force and $T_2$ is the pull force (i.e. $T_2 \geq T_1$). \\
 
-From this equation, the free body diagram that leads to this solution is presented below in Figure~\ref{fig:Capstan}. 
+From this equation, the free body diagram that leads to this solution is presented below in Figure~\ref{fig:Capstan}~\cite{capstanman}. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.75]{2_Capstan}
-	\caption{Free body diagram of differential capstan problem. \citep{capstanman}}
+	\caption{Free body diagram of differential capstan problem.}
 	\label{fig:Capstan}
 \end{figure}
 
@@ -179,14 +179,14 @@ It is clear from these plots that as the contact angle increases, the stored nor
 
 The ASME codes listed in the beginning of this chapter will be extensively studied. Note that for all iteration procedures in this report, an initial thickness of $t_0 = 12.7\ mm=0.500\ in$ with a step of $t_0 = 0.254\ mm=0.01\ in$. Python scripts utilized for implementing solving algorithms can be found in Appendix~A.
 \subsection{Section VIII: Division 1}
-As per UG-28 of \citep{ASMEbvpcVII1}, the following procedure was used to calculate the required thickness.
-The following list of steps were carried out as per \citep{ASMEbvpcVII1}.
+As per UG-28 of \cite{ASMEbvpcVII1}, the following procedure was used to calculate the required thickness.
+The following list of steps were carried out as per \cite{ASMEbvpcVII1}.
 
 \begin{enumerate}
 	\item Assume initial thickness value of $t$
 	\item Calculate $D_o/t$ ratio and assure $D_o/t \geq 10$.
 	\item Calculate $L/D_o$ ratio, if $L/D_o \geq 50 \Rightarrow 50$ or  $L/D_o \leq 0.05 \Rightarrow 0.05$
-	\item With above ratios, go to Figure G of \citep{ASMEbvpcIID} and get value for $A$
+	\item With above ratios, go to Figure G of \cite{ASMEbvpcIID} and get value for $A$
 	\item With $A$ from above go to chart CS-2 $\because S_y \geq 30 \ ksi$ to get $B$
 	\item Use Equation \ref{eq:2_VII1_pa} with $B$ to calculate allowable pressure $p_a$:
 		\begin{equation}
@@ -209,7 +209,7 @@ From this plot, the script converged at thickness of $t = 43.7\ mm = 1.68\ in$ a
 
 
 \subsection{Section VIII: Division 2}
-As per subsection 4.4.5 of \citep{ASMEbvpcVII2}, the following procedure was used to calculate the required thickness. Note that only the main formulas will be presented. For intermediate steps, see  the Python script in Appendix~\ref{appendix:a2}. The following list of steps were carried out as per \citep{ASMEbvpcVII2}.
+As per subsection 4.4.5 of \cite{ASMEbvpcVII2}, the following procedure was used to calculate the required thickness. Note that only the main formulas will be presented. For intermediate steps, see  the Python script in Appendix~\ref{appendix:a2}. The following list of steps were carried out as per \cite{ASMEbvpcVII2}.
 
 \begin{enumerate}
 	\item Assume initial thickness value of $t$
@@ -219,7 +219,7 @@ As per subsection 4.4.5 of \citep{ASMEbvpcVII2}, the following procedure was use
 			F_{he} = \frac{1.6\ C_h E_y t}{D_o}
 		\end{equation}
 	\item Based on $S_y$ and $F_{he}$, calculate the predicted buckling stress $F_{ic}$ \ref{eq:2_VII2_4419}
-	\item With subsection 4.4.2 of \citep{ASMEbvpcVII2}, compute the design factor $FS$
+	\item With subsection 4.4.2 of \cite{ASMEbvpcVII2}, compute the design factor $FS$
 	\item Calculate allowable pressure $p_a$ with Equation~\ref{eq:2_VII2_4428}
 		\begin{equation}
 			\label{eq:2_VII2_4428}
@@ -244,7 +244,7 @@ Convergence was reached at a thickness of $t = 23.4\ mm = 0.920\ in$ when $p_a\g
 %%----------------------------------------------------------------------------------------------------------------------
 \section{European Standard}
 \subsection{EN-13445-3}
-As per subsection 8.5.2.2 of \citep{EN134453}, the following procedure was used to calculate the required thickness $e_a$. Note that the script in Appendix~~\ref{appendix:a3} utilizes SI units as per \citep{EN134453}.
+As per subsection 8.5.2.2 of \cite{EN134453}, the following procedure was used to calculate the required thickness $e_a$. Note that the script in Appendix~~\ref{appendix:a3} utilizes SI units as per \cite{EN134453}.
 
 \begin{enumerate}
 	\item Assume initial thickness value of $e_a$ and calculate $p_y$ with \ref{eq:2_EN_py}
@@ -252,12 +252,12 @@ As per subsection 8.5.2.2 of \citep{EN134453}, the following procedure was used 
 			\label{eq:2_EN_py}
 			p_y = \frac{\sigma_e e_a}{R}
 		\end{equation}
-	\item Compute the lower failure pressure $p_m$ \ref{eq:2_EN_pm}, see 8.5.2.6 of \citep{EN134453} for $\varepsilon$
+	\item Compute the lower failure pressure $p_m$ \ref{eq:2_EN_pm}, see 8.5.2.6 of \cite{EN134453} for $\varepsilon$
 		\begin{equation}
 			\label{eq:2_EN_pm}
 			p_m = \frac{E e_a  \varepsilon}{R}
 		\end{equation}
-	\item With the $p_m/p_y$ ratio, use Figure 8.5.5 of \citep{EN134453} to find equivalent $p_r/p_y$
+	\item With the $p_m/p_y$ ratio, use Figure 8.5.5 of \cite{EN134453} to find equivalent $p_r/p_y$
 	\item Rearrange for $p_r$ and calculate allowable pressure $p$ ith \ref{eq:2_EN_pa}
 		\begin{equation}
 			\label{eq:2_EN_pa}
@@ -281,14 +281,14 @@ The script converged at thickness of $e_a = 32.8\ mm = 1.290\ in$ and an allowab
 
 \subsection{DNV-OS-D101}
 
-As per \citep{DNVOSD101}, in subsection F215, Equation~\ref{eq:2_DNV_hoop} is presented as follows.
+As per \cite{DNVOSD101}, in subsection F215, Equation~\ref{eq:2_DNV_hoop} is presented as follows.
 
 \begin{equation}
 	\label{eq:2_DNV_hoop}
 	\sigma_h = C\cdot\frac{T}{d_{thr}t}
 \end{equation}
 
-In this equation, $C$ is a factor based on the number of wraps on the drum,. for two layers $C=1.75$ \citep{DNVOSD101}. There are a few exceptions with this equation and they are listed as follows.
+In this equation, $C$ is a factor based on the number of wraps on the drum,. for two layers $C=1.75$ \cite{DNVOSD101}. There are a few exceptions with this equation and they are listed as follows.
 
 \begin{enumerate}
 	\item The hoop stress $\sigma_h$ is limited to $\sigma_h \leq 0.85\cdot S_y$
@@ -300,7 +300,7 @@ Rearranging Equation~\ref{eq:2_DNV_hoop} for $t$, setting $\sigma_h = S_{allow}=
 %----------------------------------------------------------------------------------------------------------------------
 \section{TWPV Hoop Stress}
 
-Using the well known hoop stress equation \citep{roarks} for a TWPV, Equation~\ref{eq:2_hoop} is presented as follows.
+Using the well known hoop stress equation \cite{roarks} for a TWPV, Equation~\ref{eq:2_hoop} is presented as follows.
 
 \begin{equation}
 	\label{eq:2_hoop}

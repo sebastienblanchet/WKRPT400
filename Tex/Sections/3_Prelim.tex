@@ -6,7 +6,7 @@ In this section, the methods used for the numerical approach are discussed in de
 %%----------------------------------------------------------------------------------------------------------------------
 \section{Deflections \& Differential Relations}
 
-The first equation that is presented is the main relation between the internal bending moment on a beam and its curvature by Equation~\ref{eq:Mcurve} as per \citep{nisbett2014shigley}. 
+The first equation that is presented is the main relation between the internal bending moment on a beam and its curvature by Equation~\ref{eq:Mcurve} as per \cite{nisbett2014shigley}. 
 
 % First equation of basic statics
 \begin{equation}
@@ -19,7 +19,7 @@ The first equation that is presented is the main relation between the internal b
 	\frac{1}{\rho}=\frac{M}{EI}
 \end{equation}
 
-Where $1/\rho$ is the radius of curvature defined as Equation~\ref{eq:curve} \citep{nisbett2014shigley}.
+Where $1/\rho$ is the radius of curvature defined as Equation~\ref{eq:curve} \cite{nisbett2014shigley}.
 
 \begin{equation}
 	\label{eq:curve}
@@ -28,7 +28,7 @@ Where $1/\rho$ is the radius of curvature defined as Equation~\ref{eq:curve} \ci
 
 \subsection{Relations}
 
-With \ref{eq:curve}, relations based on deflection $y(x)$ for slope \ref{eq:slope}, moment \ref{eq:mmt}, shearing force \ref{eq:shr} and load intensity \ref{eq:loadintens} as per \citep{nisbett2014shigley}.
+With \ref{eq:curve}, relations based on deflection $y(x)$ for slope \ref{eq:slope}, moment \ref{eq:mmt}, shearing force \ref{eq:shr} and load intensity \ref{eq:loadintens} as per \cite{nisbett2014shigley}.
 
 \begin{equation}
 	\label{eq:slope}
@@ -92,12 +92,12 @@ In the following section, these preliminary relations will be used to further ex
 %----------------------------------------------------------------------------------------------------------------------
 \section{Theory of Cylindrical Shells}
 
-As per Timoshenko's book \citep{timoshenko1959theory}, this section will cover the method of approximating the cylinder as a long thin shell. With this assumption, the governing ordinary differential equation (ODE) will be derived. The following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below.
+As per Timoshenko's book \cite{timoshenko1959theory}, this section will cover the method of approximating the cylinder as a long thin shell. With this assumption, the governing ordinary differential equation (ODE) will be derived. The following coordinate system is presented as per Figure~\ref{fig:CoordSyst}~\cite{timoshenko1959theory} below.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{CoordSyst}
-	\caption{Coordinate system adopted for derivation of DEs. \citep{timoshenko1959theory}}
+	\caption{Coordinate system adopted for derivation of DEs.}
 	\label{fig:CoordSyst}
 \end{figure}
 
@@ -219,7 +219,7 @@ Where $\beta^4$ is some parameter defined as \ref{eq:betaquad}.
 	\beta^4 = \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
 \end{equation}
 
-The solution to this common fourth order, linear, non-homogeneous, ODE in \ref{eq:de1} has a general solution of Equation~\ref{eq:solnDE} \citep{timoshenko1959theory}.
+The solution to this common fourth order, linear, non-homogeneous, ODE in \ref{eq:de1} has a general solution of Equation~\ref{eq:solnDE} \cite{timoshenko1959theory}.
 
 \begin{equation}
 	\label{eq:solnDE}
@@ -264,15 +264,15 @@ From Equations~\ref{eq:3_phi}, \ref{eq:3_psi}, \ref{eq:3_theta}, \ref{eq:3_zeta}
 	\label{fig:3_wfxsn}
 \end{figure}
 
-It is clear from above that as $\beta x \rightarrow 6 \therefore f(\beta x) \rightarrow 0$. This is the main assumption used in for long shell analysis (i.e. $\beta x \geq 6$) \citep{roarks}.
+It is clear from above that as $\beta x \rightarrow 6 \therefore f(\beta x) \rightarrow 0$. This is the main assumption used in for long shell analysis (i.e. $\beta x \geq 6$) \cite{roarks}.
 
 \subsection{Solution}
 
-The coordinate system in Figure~\ref{fig:3_wfxsn} is adopted.
+The coordinate system in Figure~\ref{fig:3_wfxsn}~\cite{timoshenko1959theory} is adopted.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{3_timo_fixed}
-	\caption{Coordinate system used for exact solution. \citep{timoshenko1959theory}}
+	\caption{Coordinate system used for exact solution}
 	\label{fig:CoordSyst}
 \end{figure}
 
