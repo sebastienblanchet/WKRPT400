@@ -1,4 +1,4 @@
-In this section, the results from previous sections will be compared with those in an ANSYS Mechanical finite element analysis (FEA).
+In this section, the results from previous sections will be compared with those in an ANSYS Mechanical finite element analysis (FEA) software \cite{ANSYS}.
 
 \section{Model}
 
@@ -11,7 +11,16 @@ Using the parameters from Table~\ref{table:prelim_params} , the drum geometry wa
 	\label{fig:4_geom}
 \end{figure}
 
-In this model, the drum's thin surface has a parameterized inward thickness. This variable will be explored to determine how the maximum stress in the drum varies.
+In this model, the drum's thin surface has a parameterized inward thickness. This variable will be explored to determine how the maximum stress in the drum varies. The initial mesh is also shown below in \ref{fig:4_mesh}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_mesh}
+	\caption{Initial coarse mesh.}
+	\label{fig:4_mesh}
+\end{figure}
+
+This mesh will be refined in order to achieve convergence on maximum results.
 
 
 \section{Run 2}
@@ -20,7 +29,7 @@ The second run continues on the results determined from Run 1.
 
 \subsection{Boundary Conditions}
 
-Both of the drum's ends are simply supported (i.e. BCs as per \ref{eq:2_endBC} ). In other words, simple supports carry no end moments.
+Both of the drum's ends are simply supported (i.e. BCs as per \ref{eq:2_endBC} ). In other words, simple supports carry no end moments.\\
 
 Figure~\ref{fig:4_R2_tens} shows the location of applied tether tension of $11,525\ lbs.$ or $51,264\ N$.
 \begin{figure}[H]
@@ -38,14 +47,56 @@ Figure~\ref{fig:4_R2_pvar} shows the variable Capstan pressure applied as per re
 	\caption{Variable Capstan pressure.}
 	\label{fig:4_R2_pvar}
 \end{figure}
-
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R2_pvarplot}
+	\includegraphics[scale=0.6]{4_R2_pvarplot}
 	\caption{Variable Capstan pressure as a function of longitudinal coordinate $z$.}
 	\label{fig:4_R2_pvarplot}
 \end{figure}
 
 
 \subsection{Results}
+
+After a mesh refinement, total deformation results are shown below in Figure~\ref{fig:4_R2_def_mu05}. The maximum deformation seen on the top surface of the drum in the $y$ direction with respect to $z$ are also shown in Figure~\ref{fig:4_R2_topdefplotmu05}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R2_def_mu05}
+	\caption{Total deformation results.}
+	\label{fig:4_R2_def_mu05}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{4_R2_topdefplotmu05}
+	\caption{Total deformation in $y$ as a function of $z$.}
+	\label{fig:4_R2_topdefplotmu05}
+\end{figure}
+
+Comments, lots of deformation.\\
+
+Again, post mesh refinement yields the maximum stress results as per Figure~\ref{fig:4_R2_stress_mu05}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R2_stress_mu05}
+	\caption{Total stress results.}
+	\label{fig:4_R2_stress_mu05}
+\end{figure}
+
+Comments, bad stress.
+
+
+\subsection{Parametric Study}
+
+A parameteric study was ran with $0.15 \geq t \geq 1.05$ and $0.05 \geq \mu \geq 0.50$. This sweep is shown below in Figure~\ref{fig:4_R2_sweep}. The allowable stress limit of $\sigma_{allow}=\sigma_{y}/SF = 23,333\ psi$ is also shown for reference.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{4_R2_sweep}
+	\caption{Results of parametric study for FEA Run 2.}
+	\label{fig:4_R2_sweep}
+\end{figure}
+
+From the above plot, it appears as though a thickness of $t geq 0.50\ in$ would appear to be sufficient.
+
 
