@@ -19,8 +19,6 @@ Where $1/\rho$ is the radius of curvature defined as Equation~\ref{eq:curve} \ci
 	\frac{1}{\rho}=\frac{d^2y/dx^2}{\left( 1 +(dy/dx)^2 \right)^\frac{3}{2}} \approx \frac{d^2y}{dx^2}
 \end{equation}
 
-\subsection{Relations}
-
 With \ref{eq:curve}, relations based on deflection $y(x)$ for slope \ref{eq:slope}, moment \ref{eq:mmt}, shearing force \ref{eq:shr} and load intensity \ref{eq:loadintens} as per \cite{nisbett2014shigley}.
 
 \begin{equation}
@@ -84,6 +82,7 @@ In the following section, these preliminary relations will be used to further ex
 
 %----------------------------------------------------------------------------------------------------------------------
 \section{Theory of Cylindrical Shells}
+
 
 As per Timoshenko's book \cite{timoshenko1959theory}, this section will cover the method of approximating the cylinder as a long thin shell. With this assumption, the governing ordinary differential equation (ODE) will be derived. The following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below.
 
@@ -219,109 +218,12 @@ Where $ C_1, C_2, C_3, C_4$ are integration constants to be solved based on BC a
 In the following section, the exact solution to this differential equation given the loading scenarios in question.
 
 %----------------------------------------------------------------------------------------------------------------------
-\section{Fixed End Solution}
-
-\subsection{Notation}
-
-Before the solution is presented, the following notation in Equations~\ref{eq:3_phi} - \ref{eq:3_zeta}.
-\begin{equation}
-	\label{eq:3_phi}
-	\varphi (\beta x) = e^{-\beta x} \left(\cos \beta x + \sin \beta x \right)
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_psi}
-	\psi (\beta x) = e^{-\beta x} \left(\cos \beta x - \sin \beta x \right)
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_theta}
-	\theta (\beta x) = e^{-\beta x} \cos \beta x
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_zeta}
-	\zeta (\beta x) = e^{-\beta x} \sin \beta x
-\end{equation}
-
-From Equations~\ref{eq:3_phi}, \ref{eq:3_psi}, \ref{eq:3_theta}, \ref{eq:3_zeta}, the plot in Figure~\ref{fig:3_wfxsn} was created below in Python.
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.75]{3_wfxns}
-	\caption{Visualization of $f(\beta x)$.}
-	\label{fig:3_wfxsn}
-\end{figure}
-
-It is clear from above that as $\beta x \rightarrow 6 \therefore f(\beta x) \rightarrow 0$. This is the main assumption used in for long shell analysis (i.e. $\beta x \geq 6$) \cite{roarks}.
-
-\subsection{Solution}
-
-The coordinate system in Figure~\ref{fig:3_wfxsn}~\cite{timoshenko1959theory} is adopted.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{3_timo_fixed}
-	\caption{Coordinate system used for exact solution.}
-	\label{fig:CoordSyst}
-\end{figure}
-
-The above schematic represents a long circular pipe which has both moment and shear carrying capacities at $x_0=0$.\\
-
-With the general solution from Equation~\ref{eq:solnDE}, it is apparent that both $C_1=C_2=0$ and since there is no external pressure applied $Z=0 \therefore f(x) = 0$. The aforementioned equation now becomes \ref{eq:3_ODE_fixed}.
-
-\begin{equation}
-	\label{eq:3_ODE_fixed}
-	w(x)=e^{-\beta x} \left(C_3 \cos \beta x +C_4 \sin \beta x \right)
-\end{equation}
-
-
-Both constants $C_3, C_4$ are solved using the relations for fixed end boundary conditions \ref{eq:2_fixedBC} as well as relations between displacement $w$, moments $M$ \ref{eq:mmt} and shear $V$ \ref{eq:shr}.
-
-
-The first integration constant $C_3$ \ref{eq:3_c3}.
-
-\begin{equation}
-	\label{eq:3_c3}
-	C_3 = - \frac{1}{2 \beta^3 D} \left( Q_0 + \beta M_0 \right)
-\end{equation}
-
-The second, $C_4$ \ref{eq:3_c4}.
-
-\begin{equation}
-	\label{eq:3_c4}
-	C_4 = \frac{M_0}{2 \beta^2 D}
-\end{equation}
-
-
-Applying Equations~\ref{eq:3_c3}, \ref{eq:3_c4} to \ref{eq:3_ODE_fixed} will yield \ref{eq:3_ODE_fixed_soln}.
-
-\begin{equation}
-	\label{eq:3_ODE_fixed_soln}
-	w(x)= \frac{e^{-\beta x}}{2 \beta^3 D} \left( \beta M_0 (\sin \beta x -\cos \beta x) - Q_0 \cos \beta x  \right)
-\end{equation}
-
-With the notation presented in Equations~\ref{eq:3_phi} - \ref{eq:3_zeta}, the derivatives of displacement $w(x)$ can be written as follows.
-
-\begin{equation}
-	\label{eq:3_w0}
-	w = - \frac{1}{2 \beta^3 D} \left( \beta M_0 \psi(\beta x) + Q_0 \theta (\beta x) \right)
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_w1}
-	\frac{dw}{dx} = \frac{1}{2 \beta^2 D} \left( 2 \beta M_0 \theta(\beta x) + Q_0 \varphi(\beta x) \right)	
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_w2}
-	\frac{d^2w}{dx^2} = - \frac{1}{2 \beta D} \left( 2 \beta M_0 \varphi(\beta x) + 2 Q_0 \zeta(\beta x) \right)
-\end{equation}
-
-\begin{equation}
-	\label{eq:3_w3}
-	\frac{d^3w}{dx^3} = \frac{1}{D} \left( 2 \beta M_0 \zeta(\beta x) - Q_0 \psi(\beta x) \right)
-\end{equation}
-
 
 \section{Application Solution}
 
 With the previously developed equations and \cite{roarks}, the equations were solved using \cite{EXCEL}.
+
+
+\section{Buckling}
+
+Assumed linear buckling using \cite{roarks}. 
