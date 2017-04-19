@@ -61,7 +61,7 @@
 \titleformat{\chapter}{\bf\normalfont\huge}{\bf\thechapter.}{20pt}{\huge \bf}
 % for appendices
 \usepackage[toc,page]{appendix}
-% for pdf
+% for pdf import
 \usepackage{pdfpages}
 %%%%% --------------------------------------------------------------------------------
 %%
@@ -125,6 +125,7 @@
 %%
 %% Need to run bibtex in compiler 
 \intotoc{\bibname}
+%% Get IEEE reference style
 \bibliographystyle{ieeetran}
 \bibliography{Biblio/Refs}
 %%

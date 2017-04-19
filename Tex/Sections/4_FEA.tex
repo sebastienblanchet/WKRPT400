@@ -1,0 +1,51 @@
+In this section, the results from previous sections will be compared with those in an ANSYS Mechanical finite element analysis (FEA).
+
+\section{Model}
+
+Using the parameters from Table~\ref{table:prelim_params} , the drum geometry was modeled as a thin surface to save computational cost and time. The geometry and coordinate system adopted in this foregoing analysis are shown below in Figure~\ref{fig:4_geom}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_geom}
+	\caption{ANSYS geometry and coordinate system overview.}
+	\label{fig:4_geom}
+\end{figure}
+
+In this model, the drum's thin surface has a parameterized inward thickness. This variable will be explored to determine how the maximum stress in the drum varies.
+
+
+\section{Run 2}
+
+The second run continues on the results determined from Run 1.
+
+\subsection{Boundary Conditions}
+
+Both of the drum's ends are simply supported (i.e. BCs as per \ref{eq:2_endBC} ). In other words, simple supports carry no end moments.
+
+Figure~\ref{fig:4_R2_tens} shows the location of applied tether tension of $11,525\ lbs.$ or $51,264\ N$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R2_tens}
+	\caption{Remote force location in ANSYS model.}
+	\label{fig:4_R2_tens}
+\end{figure}
+
+Figure~\ref{fig:4_R2_pvar} shows the variable Capstan pressure applied as per results from \ref{subsection:alt} (see Figure~\ref{fig:4_R2_pvarplot} for $p(z)$ ). Note again that the boundary conditions are for $\mu=0.05$ , which is essentially the worst case scenario.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R2_pvar}
+	\caption{Variable Capstan pressure.}
+	\label{fig:4_R2_pvar}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R2_pvarplot}
+	\caption{Variable Capstan pressure as a function of longitudinal coordinate $z$.}
+	\label{fig:4_R2_pvarplot}
+\end{figure}
+
+
+\subsection{Results}
+
