@@ -2,7 +2,6 @@
 
 In this section, the methods used for the numerical approach are discussed in detail. Parameters used in this section to follow Table~\ref{table:prelim_params}.\\
 
-
 %%----------------------------------------------------------------------------------------------------------------------
 \section{Deflections \& Differential Relations}
 
@@ -191,14 +190,9 @@ As a result of no change in curvature in the $\varphi$ direction, we know that $
 
 Where $D$ is the flexural rigidity of the shell \ref{eq:flexrig}. This term replaces the $EI$ term from Equations~\ref{eq:Mcurve} - \ref{eq:loadintens}.
 
-%\begin{equation}
-%	\label{eq:EQNNAME}
-%	EQUN
-%\end{equation} 
-
 \begin{equation}
 	\label{eq:flexrig}
-	D = \frac{Eh^3}{12(1-\nu^3)}
+	D \equiv \frac{Eh^3}{12(1-\nu^3)}
 \end{equation}
 
 Simplifying \ref{eq:eqbrm_z2} to get $Q_x = \frac{dM_x}{dx}$, the following is put in \ref{eq:eqbrm_y2} to get \ref{eq:de1}
@@ -216,7 +210,7 @@ Where $\beta^4$ is some parameter defined as \ref{eq:betaquad}.
 
 \begin{equation}
 	\label{eq:betaquad}
-	\beta^4 = \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
+	\beta^4 \equiv \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
 \end{equation}
 
 The solution to this common fourth order, linear, non-homogeneous, ODE in \ref{eq:de1} has a general solution of Equation~\ref{eq:solnDE} \cite{timoshenko1959theory}.
@@ -272,7 +266,7 @@ The coordinate system in Figure~\ref{fig:3_wfxsn}~\cite{timoshenko1959theory} is
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{3_timo_fixed}
-	\caption{Coordinate system used for exact solution}
+	\caption{Coordinate system used for exact solution.~\protect\cite{timoshenko1959theory}}
 	\label{fig:CoordSyst}
 \end{figure}
 
@@ -336,5 +330,5 @@ With the notation presented in Equations~\ref{eq:3_phi} - \ref{eq:3_zeta}, the d
 
 \section{Application Solution}
 
-
 With the previously developed equations and \cite{roarks}, the equations were solved using \cite{EXCEL}.
+

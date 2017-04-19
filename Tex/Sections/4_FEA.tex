@@ -1,31 +1,30 @@
-In this section, the results from previous sections will be compared with those in an ANSYS Mechanical finite element analysis (FEA) software \cite{ANSYS}.
+In this section, the results from previous sections will be compared with those in an ANSYS Mechanical finite element analysis (FEA) software \cite{ANSYS}. Please note that all results presented in the foregoing section will utilize USC units. Important results will be converted to their respective SI units.
 
 \section{Model}
 
-Using the parameters from Table~\ref{table:prelim_params} , the drum geometry was modeled as a thin surface to save computational cost and time. The geometry and coordinate system adopted in this foregoing analysis are shown below in Figure~\ref{fig:4_geom}.
+Using the $D_o , L$ parameters from Table~\ref{table:prelim_params}, the drum geometry was modeled as a thin surface to save computational cost and time. The geometry and coordinate system adopted in this preceding analysis are shown below in Figure~\ref{fig:4_geom}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_geom}
-	\caption{ANSYS geometry and coordinate system overview.}
+	\caption{Geometry and coordinate system overview.}
 	\label{fig:4_geom}
 \end{figure}
 
-In this model, the drum's thin surface has a parameterized inward thickness. This variable will be explored to determine how the maximum stress in the drum varies. The initial mesh is also shown below in \ref{fig:4_mesh}
+In this model, the drum's thin surface has a parameterized inward thickness. Parametric studies will be performed in ANSYS with this variable to see how maximum stress and deformation vary. The thin surface also allows for a simply initial coarse mesh generated in ANSYS (see Figure~\ref{fig:4_mesh}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_mesh}
-	\caption{Initial coarse mesh.}
+	\caption{ANSYS generated coarse mesh.}
 	\label{fig:4_mesh}
 \end{figure}
 
-This mesh will be refined in order to achieve convergence on maximum results.
-
+To assure numerically accurate results, a mesh refinement study will be performed on both maximum total deformation and equivalent (Von-Misses) stress for all foregoing simulations.
 
 \section{Run 2}
 
-The second run continues on the results determined from Run 1.
+The second run continues on the results determined from Run 1. The results presented in this foregoing section will focus on a barrel thickness of $0.50\ in$ 
 
 \subsection{Boundary Conditions}
 
@@ -88,15 +87,14 @@ Comments, bad stress.
 
 \subsection{Parametric Study}
 
-A parameteric study was ran with $0.15 \geq t \geq 1.05$ and $0.05 \geq \mu \geq 0.50$. This sweep is shown below in Figure~\ref{fig:4_R2_sweep}. The allowable stress limit of $\sigma_{allow}=\sigma_{y}/SF = 23,333\ psi$ is also shown for reference.
+A parametric study was ran with $0.15 \leq t \leq 1.05$ and $0.05 \leq \mu \leq 0.50$. This sweep results are shown below in Figure~\ref{fig:4_R2_sweep} \cite{EXCEL}. The allowable stress limit of $\sigma_{allow}=\sigma_{y}/SF = 23,333\ psi$ is also shown for reference.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.75]{4_R2_sweep}
+	\includegraphics[scale=0.6]{4_R2_sweep}
 	\caption{Results of parametric study for FEA Run 2.}
 	\label{fig:4_R2_sweep}
 \end{figure}
 
-From the above plot, it appears as though a thickness of $t geq 0.50\ in$ would appear to be sufficient.
-
+From the above plot, it appears as though a thickness of $t \geq 0.50\ in$ would appear to be sufficient.
 
