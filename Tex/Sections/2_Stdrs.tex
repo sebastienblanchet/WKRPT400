@@ -7,53 +7,53 @@ The most important parameter in question is the outer diameter $D_o$. For this e
 \begin{table}[ht]
 	\caption{Key drum parameters and material properties.}
 	\centering
-%	\begin{tabular}{c c c c}
-%		%heading
-%		\hline \textbf{Description} & \textbf{Symbol} & \textbf{Value} & \textbf{Units}\\[1 ex]
-%		\hline
-%		%Main table body content	
-%		Outer diameter		&$D_o$			& $28$		& $in$ 	\\
-%		Tether diameter		&$D_{thr}$		& $0.6$		& $in$ 	\\
-%		Drum length			&$L$			& $49$		& $in$ 	\\
-%		Tether tension		&$T$			& $11,525$	& $lbf$	\\	
-%		Yield strength		&$S_y$			& $35,000$	& $psi$	\\	
-%		Young's Modulus		&$E$			& $2.9\cdot 10^7$ &$psi$\\
-%		Poisson's ratio		&$\nu$			& $0.3$		& $ul$	\\	
-%		\hline
-%	\end{tabular}
-    \begin{tabular}{lccccc}
-          &       & \multicolumn{2}{c}{\textbf{\textit{SI}}} & \multicolumn{2}{c}{\textbf{\textit{UCS}}} \\
-	\textbf{Description} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} & \textbf{Value} & \textbf{Units} \\
-    \midrule
-    Outer diameter & $D_o$ & $711.2$ & $mm$  & $28$ & $in$ \\
-    Tether diameter & $D_{thr}$ & $15.2$ & $mm$  & $0.598$ & $in$ \\
-    Drum length & $L$   & $1,244.6$ & $mm$  & $49$ & $in$ \\
-    Tether tension & $T$   & $51,264$ & $N$   & $11,525$ & $lbf$ \\
-    Yield strength & $S_y$ & $241.3$ & $MPa$ & $35,000$ & $psi$ \\
-    Young's modulus & $E$   & $200$ & $GPa$ & $2.9\cdot 10^7$ & $psi$ \\
-    Poisson's ratio & $\nu$ & $0.3$ & $-$  & $-$    & $-$ \\
-    Safety factor & $SF$ & $1.5$ & $-$  & $-$    & $-$ \\
-    \end{tabular}%
-  \label{table:prelim_params}
+	%	\begin{tabular}{c c c c}
+	%		%heading
+	%		\hline \textbf{Description} & \textbf{Symbol} & \textbf{Value} & \textbf{Units}\\[1 ex]
+	%		\hline
+	%		%Main table body content	
+	%		Outer diameter		&$D_o$			& $28$		& $in$ 	\\
+	%		Tether diameter		&$D_{thr}$		& $0.6$		& $in$ 	\\
+	%		Drum length			&$L$			& $49$		& $in$ 	\\
+	%		Tether tension		&$T$			& $11,525$	& $lbf$	\\	
+	%		Yield strength		&$S_y$			& $35,000$	& $psi$	\\	
+	%		Young's Modulus		&$E$			& $2.9\cdot 10^7$ &$psi$\\
+	%		Poisson's ratio		&$\nu$			& $0.3$		& $ul$	\\	
+	%		\hline
+	%	\end{tabular}
+	\begin{tabular}{lccccc}
+		&       & \multicolumn{2}{c}{\textbf{\textit{SI}}} & \multicolumn{2}{c}{\textbf{\textit{UCS}}} \\
+		\textbf{Description} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} & \textbf{Value}  & \textbf{Units} \\
+		\midrule
+		Outer diameter       & $D_o$           & $711.2$        & $mm$           & $28$            & $in$           \\
+		Tether diameter      & $D_{thr}$       & $15.2$         & $mm$           & $0.598$         & $in$           \\
+		Drum length          & $L$             & $1,244.6$      & $mm$           & $49$            & $in$           \\
+		Tether tension       & $T$             & $51,264$       & $N$            & $11,525$        & $lbf$          \\
+		Yield strength       & $S_y$           & $241.3$        & $MPa$          & $35,000$        & $psi$          \\
+		Young's modulus      & $E$             & $200$          & $GPa$          & $2.9\cdot 10^7$ & $psi$          \\
+		Poisson's ratio      & $\nu$           & $0.3$          & $-$            & $-$             & $-$            \\
+		Safety factor        & $SF$            & $1.5$          & $-$            & $-$             & $-$            \\
+	\end{tabular}%
+	\label{table:prelim_params}
 \end{table}
 
 The best approach to this problem is to model the drum as an externally pressured vessel. First, in order to make this approximation, it is required to investigate how the tether tension is translated into an external pressure. This will be done by reviewing the derivation for the Capstan Equation.\\ 
 
 Next, using the above mentioned parameters and pressure, it was suggested by John Umina that the following standards should be investigated.
 \begin{itemize}
-    \item American Society of Mechanical Engineers (ASME):
-	    \begin{itemize}[label=$\bullet$]
-	    	\item Boiler and Pressure Vessel Code, Section VIII, Division 1, 2015 \cite{ASMEbvpcVII1}
-	    	\item Boiler and Pressure Vessel Code, Section VIII, Division 2, 2015 \cite{ASMEbvpcVII2}
-	    \end{itemize}
-    \item European Standard EN
-        \begin{itemize}[label=$\bullet$]
-	       	\item EN 13445: Unfired Pressure Vessels, Part 3: Design,  2002 \cite{EN134453}
-	    \end{itemize}
+	\item American Society of Mechanical Engineers (ASME):
+	      \begin{itemize}[label=$\bullet$]
+	      	\item Boiler and Pressure Vessel Code, Section VIII, Division 1, 2015 \cite{ASMEbvpcVII1}
+	      	\item Boiler and Pressure Vessel Code, Section VIII, Division 2, 2015 \cite{ASMEbvpcVII2}
+	      \end{itemize}
+	\item European Standard EN
+	      \begin{itemize}[label=$\bullet$]
+	      	\item EN 13445: Unfired Pressure Vessels, Part 3: Design,  2002 \cite{EN134453}
+	      \end{itemize}
 	\item Det Norske Veritas(DNV) \cite{DNVOSD101}
-		    \begin{itemize}[label=$\bullet$]
-	    	\item DNV-OS-D101, Marine and Machinery Systems and Equipment\cite{ASMEbvpcVII1}
-	    \end{itemize}
+	      \begin{itemize}[label=$\bullet$]
+	      	\item DNV-OS-D101, Marine and Machinery Systems and Equipment\cite{ASMEbvpcVII1}
+	      \end{itemize}
 	\item Thin Walled Pressure Vessel (TWPV) Hoop Stress \cite{roarks}\\	
 \end{itemize}
 
@@ -139,8 +139,8 @@ By letting $T = T(\theta)= T_{hi} e^{-\mu \varphi}$, Equation~\ref{eq:capstan_in
 \begin{equation}
 	\label{eq:capstan_integral2}
 	\begin{aligned}
-	\int_0^N dN =\int_0^{\theta} T_{hi} e^{-\mu \varphi} d\varphi \\
-	N = \left( -\frac{T_{hi}}{\mu} e^{-\mu \varphi} \right) \Big|_0^{\theta}
+		\int_0^N dN =\int_0^{\theta} T_{hi} e^{-\mu \varphi} d\varphi            \\
+		N = \left( -\frac{T_{hi}}{\mu} e^{-\mu \varphi} \right) \Big|_0^{\theta} 
 	\end{aligned}
 \end{equation}
 
@@ -189,20 +189,20 @@ The following list of steps were carried out as per \cite{ASMEbvpcVII1}.
 	\item With above ratios, go to Figure G of \cite{ASMEbvpcIID} and get value for $A$
 	\item With $A$ from above go to chart CS-2 $\because S_y \geq 30 \ ksi$ to get $B$
 	\item Use Equation \ref{eq:2_VII1_pa} with $B$ to calculate allowable pressure $p_a$:
-		\begin{equation}
-			\label{eq:2_VII1_pa}
-			p_a = \frac{4B}{3 \left(D_o/t\right)}
-		\end{equation}
+	      \begin{equation}
+	      	\label{eq:2_VII1_pa}
+	      	p_a = \frac{4B}{3 \left(D_o/t\right)}
+	      \end{equation}
 	\item Check that $p_a \geq p_{req}$ as calculated from Equation~\ref{eq:2_preq}, if not, increase $t$ and go to Step 2\\
-	
+	      	
 \end{enumerate}
 
 With the Python Script from Appendix~\ref{appendix:a1} the convergence plot from Figure~\ref{fig:2_vii1_cnvg} below was created.
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{2_vii1_cnvg}
-    \caption{Convergence plot of $p_a$ using ASME's BPVC VIII-1.}
-    \label{fig:2_vii1_cnvg}
+	\centering
+	\includegraphics[scale=0.8]{2_vii1_cnvg}
+	\caption{Convergence plot of $p_a$ using ASME's BPVC VIII-1.}
+	\label{fig:2_vii1_cnvg}
 \end{figure}
 
 From this plot, the script converged at thickness of $t = 43.7\ mm = 1.68\ in$ and an allowable pressure of $p_a\geq p_{reqs}$ after $n=119$ iterations. 
@@ -214,28 +214,28 @@ As per subsection 4.4.5 of \cite{ASMEbvpcVII2}, the following procedure was used
 \begin{enumerate}
 	\item Assume initial thickness value of $t$
 	\item Calculate elastic buckling stress $F_{he}$ with Equation~\ref{eq:2_VII2_4419}
-		\begin{equation}
-			\label{eq:2_VII2_4419}
-			F_{he} = \frac{1.6\ C_h E_y t}{D_o}
-		\end{equation}
+	      \begin{equation}
+	      	\label{eq:2_VII2_4419}
+	      	F_{he} = \frac{1.6\ C_h E_y t}{D_o}
+	      \end{equation}
 	\item Based on $S_y$ and $F_{he}$, calculate the predicted buckling stress $F_{ic}$ \ref{eq:2_VII2_4419}
 	\item With subsection 4.4.2 of \cite{ASMEbvpcVII2}, compute the design factor $FS$
 	\item Calculate allowable pressure $p_a$ with Equation~\ref{eq:2_VII2_4428}
-		\begin{equation}
-			\label{eq:2_VII2_4428}
-			p_a = 2 F_{ha} \left(\frac{t}{D_o}\right)
-		\end{equation}
+	      \begin{equation}
+	      	\label{eq:2_VII2_4428}
+	      	p_a = 2 F_{ha} \left(\frac{t}{D_o}\right)
+	      \end{equation}
 	\item Check if $p_a \geq p_{req}$ as calculated from \ref{eq:2_preq}, if not, increase $t$ and go to Step 2 \\
-	
+	      	
 \end{enumerate}
 
 %%on page~\pageref{fig:2_vii2_cnvg} for page ref
 The Python Script in Appendix~\ref{appendix:a2} output the following convergence plot as seen in Figure~\ref{fig:2_vii2_cnvg}.
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{2_vii2_cnvg}
-    \caption{Convergence plot of $p_a$ using ASME's BPVC VIII-2.}
-    \label{fig:2_vii2_cnvg}
+	\centering
+	\includegraphics[scale=0.8]{2_vii2_cnvg}
+	\caption{Convergence plot of $p_a$ using ASME's BPVC VIII-2.}
+	\label{fig:2_vii2_cnvg}
 \end{figure}
 
 Convergence was reached at a thickness of $t = 23.4\ mm = 0.920\ in$ when $p_a\geq p_{req}$, after $n=43$ iterations. 
@@ -248,30 +248,30 @@ As per subsection 8.5.2.2 of \cite{EN134453}, the following procedure was used t
 
 \begin{enumerate}
 	\item Assume initial thickness value of $e_a$ and calculate $p_y$ with \ref{eq:2_EN_py}
-		\begin{equation}
-			\label{eq:2_EN_py}
-			p_y = \frac{\sigma_e e_a}{R}
-		\end{equation}
+	      \begin{equation}
+	      	\label{eq:2_EN_py}
+	      	p_y = \frac{\sigma_e e_a}{R}
+	      \end{equation}
 	\item Compute the lower failure pressure $p_m$ \ref{eq:2_EN_pm}, see 8.5.2.6 of \cite{EN134453} for $\varepsilon$
-		\begin{equation}
-			\label{eq:2_EN_pm}
-			p_m = \frac{E e_a  \varepsilon}{R}
-		\end{equation}
+	      \begin{equation}
+	      	\label{eq:2_EN_pm}
+	      	p_m = \frac{E e_a  \varepsilon}{R}
+	      \end{equation}
 	\item With the $p_m/p_y$ ratio, use Figure 8.5.5 of \cite{EN134453} to find equivalent $p_r/p_y$
 	\item Rearrange for $p_r$ and calculate allowable pressure $p$ ith \ref{eq:2_EN_pa}
-		\begin{equation}
-			\label{eq:2_EN_pa}
-			p = \frac{p_r}{S}
-		\end{equation}
+	      \begin{equation}
+	      	\label{eq:2_EN_pa}
+	      	p = \frac{p_r}{S}
+	      \end{equation}
 	\item Check if $p \geq p_{req}$ as calculated from \ref{eq:2_preq}, if not, increase $e_a$ and go to Step 2\\
 \end{enumerate}
 
 Again, with the respective Python Script in Appendix~\ref{appendix:a3}, a convergence plot was created (see Figure~\ref{fig:2_en13445_cnvg}).
 \begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.8]{2_en13445_cnvg}
-    \caption{Convergence plot of $p_a$ using EN 13445-3.}
-    \label{fig:2_en13445_cnvg}
+	\centering
+	\includegraphics[scale=0.8]{2_en13445_cnvg}
+	\caption{Convergence plot of $p_a$ using EN 13445-3.}
+	\label{fig:2_en13445_cnvg}
 \end{figure}
 
 The script converged at thickness of $e_a = 32.8\ mm = 1.290\ in$ and an allowable pressure of $p\geq p_{req}$ after $n=80$ iterations. 
@@ -314,18 +314,18 @@ Again, rearranging for $t$ , $\sigma_h = S_{allow}=S_y/SF$ and using the pressur
 
 Based on the above sections, the results are summarized in Table~\ref{table:2_comp}.
 \begin{table}[H]
-  \centering
-  \caption{Comparison $t$ according to method used.}
-    \begin{tabular}{lccc}
-    \textbf{Method} & \textbf{$\mathbf{mm}$} & \textbf{$\mathbf{in}$} & \textbf{SF} \\
-    \midrule
-    ASME BPVC VIII-1 & $43.7$  & $1.680$ & $1.5$ \\
-    ASME BPVC VIII-2 & $23.4$  & $0.920$ & $1.5$ \\
-    EN 13445-3 & $32.8$  & $1.290$ & $1.5$ \\    
-    DNV-OS-D101 & $36.6$  & $1.440$ & $1.5$ \\
-    TWPV Hoop Stress & $21.0$ &$0.825$ & $1.5$\\
-    \end{tabular}%
-  \label{table:2_comp}%
+	\centering
+	\caption{Comparison $t$ according to method used.}
+	\begin{tabular}{lccc}
+		\textbf{Method}  & \textbf{$\mathbf{mm}$} & \textbf{$\mathbf{in}$} & \textbf{SF} \\
+		\midrule
+		ASME BPVC VIII-1 & $43.7$                 & $1.680$                & $1.5$       \\
+		ASME BPVC VIII-2 & $23.4$                 & $0.920$                & $1.5$       \\
+		EN 13445-3       & $32.8$                 & $1.290$                & $1.5$       \\    
+		DNV-OS-D101      & $36.6$                 & $1.440$                & $1.5$       \\
+		TWPV Hoop Stress & $21.0$                 & $0.825$                & $1.5$       \\
+	\end{tabular}%
+	\label{table:2_comp}%
 \end{table}%
 
 Based on these results the following observations may be made
