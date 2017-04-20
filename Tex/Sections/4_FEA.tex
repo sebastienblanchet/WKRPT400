@@ -167,12 +167,60 @@ Buckling mode shapes do not represent actual displacements but help you to visua
 
 Load factors $\lambda$ highly dependent on pre-stressed state, either linear on non linear.\\
 
-In this case linear buckling is utilized for its simplicity.
+In this case linear buckling is utilized for its simplicity. Must have coupled static structural analysis (see Figure~\ref{fig:4_R3_wb}.
 
-ANSYS takes in the pre stressed state and returns load factors $lambda$ which are defined as follows in Equation~\ref{eq:4_loadfactor}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R3_wb}
+	\caption{Workbench project schematic.}
+	\label{fig:4_R3_wb}
+\end{figure}
+
+ANSYS takes in the pre-stressed state and returns load factors $\lambda$ which are defined as follows in Equation~\ref{eq:4_loadfactor}.
 \begin{equation}
 	\label{eq:4_loadfactor}
-	p_{buckle} = \lambda p_{applied}
+	p' = \lambda \ p_0
 \end{equation}
 
 For this reason, a unit load pressure of $p = 1\ psi$ will be applied. The boundary conditions will follow those of Section~\ref{subsection:R1BC}.
+
+\subsection{Boundary Conditions}
+
+Boundary conditions of coupled static structural analysis. Ends simply supported (Equation~\ref{eq:2_endBC}) and a unit pressure load applied to external surface (see Figure~\ref{fig:4_R3_BC}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R3_BC}
+	\caption{Boundary conditions for Eigenvalue Buckling analysis.}
+	\label{fig:4_R3_BC}
+\end{figure}
+
+\subsection{Results}
+
+Unfortnately, ANSYS is unable to perform a mesh refinement study for a coupled static structural and eigenvalue buckling analysis hence, a much finer initial mesh than that shown in Figure~\ref{fig:4_mesh} was used to assure reasonably accurate results on the first iteration.\\
+
+Results are shown below for the first eigenvalue or mode $\psi = 1$ below in Figure~\ref{fig:4_R3_mode1}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R3_mode1}
+	\caption{Total deformation results for mode $\psi = 1$.}
+	\label{fig:4_R3_mode1}
+\end{figure}
+
+From above, it can be seen that a load factor of $\lambda = 1668$ was calculated for $t= 0.418\ in$. This value is within about $21.2\%$ of the expected analytical results.
+
+\subsection{Parametric Study}
+
+For $t\in [0.05, 1.05]$, a parametric study was performed. Results for the first, fifth and tenth mode (i.e. $\psi = 1, 5, 10$) are plotted against the thickness range of interest in Figure~\ref{fig:4_R3_modesweep} below, as per \cite{PYTHON} script in Appendix~\ref{appendix:a4}. The required critical pressure of $p =1376\ psi$ is also shown for reference.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{4_R3_modesweep}
+	\caption{Parametric sweep results for various $t, \psi$.}
+	\label{fig:4_R3_modesweep}
+\end{figure}
+
+
+
+
+

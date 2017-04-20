@@ -89,7 +89,7 @@ As per Timoshenko's book \cite{timoshenko1959theory}, this section will cover th
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{CoordSyst}
-	\caption{Coordinate system adopted for derivation of DEs.}
+	\caption[Coordinate system adopted for derivation of DEs.]{Coordinate system adopted for derivation of DEs.\protect\cite{timoshenko1959theory}}
 	\label{fig:CoordSyst}
 \end{figure}
 
@@ -185,7 +185,7 @@ Where $D$ is the flexural rigidity of the shell \ref{eq:flexrig}. This term repl
 
 \begin{equation}
 	\label{eq:flexrig}
-	D \equiv \frac{Eh^3}{12(1-\nu^3)}
+	D \triangleq \frac{Eh^3}{12(1-\nu^3)}
 \end{equation}
 
 Simplifying \ref{eq:eqbrm_z2} to get $Q_x = \frac{dM_x}{dx}$, the following is put in \ref{eq:eqbrm_y2} to get \ref{eq:de1}
@@ -203,7 +203,7 @@ Where $\beta^4$ is some parameter defined as \ref{eq:betaquad}.
 
 \begin{equation}
 	\label{eq:betaquad}
-	\beta^4 \equiv \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
+	\beta^4 \triangleq \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
 \end{equation}
 
 The solution to this common fourth order, linear, non-homogeneous, ODE in \ref{eq:de1} has a general solution of Equation~\ref{eq:solnDE} \cite{timoshenko1959theory}.
@@ -227,7 +227,39 @@ Calculated value of $t=1.686 in  = 42.8\ mm$
 
 \section{Buckling}
 
-Assumed linear buckling using Equations from Table 35 of \cite{roarks}, the following equations are presented.
+Assumed linear buckling using Equations from Table 35 of \cite{roarks}, the following equations are presented. A thin tube under uniform external pressure will buckle as follows.
+
+For Equation~\ref{eq:3_buckle1}.
+\begin{equation}
+	\label{eq:3_buckle1}
+	q' =\frac{1}{4} \frac{E}{1-\nu^2} \frac{t^3}{R^3}
+\end{equation}
+
+The above equation is to be used for very long tubes with free ends \cite{roarks}. In other words, the length of the barrel $L$ must be greater the critical length calculated with \ref{eq:3_lcrit}.
+\begin{equation}
+	\label{eq:3_lcrit}
+	L' = 4.90 R \sqrt{\frac{R}{t}}
+\end{equation}
+
+For the studied range of $t \in [0.05, 1.1) \Rightarrow L < L' \therefore$ Equation~\ref{eq:3_buckle2} must be used to calculate the critical buckling pressure.
+
+\begin{equation}
+	\label{eq:3_buckle2}
+	q' =0.807\  \frac{Et^2}{LR}\  \sqrt[4]{\left( \frac{1}{1-\nu^2} \right)^3 \left( \frac{t}{R}\right)^2}
+\end{equation}
+
+With \ref{eq:3_buckle2} and the aforementioned thickness range, critical pressure values were computed with the \cite{PYTHON} script in Appendix~\ref{appendix:a4}. These results are displayed in the following plot (see Figure~\ref{fig:3_buckling}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{3_buckling}
+	\caption{Variation of critical buckling pressure $q'$ with thickness.}
+	\label{fig:3_buckling}
+\end{figure}
+
+It is clear from above figure that a very low thickness is required to achieve a critical buckling pressure $q'$ of that in Equation~\ref{eq:2_preq} of $1376\ psi\ (9.484\ MPa)$. By rearranging, \ref{eq:3_buckle2} for $t$ and setting $q'=1376\ psi$, a critical thickness of $t=0.418\ in= 10.6\ mm$ is required to avoid buckling.\\
+
+Based on the findings in this section, it is clear that buckling will not be the failure mode for this loading scenario.
 
 
-It is clear from the above plot that the a much smaller thickness is required for a range of thicknesses 
+
