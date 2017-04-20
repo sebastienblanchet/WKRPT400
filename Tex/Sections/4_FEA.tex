@@ -42,7 +42,7 @@ Figure~\ref{fig:4_R1_p} shows uniform external pressure of $1376\ psi$ or $9.484
 
 \subsection{Results}
 
-After a mesh refinement, total deformation results are shown below in Figure~\ref{fig:4_R1_def}. The maximum deformation seen on the top surface of the drum in the $y$ direction with respect to $z$ are also shown in Figure~\ref{fig:4_R1_topdef}.
+After a mesh refinement, total deformation results are shown below in Figure~\ref{fig:4_R1_def}. The maximum deformation seen on the top surface of the drum in the $y$ direction with respect to $z$ are also shown in Figure~\ref{fig:4_R1_topdef}. Note results shown for $t=0.50\ in$
 
 \begin{figure}[H]
 	\centering
@@ -86,7 +86,7 @@ From the above plot, it appears as though a thickness of $t \approx 1.25 \ in$ w
 
 \section{Run 2: Capstan Pressure}
 
-The second run continues on the results determined from Run 1. The results presented in this foregoing section will focus on a barrel thickness of $0.50\ in$ 
+The second run continues on the results determined from Run 1. The results presented in this foregoing section will focus on a barrel thickness of $0.50\ in$.
 
 \subsection{Boundary Conditions}
 
@@ -100,7 +100,7 @@ Figure~\ref{fig:4_R2_tens} shows the location of applied tether tension of $11,5
 	\label{fig:4_R2_tens}
 \end{figure}
 
-Figure~\ref{fig:4_R2_pvar} shows the variable Capstan pressure applied as per results from \ref{subsection:alt} (see Figure~\ref{fig:4_R2_pvarplot} for $p(z)$ ). Note again that the boundary conditions are for $\mu=0.05$ , which is essentially the worst case scenario.
+Figure~\ref{fig:4_R2_pvar} shows the variable Capstan pressure applied as per results from \ref{subsection:alt} (see Figure~\ref{fig:4_R2_pvarplot} for $p(z)$ ). Note again that the boundary conditions are for $\mu=0.05$ , which is essentially the worst case scenario. Note results shown for $t=0.50\ in$
 
 \begin{figure}[H]
 	\centering
@@ -163,6 +163,8 @@ From the above plot, it appears as though a thickness of $t \geq 0.50\ in$ would
 
 \section{Run 3: Eigenvalue Buckling}
 
+Very unconservative \\
+
 Buckling mode shapes do not represent actual displacements but help you to visualize how a part or an assembly deforms when buckling. \cite{ANSYS}. \\
 
 Load factors $\lambda$ highly dependent on pre-stressed state, either linear on non linear.\\
@@ -186,7 +188,7 @@ For this reason, a unit load pressure of $p = 1\ psi$ will be applied. The bound
 
 \subsection{Boundary Conditions}
 
-Boundary conditions of coupled static structural analysis. Ends simply supported (Equation~\ref{eq:2_endBC}) and a unit pressure load applied to external surface (see Figure~\ref{fig:4_R3_BC}).
+Boundary conditions of coupled static structural analysis. Ends simply supported (Equation~\ref{eq:2_endBC}) and a unit pressure load applied to external surface (see Figure~\ref{fig:4_R3_BC}). Furthermore, for comparison of critical buckling calculations in Section~\ref{section:3_buckle}, a thickness of $t=0.418\ in$ was modeled. 
 
 \begin{figure}[H]
 	\centering
@@ -197,7 +199,7 @@ Boundary conditions of coupled static structural analysis. Ends simply supported
 
 \subsection{Results}
 
-Unfortnately, ANSYS is unable to perform a mesh refinement study for a coupled static structural and eigenvalue buckling analysis hence, a much finer initial mesh than that shown in Figure~\ref{fig:4_mesh} was used to assure reasonably accurate results on the first iteration.\\
+Unfortunately, ANSYS is unable to perform a mesh refinement study for a coupled static structural and eigenvalue buckling analysis hence, a much finer initial mesh than that shown in Figure~\ref{fig:4_mesh} was used to assure reasonably accurate results on the first iteration.\\
 
 Results are shown below for the first eigenvalue or mode $\psi = 1$ below in Figure~\ref{fig:4_R3_mode1}.
 \begin{figure}[H]
