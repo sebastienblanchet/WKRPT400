@@ -1,11 +1,31 @@
 
-
-Key discussion points:\\
-
+\section{Numerical Error}
 Numerical error\\
 
+
+\section{Considerations}
 Assumptions of thin walled\\
 
 Material imperfections resulting in higher stress concentrations\\
 
 Linear buckling\\
+imperfections and nonlinearities prevent most real-world structures from achieving their theoretical elastic buckling strength\\
+
+
+\section{Manufacturing}
+
+It must be accounted for that this will have to manufactured with standard available ASME pipe. See Table~\ref{table:5_pipe} for standard pipe available as per \cite{PIPEINFO}. Note that all dimensions are shown in USC as per standard pipe.
+
+\begin{table}[ht]
+	\caption{Available wall thicknesses for standard pipe.}
+	\centering
+	\begin{tabular}{ccc}
+    \textbf{Thickness} & \textbf{I.D} & \textbf{Pipe Schedule} \\
+    \midrule
+    0.312 & 27.376 & 10 \\
+    0.375 & 27.250 & STD \\
+    0.500 & 27.000 & 20 \\
+    0.625 & 26.750 & 30 \\
+    \end{tabular}%
+	\label{table:5_pipe}
+\end{table}

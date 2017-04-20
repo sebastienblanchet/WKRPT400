@@ -24,12 +24,12 @@ To assure numerically accurate results, a mesh refinement study will be performe
 
 
 
-\section{Run 1}
+\section{Run 1: Uniform Pressure}
 
 The initial FEA run will have a simplistic case. 
 
 \subsection{Boundary Conditions}
-
+\label{subsection:R1BC}
 Both of the drum's ends are fixed (i.e. BCs as per \ref{eq:2_fixedBC}).\\
 
 Figure~\ref{fig:4_R1_p} shows uniform external pressure of $1376\ psi$ or $9.484\  MPa$ as per \ref{eq:2_preq}.
@@ -84,7 +84,7 @@ A parametric study was ran with $0.50 \leq t \leq 1.75$. This sweep results are 
 
 From the above plot, it appears as though a thickness of $t \approx 1.25 \ in$ would appear to be sufficient.
 
-\section{Run 2}
+\section{Run 2: Capstan Pressure}
 
 The second run continues on the results determined from Run 1. The results presented in this foregoing section will focus on a barrel thickness of $0.50\ in$ 
 
@@ -160,3 +160,19 @@ A parametric study was ran with $0.15 \leq t \leq 1.05$ and $0.05 \leq \mu \leq 
 
 From the above plot, it appears as though a thickness of $t \geq 0.50\ in$ would appear to be sufficient.
 
+
+\section{Run 3: Eigenvalue Buckling}
+
+Buckling mode shapes do not represent actual displacements but help you to visualize how a part or an assembly deforms when buckling. \cite{ANSYS}. \\
+
+Load factors $\lambda$ highly dependent on pre-stressed state, either linear on non linear.\\
+
+In this case linear buckling is utilized for its simplicity.
+
+ANSYS takes in the pre stressed state and returns load factors $lambda$ which are defined as follows in Equation~\ref{eq:4_loadfactor}.
+\begin{equation}
+	\label{eq:4_loadfactor}
+	p_{buckle} = \lambda p_{applied}
+\end{equation}
+
+For this reason, a unit load pressure of $p = 1\ psi$ will be applied. The boundary conditions will follow those of Section~\ref{subsection:R1BC}.
