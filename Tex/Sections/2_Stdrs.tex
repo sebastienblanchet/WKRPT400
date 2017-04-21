@@ -2,7 +2,7 @@
 
 Before any complex analysis is completed, initial existing codes and standards will be investigated.\\
 
-The most important parameter in question is the outer diameter $D_o$. For this entire report, it will be assumed that this value is constant at $D_o = 711\Unit{mm} = 28\Unit{in}$. Based on this fixed parameter, the following relevant values which will be used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \cite{ASMEbvpcIID} for a SA-106 Grade B steel (most commonly used in seamless pipe). Units shown in both metric (SI) and United States customary (USC).\\
+The most important parameter in question is the outer diameter $D$. For this entire report, it will be assumed that this value is constant at $D = 711\Unit{mm} = 28\Unit{in}$. Based on this fixed parameter, the following relevant values which will be used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \cite{ASMEbvpcIID} for a SA-106 Grade B steel (most commonly used in seamless pipe). Units shown in both metric (SI) and United States customary (USC).\\
 
 \begin{table}[ht]
 	\caption{Key drum parameters and material properties.}
@@ -11,14 +11,14 @@ The most important parameter in question is the outer diameter $D_o$. For this e
 		&       & \multicolumn{2}{c}{\textbf{\textit{SI}}} & \multicolumn{2}{c}{\textbf{\textit{UCS}}} \\
 		\textbf{Description} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} & \textbf{Value}  & \textbf{Units} \\
 		\midrule
-		Outer diameter       & $D_o$           & $711.2$        & $\Unit{mm}$           & $28$            & $\Unit{in}$           \\
+		Outer diameter       & $D$           & $711.2$        & $\Unit{mm}$           & $28$            & $\Unit{in}$           \\
 		Tether diameter      & $d$       	   & $15.2$         & $\Unit{mm}$           & $0.598$         & $\Unit{in}$           \\
 		Drum length          & $L$             & $1,244.6$      & $\Unit{mm}$           & $49$            & $\Unit{in}$           \\
 		Tether tension       & $T$             & $51,264$       & $\Unit{N}$            & $11,525$        & $\Unit{lbf}$          \\
-		Yield strength       & $S_y$           & $241.3$        & $\Unit{MPa}$          & $35,000$        & $\Unit{psi}$          \\
+		Yield strength       & $\sigma_y$           & $241.3$        & $\Unit{MPa}$          & $35,000$        & $\Unit{psi}$          \\
 		Young's modulus      & $E$             & $200$          & $\Unit{GPa}$          & $2.9\cdot 10^7$ & $\Unit{psi}$          \\
 		Poisson's ratio      & $\nu$           & $0.3$          & $-$            		& $-$             & $-$           		  \\
-		Safety factor        & $SF$            & $1.5$          & $-$            		& $-$             & $-$            	      \\
+		Safety factor        & $n$            & $1.5$          & $-$            		& $-$             & $-$            	      \\
 	\end{tabular}%
 	\label{table:prelim_params}
 \end{table}
@@ -55,7 +55,12 @@ After much research into this problem, the solution reveals itself into the deri
 	T_2 = T_1 e^{\mu\theta}
 \end{equation}
 
-Where $T_1$ is the hold force and $T_2$ is the pull force (i.e. $T_2 \geq T_1$). \\
+Where $T_1$ is the hold force and $T_2$ is the pull force (i.e. $T_2 \geq T_1$). This equation can also be rewritten as follows \ref{eq:Capstan_mod}. 
+
+\begin{equation}
+	\label{eq:Capstan_mod}
+	T(\theta) = T_h e^{-\mu\theta}
+\end{equation}
 
 From this equation, the free body diagram that leads to this solution is presented below in Figure~\ref{fig:Capstan}~\cite{capstanman}. 
 
@@ -120,6 +125,7 @@ Using the values from Table~\ref{table:prelim_params} and \ref{eq:2_preq}, $p=13
 %------------------------------------------------------------------------------------------
 \subsection{Alternate Solution}
 \label{subsection:alt}
+
 By letting $T = T(\theta)= T_{hi} e^{-\mu \varphi}$, Equation~\ref{eq:capstan_integral} becomes \ref{eq:capstan_integral2} hence yielding \ref{eq:CapstanNorm2} (recall $\int e^{ax} dx = \frac{1}{a} e^{ax} + C$).
 
 \begin{equation}
@@ -170,14 +176,14 @@ The following list of steps were carried out as per \cite{ASMEbvpcVII1}.
 
 \begin{enumerate}
 	\item Assume initial thickness value of $t$
-	\item Calculate $D_o/t$ ratio and assure $D_o/t \geq 10$.
-	\item Calculate $L/D_o$ ratio, if $L/D_o \geq 50 \Rightarrow 50$ or  $L/D_o \leq 0.05 \Rightarrow 0.05$
+	\item Calculate $D/t$ ratio and assure $D/t \geq 10$.
+	\item Calculate $L/D$ ratio, if $L/D \geq 50 \Rightarrow 50$ or  $L/D \leq 0.05 \Rightarrow 0.05$
 	\item With above ratios, go to Figure G of \cite{ASMEbvpcIID} and get value for $A$
 	\item With $A$ from above go to chart CS-2 $\because S_y \geq 30 \ ksi$ to get $B$
 	\item Use Equation \ref{eq:2_VII1_pa} with $B$ to calculate allowable pressure $p_a$:
 	      \begin{equation}
 	      	\label{eq:2_VII1_pa}
-	      	p_a = \frac{4B}{3 \left(D_o/t\right)}
+	      	p_a = \frac{4B}{3 \left(D/t\right)}
 	      \end{equation}
 	\item Check that $p_a \geq p_{req}$ as calculated from Equation~\ref{eq:2_preq}, if not, increase $t$ and go to Step 2\\
 	      	
@@ -202,14 +208,14 @@ As per subsection 4.4.5 of \cite{ASMEbvpcVII2}, the following procedure was used
 	\item Calculate elastic buckling stress $F_{he}$ with Equation~\ref{eq:2_VII2_4419}
 	      \begin{equation}
 	      	\label{eq:2_VII2_4419}
-	      	F_{he} = \frac{1.6\ C_h E_y t}{D_o}
+	      	F_{he} = \frac{1.6\ C_h E_y t}{D}
 	      \end{equation}
 	\item Based on $S_y$ and $F_{he}$, calculate the predicted buckling stress $F_{ic}$ \ref{eq:2_VII2_4419}
 	\item With subsection 4.4.2 of \cite{ASMEbvpcVII2}, compute the design factor $FS$
 	\item Calculate allowable pressure $p_a$ with Equation~\ref{eq:2_VII2_4428}
 	      \begin{equation}
 	      	\label{eq:2_VII2_4428}
-	      	p_a = 2 F_{ha} \left(\frac{t}{D_o}\right)
+	      	p_a = 2 F_{ha} \left(\frac{t}{D}\right)
 	      \end{equation}
 	\item Check if $p_a \geq p_{req}$ as calculated from \ref{eq:2_preq}, if not, increase $t$ and go to Step 2 \\
 	      	
@@ -281,7 +287,14 @@ In this equation, $C$ is a factor based on the number of wraps on the drum,. for
 	\item The calculated $\sigma_h$  if superseded with larger tested value\\
 \end{enumerate}
 
-Rearranging Equation~\ref{eq:2_DNV_hoop} for $t$, setting $\sigma_h = S_{allow}=S_y/SF$ (see Table~\ref{table:prelim_params}) and solving accordingly will yield a valid value of $t = 36.6\ mm = 1.440 \ in$. 
+The allowable stress limit will be presented as follows in Equation~\ref{eq:2_sigall}.
+
+\begin{equation}
+	\label{eq:2_sigall}
+	\sigma_a = \frac{\sigma_y}{n}
+\end{equation}
+
+This value will be held constant throughout the remainder of this report. By subsistituing the values for yield strength and safety factor from Table~\ref{table:prelim_params}, $\sigma_a= 23,333 \Unit{psi}= 160.9 \Unit{MPa}$. Rearranging Equation~\ref{eq:2_DNV_hoop} for $t$, setting $\sigma_h$ to the allowable stress limit,  solving accordingly will yield a valid value of $t = 36.6\ mm = 1.440 \ in$. 
 
 %----------------------------------------------------------------------------------------------------------------------
 \section{TWPV Hoop Stress}
@@ -293,7 +306,7 @@ Using the well known hoop stress equation \cite{roarks} for a TWPV, Equation~\re
 	\sigma_h = \frac{pR}{t}
 \end{equation}
 
-Again, rearranging for $t$ , $\sigma_h = S_{allow}=S_y/SF$ and using the pressure $p$ calculated in \ref{eq:2_preq}, solving accordingly will yield a valid value of $t = 21.0\ mm = 0.825 \ in$. Note that $\because R/t = 17 \geq 10$, the assumption of a TWPV is valid.
+Again, rearranging for $t$ , $\sigma_h$ as per value calculated in \ref{eq:2_sigall} and using the pressure $p$ calculated in \ref{eq:2_preq}, solving accordingly will yield a valid value of $t = 21.0\ mm = 0.825 \ in$. Note that $\because R/t = 17 \geq 10$, the assumption of a TWPV is valid.
 
 %%----------------------------------------------------------------------------------------------------------------------
 \section{Comparison}

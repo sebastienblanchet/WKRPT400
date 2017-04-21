@@ -2,7 +2,7 @@ In this section, the results from previous sections will be compared with those 
 
 \section{Model}
 
-Using the $D_o , L$ parameters from Table~\ref{table:prelim_params}, the drum geometry was modeled as a thin surface to save computational cost and time. The geometry and coordinate system adopted in this preceding analysis are shown below in Figure~\ref{fig:4_geom}.
+Using the $D, L$ parameters from Table~\ref{table:prelim_params}, the drum geometry was modeled as a thin surface to save computational cost and time. The geometry and coordinate system adopted in this preceding analysis are shown below in Figure~\ref{fig:4_geom}.
 
 \begin{figure}[H]
 	\centering
@@ -32,7 +32,7 @@ The initial FEA run will have a simplistic case.
 \label{subsection:R1BC}
 Both of the drum's ends are fixed (i.e. BCs as per \ref{eq:2_fixedBC}).\\
 
-Figure~\ref{fig:4_R1_p} shows uniform external pressure of $1376\ psi$ or $9.484\  MPa$ as per \ref{eq:2_preq}.
+Figure~\ref{fig:4_R1_p} shows uniform external pressure of $1376 \Unit{psi}$ or $9.484 \Unit{MPa}$ as per \ref{eq:2_preq}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R1_p}
@@ -42,7 +42,7 @@ Figure~\ref{fig:4_R1_p} shows uniform external pressure of $1376\ psi$ or $9.484
 
 \subsection{Results}
 
-After a mesh refinement, total deformation results are shown below in Figure~\ref{fig:4_R1_def}. The maximum deformation seen on the top surface of the drum in the $y$ direction with respect to $z$ are also shown in Figure~\ref{fig:4_R1_topdef}. Note results shown for $t=0.50\ in$
+After a mesh refinement, total deformation results are shown below in Figure~\ref{fig:4_R1_def}. The maximum deformation seen on the top surface of the drum in the $y$ direction with respect to $z$ are also shown in Figure~\ref{fig:4_R1_topdef}. Note results shown for $t=0.50\Unit{in}$
 
 \begin{figure}[H]
 	\centering
@@ -73,7 +73,7 @@ Comments, bad stress.
 
 \subsection{Parametric Study}
 
-A parametric study was ran with $0.50 \leq t \leq 1.75$. This sweep results are shown below in Figure~\ref{fig:4_R1_sweep} \cite{EXCEL}. The allowable stress limit of $\sigma_{allow}=\sigma_{y}/SF = 23,333\ psi$ is also shown for reference.
+A parametric study was ran with $t \in [0.50, 1.75]$. This sweep results are shown below in Figure~\ref{fig:4_R1_sweep} \cite{EXCEL}. The allowable stress limit of Equation~\ref{eq:2_sigall} of $23,333 \Unit{psi}$ is also shown for reference.
 
 \begin{figure}[H]
 	\centering
@@ -149,7 +149,7 @@ Comments, bad stress.
 
 \subsection{Parametric Study}
 
-A parametric study was ran with $0.15 \leq t \leq 1.05$ and $0.05 \leq \mu \leq 0.50$. This sweep results are shown below in Figure~\ref{fig:4_R2_sweep} \cite{EXCEL}. The allowable stress limit of $\sigma_{allow}=\sigma_{y}/SF = 23,333\ psi$ is also shown for reference.
+A parametric study was ran with $0.15 \leq t \leq 1.05$ and $0.05 \leq \mu \leq 0.50$. This sweep results are shown below in Figure~\ref{fig:4_R2_sweep} \cite{EXCEL}.  The allowable stress limit of Equation~\ref{eq:2_sigall} of $23,333 \Unit{psi}$ is also shown for reference.
 
 \begin{figure}[H]
 	\centering
@@ -184,7 +184,7 @@ ANSYS takes in the pre-stressed state and returns load factors $\lambda$ which a
 	p' = \lambda \ p_0
 \end{equation}
 
-For this reason, a unit load pressure of $p = 1\ psi$ will be applied. The boundary conditions will follow those of Section~\ref{subsection:R1BC}.
+For this reason, a unit load pressure of $p_0 = 1\ psi$ will be applied. The boundary conditions will follow those of Section~\ref{subsection:R1BC}.
 
 \subsection{Boundary Conditions}
 
@@ -209,7 +209,7 @@ Results are shown below for the first eigenvalue or mode $\psi = 1$ below in Fig
 	\label{fig:4_R3_mode1}
 \end{figure}
 
-From above, it can be seen that a load factor of $\lambda = 1668$ was calculated for $t= 0.418\ in$. This value is within about $21.2\%$ of the expected analytical results.
+From above, it can be seen that a load factor of $\lambda = 1668$ was calculated for $t= 0.418\Unit in$. This value is within about $21.2\%$ of the expected analytical results.
 
 \subsection{Parametric Study}
 
@@ -222,7 +222,11 @@ For $t\in [0.05, 1.05]$, a parametric study was performed. Results for the first
 	\label{fig:4_R3_modesweep}
 \end{figure}
 
-
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{4_R3_comp}
+	\caption{Comparison of analytical and FEA results.}
+	\label{fig:4_R3_comp}
+\end{figure}
 
 
