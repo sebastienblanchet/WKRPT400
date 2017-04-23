@@ -230,3 +230,61 @@ For $t\in [0.05, 1.05]$, a parametric study was performed. Results for the first
 \end{figure}
 
 
+The main conclusion which can be drawn for the above results confirms those from Section~\ref{section:3_buckle} that buckling will not be the primary failure mode due to the smaller thicknesses required to attain a critical pressure of $p'$ as calculated in Equation~\ref{eq:2_preq}.
+
+\section{Run 4: Flanges}
+\label{section:4_R4}
+\subsection{Model}
+
+In hopes of finding a reasonable estimate for sizing the drum assembly's flanges, a final FEA run is completed. Figure~\ref{fig:4_R4_mesh} below shows the mesh for the modeled assembly. Note that the flanges are also modeled as thin surfaces. Drum barrel has thickness of 0.625 in which will be held constant in this section.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R4_mesh}
+	\caption{Drum assembly mesh.}
+	\label{fig:4_R4_mesh}
+\end{figure}
+
+\subsection{Boundary Conditions}
+
+Figure~\ref{fig:4_R4_BC} shows uniform external pressure of $1376 \Unit{psi}$ and fixed circular region on flange face of 5 in.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R4_BC}
+	\caption{Uniform pressure and fixed flange region.}
+	\label{fig:4_R4_BC}
+\end{figure}
+
+
+\subsection{Results}
+
+Figure~\ref{fig:4_R4_res2} Figure~\ref{fig:4_R4_res1}. Note results shown for flanges of thickness 0.125 in.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R4_res2}
+	\caption{Drum assembly stress results.}
+	\label{fig:4_R4_res2}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R4_res1}
+	\caption{Flange stress results for $t=0.125 \Unit{in}$.}
+	\label{fig:4_R4_res1}
+\end{figure}
+
+Comments, lots of deformation.\\
+
+\subsection{Parametric Study}
+
+A parametric study was ran with $t \in [0.0625, 1.00]$. This sweep results are shown below in Figure~\ref{fig:4_R4_sweep} \cite{EXCEL}. The allowable stress limit of Equation~\ref{eq:2_sigall} of $23,333 \Unit{psi}$ is also shown for reference.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{4_R4_sweep}
+	\caption{Results of parametric study for FEA Run 4.}
+	\label{fig:4_R4_sweep}
+\end{figure}
+
+From the above plot, it appears as though a thickness of $t \approx 1.25 \ in$ would appear to be sufficient.
+
+
