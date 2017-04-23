@@ -1,7 +1,31 @@
 \section{Result Summary}
 
+Based on all findings from this report, a tabular summary is shown below in Table~\ref{table:5_sum}.
 
-From this, a $t= X\ in= X\ mm$ should be selected.
+\begin{table}[H]
+  \centering
+  \caption{Summary of all results from report.}
+    \begin{tabular}{clccll}
+          &       & \multicolumn{2}{c}{\textbf{Results}} &       &  \\
+    \textbf{Section} & \textbf{Method} & \textbf{mm} & \textbf{in} & \textbf{BC} & \textbf{Pressure } \\
+    \midrule
+          \ref{section:2_VIII1}& ASME BPVC VIII-1 & $43.2$ & $1.680$ & Fixed & Uniform \\
+          \ref{section:2_VIII2}& ASME BPVC VIII-2 & $23.4$ & $0.920$ & Fixed & Uniform \\
+          \ref{section:2_EN}& EN 13445-3 & $32.8$ & $1.290$ & Fixed & Uniform \\
+          \ref{section:2_DNV}& DNV-OS-D101 & $36.6$ & $1.440$ & Fixed & Uniform \\
+          \ref{section:2_TWPV}& TWPV Hoop Stress & $21.0$ & $0.825$ & Simply supported & Uniform \\
+          \ref{section:3_roark}& Roarks & $42.8$ & $1.686$ & Fixed & Uniform \\
+          \ref{section:3_buckle}& Roarks Buckling & $10.6$ & $0.418$ & Simply supported & Uniform \\
+          \ref{section:4_R1}& FEA Run 1A & $30.5$ & $1.200$ & Fixed & Uniform \\
+          \ref{section:4_R1}& FEA Run 1B & $22.2$ & $0.875$ & Simply supported & Uniform \\
+          \ref{section:4_R2}& FEA Run 2 & $14.0$ & $0.550$ & Simply supported & Capstan \\
+          \ref{section:4_R3}& FEA Run 3 & $10.2$ & $0.400$ & Simply supported & Uniform \\
+    \end{tabular}
+  \label{table:5_sum}
+\end{table}%
+
+
+From this, a $t= X\Unit{in}= X\Unit{mm}$ should be selected.
 
 \section{Manufacturing}
 
@@ -11,7 +35,7 @@ It must be accounted for that this will have to manufactured with standard avail
 	\caption[Available wall thicknesses for standard pipe.]{Available wall thicknesses for standard pipe.\protect\cite{PIPEINFO}}
 	\centering
 	\begin{tabular}{ccc}
-    \textbf{Thickness} & \textbf{I.D} & \textbf{Pipe Schedule} \\
+    \textbf{Thickness} & \textbf{ID} & \textbf{Pipe Schedule} \\
     \midrule
     0.312 & 27.376 & 10 \\
     0.375 & 27.250 & STD \\

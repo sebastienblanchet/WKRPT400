@@ -171,6 +171,7 @@ It is clear from these plots that as the contact angle increases, the stored nor
 
 The ASME codes listed in the beginning of this chapter will be extensively studied. Note that for all iteration procedures in this report, an initial thickness of $t_0 = 12.7\ mm=0.500\ in$ with a step of $t_0 = 0.254\ mm=0.01\ in$. Python scripts utilized for implementing solving algorithms can be found in Appendix~A developed with \cite{PYTHON}. 
 \subsection{Section VIII: Division 1}
+\label{section:2_VIII1}
 As per UG-28 of \cite{ASMEbvpcVII1}, the following procedure was used to calculate the required thickness.
 The following list of steps were carried out as per \cite{ASMEbvpcVII1}.
 
@@ -201,6 +202,7 @@ From this plot, the script converged at thickness of $t = 43.7\ mm = 1.68\ in$ a
 
 
 \subsection{Section VIII: Division 2}
+\label{section:2_VIII2}
 As per subsection 4.4.5 of \cite{ASMEbvpcVII2}, the following procedure was used to calculate the required thickness. Note that only the main formulas will be presented. For intermediate steps, see  the Python script in Appendix~\ref{appendix:a2}. The following list of steps were carried out as per \cite{ASMEbvpcVII2}.
 
 \begin{enumerate}
@@ -236,6 +238,7 @@ Convergence was reached at a thickness of $t = 23.4\ mm = 0.920\ in$ when $p_a\g
 %%----------------------------------------------------------------------------------------------------------------------
 \section{European Standard}
 \subsection{EN-13445-3}
+\label{section:2_EN}
 As per subsection 8.5.2.2 of \cite{EN134453}, the following procedure was used to calculate the required thickness $e_a$. Note that the script in Appendix~~\ref{appendix:a3} utilizes SI units as per \cite{EN134453}.
 
 \begin{enumerate}
@@ -272,6 +275,7 @@ The script converged at thickness of $e_a = 32.8\ mm = 1.290\ in$ and an allowab
 \section{DNV}
 
 \subsection{DNV-OS-D101}
+\label{section:2_DNV}
 
 As per \cite{DNVOSD101}, in subsection F215, Equation~\ref{eq:2_DNV_hoop} is presented as follows.
 
@@ -298,7 +302,7 @@ This value will be held constant throughout the remainder of this report. By sub
 
 %----------------------------------------------------------------------------------------------------------------------
 \section{TWPV Hoop Stress}
-
+\label{section:2_TWPV}
 Using the well known hoop stress equation \cite{roarks} for a TWPV, Equation~\ref{eq:2_hoop} is presented as follows.
 
 \begin{equation}

@@ -25,7 +25,7 @@ To assure numerically accurate results, a mesh refinement study will be performe
 
 
 \section{Run 1: Uniform Pressure}
-
+\label{section:4_R1}
 The initial FEA run will have a simplistic case. 
 
 \subsection{Boundary Conditions}
@@ -85,7 +85,7 @@ A parametric study was ran with $t \in [0.50, 1.75]$. This sweep results are sho
 From the above plot, it appears as though a thickness of $t \approx 1.25 \ in$ would appear to be sufficient.
 
 \section{Run 2: Capstan Pressure}
-
+\label{section:4_R2}
 The second run continues on the results determined from Run 1. The results presented in this foregoing section will focus on a barrel thickness of $0.50\ in$.
 
 \subsection{Boundary Conditions}
@@ -162,7 +162,7 @@ From the above plot, it appears as though a thickness of $t \geq 0.50\ in$ would
 
 
 \section{Run 3: Eigenvalue Buckling}
-
+\label{section:4_R3}
 Very unconservative \\
 
 Buckling mode shapes do not represent actual displacements but help you to visualize how a part or an assembly deforms when buckling. \cite{ANSYS}. \\
@@ -188,7 +188,7 @@ For this reason, a unit load pressure of $p_0 = 1\ psi$ will be applied. The bou
 
 \subsection{Boundary Conditions}
 
-Boundary conditions of coupled static structural analysis. Ends simply supported (Equation~\ref{eq:2_endBC}) and a unit pressure load applied to external surface (see Figure~\ref{fig:4_R3_BC}). Furthermore, for comparison of critical buckling calculations in Section~\ref{section:3_buckle}, a thickness of $t=0.418\ in$ was modeled. 
+Boundary conditions of coupled static structural analysis. Ends simply supported (Equation~\ref{eq:2_endBC}) and a unit pressure load applied to external surface (see Figure~\ref{fig:4_R3_BC}). Furthermore, for comparison of critical buckling calculations in Section~\ref{section:3_buckle}, a thickness of $t=0.418\Unit{in}$ was modeled. 
 
 \begin{figure}[H]
 	\centering
@@ -209,11 +209,11 @@ Results are shown below for the first eigenvalue or mode $\psi = 1$ below in Fig
 	\label{fig:4_R3_mode1}
 \end{figure}
 
-From above, it can be seen that a load factor of $\lambda = 1668$ was calculated for $t= 0.418\Unit in$. This value is within about $21.2\%$ of the expected analytical results.
+From above, it can be seen that a load factor of $\lambda = 1668$ was calculated for $t= 0.418\Unit{in}$. This value is within about $21.2\%$ of the expected analytical results.
 
 \subsection{Parametric Study}
 
-For $t\in [0.05, 1.05]$, a parametric study was performed. Results for the first, fifth and tenth mode (i.e. $\psi = 1, 5, 10$) are plotted against the thickness range of interest in Figure~\ref{fig:4_R3_modesweep} below, as per \cite{PYTHON} script in Appendix~\ref{appendix:a4}. The required critical pressure of $p =1376\ psi$ is also shown for reference.
+For $t\in [0.05, 1.05]$, a parametric study was performed. Results for the first, fifth and tenth mode (i.e. $\psi = 1, 5, 10$) are plotted against the thickness range of interest in Figure~\ref{fig:4_R3_modesweep} below, as per \cite{PYTHON} script in Appendix~\ref{appendix:a4}. The required critical pressure of $p =1376\Unit{psi}$ is also shown for reference.
 
 \begin{figure}[H]
 	\centering
