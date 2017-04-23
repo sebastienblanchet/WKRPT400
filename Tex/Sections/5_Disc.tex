@@ -1,10 +1,10 @@
 \section{Result Summary}
 
-Based on all findings from this report, a tabular summary is shown below in Table~\ref{table:5_sum}.
+Based on all findings from this report, a summary is shown below in Table~\ref{table:5_sum}.
 
 \begin{table}[H]
   \centering
-  \caption{Tabulated summary report results.}
+  \caption{Tabulated summary of all report results.}
     \begin{tabular}{clccll}
           &       & \multicolumn{2}{c}{\textbf{Results}} &       &  \\
     \textbf{Section} & \textbf{Method} & \textbf{mm} & \textbf{in} & \textbf{BC} & \textbf{Pressure } \\
@@ -24,9 +24,9 @@ Based on all findings from this report, a tabular summary is shown below in Tabl
   \label{table:5_sum}
 \end{table}%
 
-It is now required to discuss the feasbility of all above results. The most realistic scenario likely represents that from FEA Run 2, with the simply supported end drum with the Capstan pressure profile.\\
+It is now required to discuss the feasibility of all above results. The most realistic scenario likely represents that from FEA Run 2, with the simply supported end drum with the Capstan pressure profile.\\
 
-From this, it is realistic to say that a thickness of $t\geq 0.55 \Unit{in}/14.0\Unit{mm}$ should be selected. 
+From this, it is realistic to say that a thickness of $t\geq 0.55\ \Unit{in}/ \ 14.0\Unit{mm}$ should be selected. 
 
 \section{Manufacturing}
 
@@ -46,17 +46,14 @@ It must be accounted for that this will have to manufactured with standard avail
 	\label{table:5_pipe}
 \end{table}
 
-It makes sense to use a Schedule 30, 28 in OD pipe with a wall thickness of 5/8 in.
+From above, a Schedule 30, 28 in OD pipe with a wall thickness of 0.625 in must be selected.
 
 \section{Numerical Error}
-Numerical error\\
+As a result of running a large range of \cite{ANSYS} simulations (i.e. 112 total), the error margins used for numerical convergence were set to be relatively high (i.e. 20\%). This being said, there is likely to be a significant error related to the FEA results which must be understood.
 
 
 \section{Other Considerations}
-Assumptions of thin walled\\
+Asides from erroneous values attained from software and calculation, there are some further factors to consider. For instance, most analytical methods used in Sections 2 and 3 assume very thin cylindrical shells. A key part of this assumption lies in the fact that bending stresses do not develop internally \cite{timoshenko1959theory}. \\
 
-Material imperfections resulting in higher stress concentrations\\
-
-Linear buckling\\
-imperfections and nonlinearities prevent most real-world structures from achieving their theoretical elastic buckling strength\\
+Also, material imperfections resulting in higher stress concentrations. This phenomenon highly affects the results determined from a buckling analysis. It is these imperfections that cause non-linearities prevent most real-world structures from achieving their theoretical elastic buckling strength \cite{ANSYS}.
 

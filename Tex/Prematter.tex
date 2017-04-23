@@ -47,6 +47,7 @@
 \nomenclatureitem{DNV}{Det Norske Veritas}
 \nomenclatureitem{FEA}{Finite Element Analysis}
 \nomenclatureitem{ID}{Inner Diameter}
+\nomenclatureitem{OD}{Outer Diameter}
 \nomenclatureitem{ODE}{Ordinary Differential Equation}
 \nomenclatureitem{SF}{Safety Factor}
 \nomenclatureitem{SI}{International System of Units}
@@ -58,16 +59,12 @@
 %%
 \chapter{Summary}
 
-The objective of this report is (INTRODUCTION)\\
+As a result of Altaeros' decision to manufacture the grounded tether management's winch system in house, a complete structural analysis is required to be completed. First, the derivation of the Capstan equation was explored to understand how tether tension of $T=11,525 \Unit{lbs} = 51,264\Unit{N}$ translates to external pressure. From this, a pressure of $p=1376\Unit{psi}= 9.486\Unit{MPa}$ was calculated. From this, existing codes and standards were studied to find an initial benchmark. Upon studying ASME's BPVC, EN, DNV and TWPV a range of thicknesses $t\in [0.825, 1.680]$ (inch) were calculated. \\
 
-Preliminary analysis results from codes (Section 2)\\ 
+The governing ODE for thin shell theory was presented and from this, an in depth analysis was completed. Assuming a fixed end cylinder loaded with uniform pressure $p$ returned a thickness of 1.686 in / 42.8 mm matching ASME BPVC VIII-1 calculations. Further buckling analysis was completed to explore other failure modes. Setting the critical buckling pressure to $p'=p$ yielded a critical thickness  of 0.418 in / 10.6 mm, confirming that buckling is not the primary mode of failure.\\
 
-Analytical results (Section 3)\\
+A series of ANSYS FEA runs were completed to understand the equivalent stresses. Run 1 explored uniform pressure $p$ with both fixed and simply supported ends yielding required thicknesses of 1.200 and 0.875 in respectively. Run 2 focused on modeling the exponential decay as per Capstan equation. with simply supported ends yielding a $t=0.550\Unit{in}$. Run 3 focused on a linear eigenvalue buckling analysis to confirm analytical findings. A critical thickness of approximately 0.400 in, converging with preliminary calculations. Run 4 served as a preliminary benchmark for flange design. It was determined that the optimal flange thickness is 0.250 in.\\
 
-FEA Results (Section 4).Run 1, 2, 3 4?\\	
-
-Discussion points (Section 5)\\
-
-Conclusions and recommendations (Sections 6-7)
+In short, based on a tabular summary of all report findings, it was concluded that the winch drum should be manufactured from a Schedule 30 ($t=$ 0.625 in), 28 in OD pipe. Numerical error, material imperfections and non linear buckling were discussed.
 
 

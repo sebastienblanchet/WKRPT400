@@ -1,28 +1,7 @@
-%In conclusion, ODI must improve the DBM’s existing MBA. The 100: 1 reduction Mijno MNT-115-100
-%gearbox (GB) and Allen Bradley (AB) N-4220-2-H00AA MBS are highly outdated.\\
-%
-%Multiple  high by 2. thick steel rule samples were bent 45 and from this current, speed and
-%time data were collected. These data were converted to torques. Upon calculation of safety factors (SF)
-%with maximum calculated nominal 280and acceleration 345.2  torques both the MBS and GB
-%failed SF the 1.25 SF requirement.\\
-%
-%An ODI supplier for PLC control systems, Brock Solutions was consulted and the new MBS was selected
-%to be an AB MPM-A1153F-MJ72AA, rated for 6. nominal, 19. acceleration torque.
-%As no GB was suggested, the selection process was left to ODI. Constraints were mechanical fit into the
-%DBM and gear ratios between 50 and 100. Existing, GB, GBC , GBM were studied for proper mechanical
-%fit. A possible solution was to keep the same  shaft size. Of twelve GBs, none passed the same SF
-%requirements.\\
-%
-%Another solution was to increase the shaft size to . The same procedure was followed and the
-%WITTENSTIEN SP-140S-MF2-70-1E1 was selected upon passing aforementioned SF requirements. This
-%70:1 reduction GB is rated for 360. and 660. nominal and acceleration torques, respectively.
-%To implement this solution, it is required to replace the GBM, bore and broach the GBC and replace the
-%socket head cap screws. The proposed design was validated.
+As a result of Altaeros' decision to manufacture the grounded tether management's winch system in house, a complete structural analysis is required to be completed. First, the derivation of the Capstan equation was explored to understand how tether tension of $T=11,525 \Unit{lbs} = 51,264\Unit{N}$ translates to external pressure. From this, a pressure of $p=1376\Unit{psi}= 9.486\Unit{MPa}$ was calculated. From this, existing codes and standards were studied to find an initial benchmark. Upon studying ASME's BPVC, EN, DNV and TWPV a range of thicknesses $t\in [0.825, 1.680]$ (inch) were calculated. \\
 
-Results from Section 2: Codes\\
+The governing ODE for thin shell theory was presented and from this, an in depth analysis was completed. Assuming a fixed end cylinder loaded with uniform pressure $p$ returned a thickness of 1.686 in / 42.8 mm matching ASME BPVC VIII-1 calculations. Further buckling analysis was completed to explore other failure modes. Setting the critical buckling pressure to $p'=p$ yielded a critical thickness  of 0.418 in / 10.6 mm, confirming that buckling is not the primary mode of failure.\\
 
-Results from analytical calculations.\\
+A series of ANSYS FEA runs were completed to understand the equivalent stresses. Run 1 explored uniform pressure $p$ with both fixed and simply supported ends yielding required thicknesses of 1.200 and 0.875 in respectively. Run 2 focused on modeling the exponential decay as per Capstan equation. with simply supported ends yielding a $t=0.550\Unit{in}$. Run 3 focused on a linear eigenvalue buckling analysis to confirm analytical findings. A critical thickness of approximately 0.400 in, converging with preliminary calculations. Run 4 served as a preliminary benchmark for flange design. It was determined that the optimal flange thickness is 0.250 in.\\
 
-Results from FEA.\\
-
-Discussion points.\\
+In short, based on a tabular summary of all report findings, it was concluded that the winch drum should be manufactured from a Schedule 30 ($t=$ 0.625 in), 28 in OD pipe. Numerical error, material imperfections and non linear buckling were discussed.
