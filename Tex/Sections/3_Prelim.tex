@@ -1,25 +1,25 @@
 \label{chapt:prelim}
 
-In this section, the methods used for the numerical approach are discussed in detail. Parameters used in this section to follow Table~\ref{table:prelim_params}.
+In this foregoing section, methods used to set up the analytical approach are discussed in detail. Please note that all parameters used in this section will follow Table~\ref{table:prelim_params}.
 
 %----------------------------------------------------------------------------------------------------------------------
-\section{Deflections \& Differential Relations}
+\section{Deflection \& Differential Relations}
 
-The first equation that is presented is the main relation between the internal bending moment on a beam and its curvature by Equation~\ref{eq:Mcurve} as per \cite{nisbett2014shigley}. 
+The first key equation to setting up the differential relations is taken from \cite{nisbett2014shigley}. Equation~\ref{eq:Mcurve} shows the relationship between internal bending moment on a beam and its radius of curvature. 
 
 \begin{equation}
 	\label{eq:Mcurve}
 	\frac{1}{\rho}=\frac{M}{EI}
 \end{equation}
 
-Where $1/\rho$ is the radius of curvature defined as Equation~\ref{eq:curve} \cite{nisbett2014shigley}.
+Where $1/\rho$ is the radius of curvature defined as Equation~\ref{eq:curve} \cite{nisbett2014shigley}. Note that for a small differential, the denominator approaches unity, leaving the final result.
 
 \begin{equation}
 	\label{eq:curve}
 	\frac{1}{\rho}=\frac{d^2y/dx^2}{\left( 1 +(dy/dx)^2 \right)^\frac{3}{2}} \approx \frac{d^2y}{dx^2}
 \end{equation}
 
-With \ref{eq:curve}, relations based on deflection $y(x)$ for slope \ref{eq:slope}, moment \ref{eq:mmt}, shearing force \ref{eq:shr} and load intensity \ref{eq:loadintens} as per \cite{nisbett2014shigley}.
+From Equation~\ref{eq:curve} deflection $y(x)$ relations for slope \ref{eq:slope}, moment \ref{eq:mmt} and shearing force \ref{eq:shr} as a consequence \cite{nisbett2014shigley}.
 
 \begin{equation}
 	\label{eq:slope}
@@ -36,16 +36,11 @@ With \ref{eq:curve}, relations based on deflection $y(x)$ for slope \ref{eq:slop
 	V(x) = \frac{dM(x)}{dx} = EI\ \frac{d^3y}{dx^3}
 \end{equation}
 
-\begin{equation}
-	\label{eq:loadintens}
-	q(x) = \frac{dV(x)}{dx} = EI\ \frac{d^4y}{dx^4}
-\end{equation}
+The above listed equations are important for understand how deflection translates to other internal loading.\\
 
-\subsection{Boundary Conditions}
+Furthermore, boundary conditions (BC) may be derived as a result. The following equations assume that the boundary in question is located at $x_0$.\\
 
-From these above equations, we may present boundary conditions (BC) as follows assuming that the boundary in question is located at $x_0$.\\
-
-\textbf{Free Ends:}\\
+\textbf{Free Ends:} no loading, allowed to deform\\
 \begin{equation}
 	\label{eq:2_freeBC}
 	\begin{aligned}
@@ -56,7 +51,7 @@ From these above equations, we may present boundary conditions (BC) as follows a
 	\end{aligned}
 \end{equation}
 
-\textbf{Simply Supported:}\\
+\textbf{Simply Supported:} free to rotate\\
 \begin{equation}
 	\label{eq:2_endBC}
 	\begin{aligned}
@@ -67,7 +62,7 @@ From these above equations, we may present boundary conditions (BC) as follows a
 	\end{aligned}
 \end{equation}
 
-\textbf{Fixed:}\\
+\textbf{Fixed:} load is carried at the ends\\
 \begin{equation}
 	\label{eq:2_fixedBC}
 	\begin{aligned}
@@ -78,29 +73,29 @@ From these above equations, we may present boundary conditions (BC) as follows a
 	\end{aligned}
 \end{equation}
 
-In the following section, these preliminary relations will be used to further expand on more complex analysis approaches.
+The equations from this subsection serve as an important set up for the more complex approach derived in the following section. 
 
 %----------------------------------------------------------------------------------------------------------------------
 \section{Theory of Cylindrical Shells}
+\label{section:3_shells}
 
-
-As per Timoshenko's book \cite{timoshenko1959theory}, this section will cover the method of approximating the cylinder as a long thin shell. With this assumption, the governing ordinary differential equation (ODE) will be derived. The following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below.
+As per \cite{timoshenko1959theory}, this section covers the method of approximating the drum barrel as a long thin cylindrical shell. With this assumption, the governing ordinary differential equation (ODE) is derived. First, the following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below. Note that symbols in for the derivation in the section will follow \cite{timoshenko1959theory}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{CoordSyst}
-	\caption[Coordinate system adopted for derivation of DEs.]{Coordinate system adopted for derivation of DEs.\protect\cite{timoshenko1959theory}}
+	\caption[Coordinate system adopted for derivation of ODE.]{Coordinate system adopted for derivation of ODE.\protect\cite{timoshenko1959theory}}
 	\label{fig:CoordSyst}
 \end{figure}
 
-Based on this, the following differential equations are presented as a pressure balance knowing that the differential area can be represented as Equation~\ref{eq:diffsurf}
+From the above figure, the differential area of the cylindrical shell is presented as Equation~\ref{eq:diffsurf}. Note that in the foregoing section, $x$ is the axial direction, $a$ is the shell's outer radius and $\varphi$ is the circumferential direction.
  
 \begin{equation}
 	\label{eq:diffsurf}
 	dA = dS\ dx = a\ d\varphi \ dx   
 \end{equation}
 
-The equations of equilibrium may be written as a force projection about the x and z axis and momment balance about y as Equations ~\ref{eq:eqbrm_x}, ~\ref{eq:eqbrm_z}, ~\ref{eq:eqbrm_y} respectively.
+Equilibrium is performed as a force balance in the $x, z$ axes and moment balance about the $y$ axis and presented as Equations ~\ref{eq:eqbrm_x}, ~\ref{eq:eqbrm_z}, ~\ref{eq:eqbrm_y} respectively. Note that $Z$ denotes and external pressure applied to the shell (not shown in Figure~\ref{fig:CoordSyst}).
 
 \begin{equation}
 	\label{eq:eqbrm_x}
@@ -117,14 +112,14 @@ The equations of equilibrium may be written as a force projection about the x an
 	\frac{dM_x}{dx}\ a\ d\varphi \ dx- Q_x\ a\ d\varphi \ dx= 0
 \end{equation}
 
-First looking at \ref{eq:eqbrm_x}, simplifying this equation and taking the integral with respect to $x$ will leave \ref{eq:eqbrm_x2}. 
+First looking at \ref{eq:eqbrm_x}, the axial force $N_x$ is determined by taking the integral with respect to $x$ \ref{eq:eqbrm_x2}. 
 
 \begin{equation}
 	\label{eq:eqbrm_x2}
 	N_x = C = 0 
 \end{equation}
 
-This above equation simply states that the effects of bending due to the axial forces will be neglected.\\
+The above equation states that the effects of bending due to the axial forces are neglected, which is a valid assumption for thin shells \cite{timoshenko1959theory}.\\
 
 Similarly with \ref{eq:eqbrm_z} and \ref{eq:eqbrm_y}, simplifications will lead to \ref{eq:eqbrm_z2} and \ref{eq:eqbrm_y2} respectively.
 \begin{equation}
