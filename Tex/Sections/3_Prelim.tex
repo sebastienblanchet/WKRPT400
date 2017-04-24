@@ -79,7 +79,7 @@ The equations from this subsection serve as an important set up for the more com
 \section{Theory of Cylindrical Shells}
 \label{section:3_shells}
 
-As per \cite{timoshenko1959theory}, this section covers the method of approximating the drum barrel as a long thin cylindrical shell. With this assumption, the governing ordinary differential equation (ODE) is derived. First, the following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below. Note that symbols in for the derivation in the section will follow \cite{timoshenko1959theory}.
+As per \cite{timoshenko1959theory}, this section covers the method of approximating the drum barrel as a long thin cylindrical shell. With this assumption, the governing ordinary differential equation (ODE) is derived. First, the following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below. Note that all symbols and steps in this subsquent derivation will follow \cite{timoshenko1959theory}.
 
 \begin{figure}[H]
 	\centering
@@ -132,7 +132,7 @@ Similarly with \ref{eq:eqbrm_z} and \ref{eq:eqbrm_y}, simplifications will lead 
 	\frac{dM_x}{dx}- Q_x= 0
 \end{equation} 
 
-With these equations and using strain relations from Hooke's law, the fine DE for displacement will be determined. In Equation ~\ref{eq:strain_xphi}, the relations between displacement and strain are presented.
+Next, differential relations between displacement and strain are presented in Equation~\ref{eq:strain_xphi}. Note $u$ and $w$ are displacements in both $x$ and $z$ directions.
 
 \begin{equation}
 	\label{eq:strain_xphi}
@@ -142,13 +142,12 @@ With these equations and using strain relations from Hooke's law, the fine DE fo
 	\end{aligned}
 \end{equation}
 
-From Hooke's law $N_x$ may be also written as Equation~\ref{eq:Hookes_Nx}. Substituting ~\ref{eq:strain_xphi} will leave the final simplification.
+From Hooke's law $N_x$ may be also written as Equation~\ref{eq:Hookes_Nx}. Substituting Equation~\ref{eq:strain_xphi} will yield the following. Note that $h$ represents the thickness of the cylindrical shell.
 \begin{equation}
 	\label{eq:Hookes_Nx}
 	N_x = \frac{Eh}{1-\nu^2}\ \left( \varepsilon_x + \nu \varepsilon_\varphi \right) =  \frac{Eh}{1-\nu^2}\ \left( \frac{du}{dx} -\nu \ \frac{w}{a} \right)
 \end{equation} 
 
-%%tilde is UNBREAKABLE SPACE
 Solving Equation~\ref{eq:Hookes_Nx} using ~\ref{eq:eqbrm_x2} leaves \ref{eq:Nx_simpl}.
 \begin{equation}
 	\label{eq:Nx_simpl}
