@@ -1,8 +1,27 @@
-In this section, the results from previous sections will be compared with those in an ANSYS Mechanical finite element analysis (FEA) software \cite{ANSYS}. Please note that all results presented in the foregoing section will utilize USC units. Important results will be converted to their respective SI units.
+This section uses ANSYS Mechanical FEA software \cite{ANSYS} to validate analytical findings from previous sections. Please note that all results presented in the foregoing section utilizes USC units however, important results will be converted to their respective SI units. The overall ANSYS geometry is first presented followed by a series of FEA runs which are summarized below (see Table~\ref{table:4_runs}).
+
+\begin{table}[H]
+  \centering
+  \caption{Labeling of FEA runs.}
+    \begin{tabular}{cll}
+    \textbf{Run } & \textbf{Focus} & \textbf{Description}\\
+    \hline
+    1A    & Drum Stress & Fixed ends, uniform $p$\\
+    1B    & Drum Stress & Simply supported ends, uniform $p$ \\
+    2A    & Drum Stress & Fixed ends, Capstan $p, z=24.5$, various $\mu$ \\
+    2B    & Drum Stress & Simply supported ends, Capstan $p, z=24.5$, various $\mu$ \\
+    2C    & Drum Stress & Fixed ends, Capstan $p, z=0$, various $\mu$ \\
+    2D    & Drum Stress & Simply supported ends, Capstan $p, z=0$, various $\mu$ \\
+    3     & Drum Buckling & Simply supported ends, uniform $p$ \\
+    4     & Flange Stress & Fixed ends, uniform $p$ \\
+    \end{tabular}%
+  \label{table:4_runs}%
+\end{table}%
+
 
 \section{Model}
 
-Using the $D, L$ parameters from Table~\ref{table:prelim_params}, the drum geometry was modeled as a thin surface to save computational cost and time. The geometry and coordinate system adopted in this preceding analysis are shown below in Figure~\ref{fig:4_geom}.
+Both $D$ and $L$ parameters from Table~\ref{table:prelim_params} are used to model the drum barrel's geometry. The coordinate system adopted in the foregoing analysis is shown below in Figure~\ref{fig:4_geom}. 
 
 \begin{figure}[H]
 	\centering
@@ -11,28 +30,28 @@ Using the $D, L$ parameters from Table~\ref{table:prelim_params}, the drum geome
 	\label{fig:4_geom}
 \end{figure}
 
-In this model, the drum's thin surface has a parameterized inward thickness. Parametric studies will be performed in ANSYS with this variable to see how maximum stress and deformation vary. The thin surface also allows for a simply initial coarse mesh generated in ANSYS (see Figure~\ref{fig:4_mesh}).
+This model utilizes a thin cylindrical surface with inwards parameterized thickness to save computational time. A series of parametric studies will be performed determine how maximum stresses vary with $t$. Note that flanges are not shown in this model as they will be added in the final run.\\
+
+The thin surface also allows for a simple initial ANSYS generated coarse mesh (see Figure~\ref{fig:4_mesh}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_mesh}
-	\caption{ANSYS generated coarse mesh.}
+	\caption{Initial model coarse mesh.}
 	\label{fig:4_mesh}
 \end{figure}
 
-To assure numerically accurate results, a mesh refinement study will be performed on both maximum total deformation and equivalent (Von-Misses) stress for all foregoing simulations.
-
-
+Numerical accuracy of results will be assured by performing mesh refinement when possible in all foregoing simulations.
 
 \section{Run 1: Uniform Pressure}
 \label{section:4_R1}
-The initial FEA run will have a simplistic case. 
+
+The first FEA run will explore the simply uniformly loaded drum with both fixed and free ends. 
 
 \subsection{Boundary Conditions}
 \label{subsection:R1BC}
-Both of the drum's ends are fixed (i.e. BCs as per \ref{eq:2_fixedBC}).\\
 
-Figure~\ref{fig:4_R1_p} shows uniform external pressure of $1376 \Unit{psi}$ or $9.484 \Unit{MPa}$ as per \ref{eq:2_preq}.
+An initial simulation will be performed with fixed ends (BC as per Equation~\ref{eq:2_fixedBC}) and $t=0.500\Unit{in}$. Figure~\ref{fig:4_R1_p} shows the uniform external pressure of $1376 \Unit{psi}$ or $9.484 \Unit{MPa}$ as per \ref{eq:2_preq}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R1_p}
@@ -42,47 +61,30 @@ Figure~\ref{fig:4_R1_p} shows uniform external pressure of $1376 \Unit{psi}$ or 
 
 \subsection{Results}
 
-After a mesh refinement, total deformation results are shown below in Figure~\ref{fig:4_R1_def}. The maximum deformation seen on the top surface of the drum in the $y$ direction with respect to $z$ are also shown in Figure~\ref{fig:4_R1_topdef}. Note results shown for $t=0.50\Unit{in}$
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{4_R1_def}
-	\caption{Total deformation results.}
-	\label{fig:4_R1_def}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.6]{4_R1_topdef}
-	\caption{Total deformation in $y$ as a function of $z$.}
-	\label{fig:4_R1_topdef}
-\end{figure}
-
-Comments, lots of deformation.\\
-
-Again, post mesh refinement yields the maximum stress results as per Figure~\ref{fig:4_R1_stress}.
+A mesh refinement is completed and yields the equivalent maximum stress results in Figure~\ref{fig:4_R1_stress} below. Note results are shown for $t=0.500\Unit{in}$.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R1_stress}
-	\caption{Total stress results.}
+	\caption{Maximum equivalent stress results for Run 1.}
 	\label{fig:4_R1_stress}
 \end{figure}
 
-Comments, bad stress.
+It is apparent from the above figure that the fixed ends are carrying most of load. In hopes of better understanding how this uniform pressure results in stress, a parametric study will is performed by varying the drum thickness $t$ for a cylinder with both fixed and simply supported ends.
 
 
 \subsection{Parametric Study}
 
-A parametric study was ran with $t \in [0.50, 1.75]$. This sweep results are shown below in Figure~\ref{fig:4_R1_sweep} \cite{EXCEL}. The allowable stress limit of Equation~\ref{eq:2_sigall} of $23,333 \Unit{psi}$ is also shown for reference.
+A parametric study is perforned with a range of $t \in [0.50, 1.75]$ for both fixed and simply supported ends. The results from this simulation are shown below in Figure~\ref{fig:4_R1_sweep} \cite{EXCEL}. The allowable stress limit of $23,333 \Unit{psi}$ (Equation~\ref{eq:2_sigall}) is also shown for reference.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{4_R1_sweep}
-	\caption{Results of parametric study for FEA Run 1.}
+	\includegraphics[scale=0.75]{4_R1_sweep}
+	\caption{Results the parametric sweep for Run 1.}
 	\label{fig:4_R1_sweep}
 \end{figure}
 
-From the above plot, it appears as though a thickness of $t \approx 1.25 \ in$ would appear to be sufficient.
+From the above plot, a thicknesses of $1.25 \Unit{in}$ and $0.875\Unit{in}$ are required for uniformly loaded cylinder with fixed and simply supported ends respectively.
 
 \section{Run 2: Capstan Pressure}
 \label{section:4_R2}
