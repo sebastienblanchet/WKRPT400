@@ -166,7 +166,7 @@ Similarly, with $N_\varphi$, again applying \ref{eq:strain_xphi} leaves \ref{eq:
 	N_\varphi = - \frac{Ehw}{a}
 \end{equation}
 
-As a result of no change in curvature in the $\varphi$ direction, we know that $\frac{dM_\varphi}{d\varphi}= 0$ hence no change in the circumferential moments. This relation is translated to axial momments $M_x$ with \ref{eq:Mphix}.
+As a result of no change in curvature in the $\varphi$ direction, we know that $\frac{dM_\varphi}{d\varphi}= 0$ hence no change in the circumferential moments \cite{timoshenko1959theory}. This relation is translated to axial moments $M_x$ with \ref{eq:Mphix}.
 
 \begin{equation}
 	\label{eq:Mphix}
@@ -176,14 +176,14 @@ As a result of no change in curvature in the $\varphi$ direction, we know that $
 	\end{aligned}
 \end{equation}
 
-Where $D$ is the flexural rigidity of the shell \ref{eq:flexrig}. This term replaces the $EI$ term from Equations~\ref{eq:Mcurve} - \ref{eq:loadintens}.
+Where $D$ is defined as the flexural rigidity of the shell \ref{eq:flexrig}. This term replaces the $EI$ term from Equations~\ref{eq:Mcurve} - \ref{eq:shr}.
 
 \begin{equation}
 	\label{eq:flexrig}
 	D \triangleq \frac{Eh^3}{12(1-\nu^3)}
 \end{equation}
 
-Simplifying \ref{eq:eqbrm_z2} to get $Q_x = \frac{dM_x}{dx}$, the following is put in \ref{eq:eqbrm_y2} to get \ref{eq:de1}
+Simplifying \ref{eq:eqbrm_z2} to get $Q_x = \frac{dM_x}{dx}$, the following is put in \ref{eq:eqbrm_y2} to get the final ODE in Equation~\ref{eq:de1}
 
 \begin{equation}
 	\label{eq:de1}
@@ -210,39 +210,39 @@ The solution to this common fourth order, linear, non-homogeneous, ODE in \ref{e
 
 Where $ C_1, C_2, C_3, C_4$ are integration constants to be solved based on BC and $f(x)$ is the particular solution to the ODE (recall $y_{general}=y_{homogeneous}+y_{particular}$).\\
 
-In the following section, the exact solution to this differential equation given the loading scenarios in question.
+In the following section, a specific solution of this differential equation will be determined.
 
 %----------------------------------------------------------------------------------------------------------------------
 
-\section{Application Solution}
+\section{Roark's Solution}
 \label{section:3_roark}
 
-With the previously developed equations and \cite{roarks}, the equations were solved using \cite{EXCEL}.\\
+The previous equation prepared the set up to the solution procedure outlined in Example 3 of Chapter 12, p.538 \cite{roarks}. A similar solution was developped in an Excel \cite{EXCEL} calculator (see Appendix B).The main important factor lies in the assumptions of a long shell(i.e. $\beta l \geq 6$) and a TWPV (i.e $R/t \geq 10$).\\
 
-Calculated value of $t=1.686 in  = 42.8\ mm$
+Referring to Appendix B, a final calculated value of $t=1.686 \Unit{in}= 42.8 \Unit{mm}$ upon confirming the assumptions.
 
-\section{Buckling}
+\section{Roark's Buckling}
 \label{section:3_buckle}
 
-Assumed linear buckling using Equations from Table 35 of \cite{roarks}, the following equations are presented. A thin tube under uniform external pressure will buckle as follows.
+Up to this point, all values for calculating the drum barrel thickness have focused on the stress state. It was proposed by John Umina to investigate buckling. To confirm that stress is primary mode of failure, a linear buckling analysis is completed.\\
 
-For Equation~\ref{eq:3_buckle1}.
+With equations from Table 35 of \cite{roarks}, the following relations are presented. First, Equation~\ref{eq:3_buckle1} is presented for a long thin tube under uniform external pressure with ends simply supported.
 \begin{equation}
 	\label{eq:3_buckle1}
-	q' =\frac{1}{4} \frac{E}{1-\nu^2} \frac{t^3}{R^3}
+	p' =\frac{1}{4} \frac{E}{1-\nu^2} \frac{t^3}{R^3}
 \end{equation}
 
-The above equation is to be used for very long tubes with free ends \cite{roarks}. In other words, the length of the barrel $L$ must be greater the critical length calculated with \ref{eq:3_lcrit}.
+To classify as a long tube, the length of the barrel $L$ must be greater the critical length as calculated with Equation~\ref{eq:3_lcrit}.
 \begin{equation}
 	\label{eq:3_lcrit}
 	L' = 4.90 R \sqrt{\frac{R}{t}}
 \end{equation}
 
-For the studied range of $t \in [0.05, 1.1) \Rightarrow L < L' \therefore$ Equation~\ref{eq:3_buckle2} must be used to calculate the critical buckling pressure.
+For the studied range of $t \in [0.05, 1.05] \Rightarrow L < L' \therefore$ Equation~\ref{eq:3_buckle2} must is to calculate the critical buckling pressure for a short thin cylinder.
 
 \begin{equation}
 	\label{eq:3_buckle2}
-	q' =0.807\  \frac{Et^2}{LR}\  \sqrt[4]{\left( \frac{1}{1-\nu^2} \right)^3 \left( \frac{t}{R}\right)^2}
+	p' =0.807\  \frac{Et^2}{LR}\  \sqrt[4]{\left( \frac{1}{1-\nu^2} \right)^3 \left( \frac{t}{R}\right)^2}
 \end{equation}
 
 With \ref{eq:3_buckle2} and the aforementioned thickness range, critical pressure values were computed with the \cite{PYTHON} script in Appendix~\ref{appendix:a4}. These results are displayed in the following plot (see Figure~\ref{fig:3_buckling}).
@@ -250,13 +250,13 @@ With \ref{eq:3_buckle2} and the aforementioned thickness range, critical pressur
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.75]{3_buckling}
-	\caption{Variation of critical buckling pressure $q'$ with thickness.}
+	\caption{Variation of critical buckling pressure $p'$ with $t$.}
 	\label{fig:3_buckling}
 \end{figure}
 
-It is clear from above figure that a very low thickness is required to achieve a critical buckling pressure $q'$ of that in Equation~\ref{eq:2_preq} of $1376\ psi\ (9.484\ MPa)$. By rearranging, \ref{eq:3_buckle2} for $t$ and setting $q'=1376\ psi$, a critical thickness of $t=0.418\ in= 10.6\ mm$ is required to avoid buckling.\\
+As depicted in the above figure, a very low thickness is required to achieve a critical buckling pressure $p'$ of $137\Unit{psi} \/\ 9.484\Unit{MPa}$ (as per Equation~\ref{eq:2_preq}).\\
 
-Based on the findings in this section, it is clear that buckling will not be the failure mode for this loading scenario.
+By rearranging, \ref{eq:3_buckle2} for $t$ and setting $p'=1376\Unit{psi}$, a critical thickness of $0.418\Unit{in}= 10.6\Unit{mm}$ is required to avoid buckling. Based on these conclusions, buckling will not be the primary failure mode for the drum barrel given the loading scenario. The following section will validate all conclusions with a series of FEA simulations.
 
 
 
