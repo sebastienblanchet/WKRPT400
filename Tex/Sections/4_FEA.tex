@@ -149,17 +149,44 @@ Comments, bad stress.
 
 \subsection{Parametric Study}
 
-A parametric study was ran with $0.15 \leq t \leq 1.05$ and $0.05 \leq \mu \leq 0.50$. This sweep results are shown below in Figure~\ref{fig:4_R2_sweep} \cite{EXCEL}.  The allowable stress limit of Equation~\ref{eq:2_sigall} of $23,333 \Unit{psi}$ is also shown for reference.
+A parametric study was ran with  $t\in [0.15, 1.05]$ and $\mu =0.05, 0.50$. This sweep results are shown below in Figure~\ref{fig:4_R2_sweep} \cite{EXCEL}.  The allowable stress limit of Equation~\ref{eq:2_sigall} of $23,333 \Unit{psi}$ is also shown for reference.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{4_R2_sweep}
+	\includegraphics[]{4_R2_sweep_FE_SSE}
 	\caption{Results of parametric study for FEA Run 2.}
 	\label{fig:4_R2_sweep}
 \end{figure}
 
-From the above plot, it appears as though a thickness of $t \geq 0.50\ in$ would appear to be sufficient.
+The main take away from this above sweep is that for a Capstan pressure profile beginning at the center of the drum, the end conditions do not matter. This can be validated through thin shell theory (i.e $\beta x geq 6$).\\
 
+From the above plot, it appears as though a thickness of $t \geq 0.55 \Unit{in}$ would appear to be sufficient.\\
+
+To investigate the effects of the end conditions, the Capstan pressure was applied from $0 \leq z \leq 24.5$. See figures 
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R2_BC_c}
+	\caption{Variable Capstan pressure.}
+	\label{fig:4_R2_BC_c}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{4_R2_stress_c}
+	\caption{Total stress results.}
+	\label{fig:4_R2_stress_c}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[]{4_R2_sweep_c}
+	\caption{Results of parametric study for FEA Run 2.}
+	\label{fig:4_R2_sweep}
+\end{figure}
 
 \section{Run 3: Eigenvalue Buckling}
 \label{section:4_R3}
