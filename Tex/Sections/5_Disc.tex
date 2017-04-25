@@ -17,8 +17,8 @@ A summary of all report results for the required drum barrel thickness is shown 
           \ref{section:2_EN}& EN 13445-3 & $32.8$ & $1.290$ & Fixed & Uniform \\
           \ref{section:2_DNV}& DNV-OS-D101 & $36.6$ & $1.440$ & Fixed & Uniform \\
           \ref{section:2_TWPV}& TWPV Hoop Stress & $21.0$ & $0.825$ & Simply supported & Uniform \\
-          \ref{section:3_roark}& Roarks & $42.8$ & $1.686$ & Fixed & Uniform \\
-          \ref{section:3_buckle}& Roarks Buckling & $10.6$ & $0.418$ & Simply supported & Uniform \\
+          \ref{section:3_roark}& Roark's & $42.8$ & $1.686$ & Fixed & Uniform \\
+          \ref{section:3_buckle}& Roark's Buckling & $10.6$ & $0.418$ & Simply supported & Uniform \\
           \ref{section:4_R1}& FEA Run 1A & $30.5$ & $1.200$ & Fixed & Uniform \\
           \ref{section:4_R1}& FEA Run 1B & $22.2$ & $0.875$ & Simply supported & Uniform \\
           \ref{section:4_R2}& FEA Run 2A & $14.0$ & $0.550$ & Fixed & Capstan $z=24.5$ \\
@@ -44,7 +44,7 @@ The work completed on flange sizing was indeed brief due to aforementioned time 
 
 \section{Manufacturing}
 
-In reality, the manufacturing of these components will likely be in the United States. It would be benificial to manufacture the drum barrel with standard ASME pipe. See Table~\ref{table:5_pipe} for standard pipe available as per \cite{PIPEINFO}. Note that all dimensions are shown in USC as per standard pipe.
+The manufacturing of these components will likely be in the United States. It would be beneficial for Altaeros to manufacture the drum barrel with standard ASME pipe. See Table~\ref{table:5_pipe} for standard pipe available as per \cite{PIPEINFO}. Note that all dimensions are shown in USC as per standard pipe.
 
 \begin{table}[H]
 	\caption[Available wall thicknesses for standard pipe.]{Available wall thicknesses for standard pipe.\protect\cite{PIPEINFO}}
@@ -68,11 +68,11 @@ As for the flanges, the 36 in OD circular shape could easily but cut out of a $3
 
 \section{Numerical Error}
 \label{subsection:5_numerr}
-Due to the wide range of BC, a large number of simulations were performed (i.e. 132 total). To save computational time, the error margins used for the numerical convergence of mesh refinements were set to be relatively high (i.e. 20\%). Consequently, there is likely to be a significant numerical error associated to the FEA results. These discrepancies observed have been discussed in previous sections however, this is must be understood as a part of the previous conclusions.
+Due to the wide range of BC, many simulations were performed (i.e. 132 total). To save computational time, the error margins used for the numerical convergence of mesh refinements were set to be relatively high (i.e. 20\%). Consequently, there is likely to be a significant numerical error associated to the FEA results. These discrepancies observed have been discussed in previous sections however, this is must be understood as a part of the previous conclusions.
 
 
 \section{Other Considerations}
-Asides from erroneous values attained from software and calculation, there are other factors to consider which may skew the results. For instance, most analytical methods used in Sections 2 and 3 assume very thin cylindrical shells. A key part of this assumption lies in the fact that bending stresses do not develop axially (see Section~\ref{section:3_shells}) \cite{timoshenko1959theory}, which may not be the case in reality.\\
+Asides from erroneous values attained from software and calculation, there are other factors to consider which may skew the results. For instance, most analytical methods used in Sections 2 and 3 assume very thin cylindrical shells. A key part of this assumption lies in the fact that bending stresses do not develop axially (see Section~\ref{section:3_shells}) \cite{timoshenko1959theory}, which realistically may not be the case.\\
 
-In addition, material imperfections could result in higher stress concentrations. This phenomenon highly affects the results determined from a buckling analysis. It is these imperfections that cause non-linearities and prevent most real-world structures from achieving their theoretical elastic buckling strength \cite{ANSYS}.
+In addition, material imperfections could result in higher stress concentrations. This phenomenon highly affects the results determined from a buckling analysis. It is these imperfections that cause the nonlinear effects and prevent most real-world structures from achieving their theoretical elastic buckling strength \cite{ANSYS}.
 

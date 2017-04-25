@@ -70,12 +70,11 @@ A mesh refinement is completed and yields the equivalent maximum stress results 
 	\label{fig:4_R1_stress}
 \end{figure}
 
-It is apparent from the above figure that the fixed ends are carrying most of load. In hopes of better understanding how this uniform pressure results in stress, a parametric study will is performed by varying the drum thickness $t$ for a cylinder with both fixed and simply supported ends.
-
+It is apparent from the above figure that the fixed ends are carrying most of load. In hopes of better understanding how this uniform pressure results in stress, a parametric study is performed by varying the drum thickness $t$ for a cylinder with both fixed and simply supported ends.
 
 \subsection{Parametric Study}
 
-A parametric study is perforned with a range of $t \in [0.500, 1.750]$ for both fixed and simply supported ends. The results from this simulation are shown below in Figure~\ref{fig:4_R1_sweep} \cite{EXCEL}. The allowable stress limit of $23,333 \Unit{psi}$ (Equation~\ref{eq:2_sigall}) is also shown for reference.
+A parametric study is performed with a range of $t \in [0.500, 1.750]$ for both fixed and simply supported ends. The results from this simulation are shown below in Figure~\ref{fig:4_R1_sweep} \cite{EXCEL}. The allowable stress limit of $23,333 \Unit{psi}$ (Equation~\ref{eq:2_sigall}) is also shown for reference.
 
 \begin{figure}[H]
 	\centering
@@ -92,9 +91,9 @@ The second run elaborates on the results determined from Run 1. The aim of Run 2
 
 \subsection{Boundary Conditions}
 
-Initial results are shown for simply supported supported ends (i.e. BC as per Equation~\ref{eq:2_endBC} ) and a thickness of $0.500$ in.\\
+Initial results are shown for simply supported ends (i.e. BC as per Equation~\ref{eq:2_endBC} ) and a thickness of $0.500$ in.\\
 
-The variable Capstan pressure is shown applied to the external surface of the cylinder in Figure~\ref{fig:4_R2_pvar}. This pressure profile is also shown in Figure~\ref{fig:4_R2_pvarplot} as per the results in Section~\ref{subsection:alt}. Note again that the pressure profile is shown for $\mu=0.05$, the worst case scenario. It is also applied beginning at the center of the drum or $z=24.5$.
+The variable Capstan pressure is shown applied to the external surface of the cylinder in Figure~\ref{fig:4_R2_pvar}. This pressure profile is also shown in Figure~\ref{fig:4_R2_pvarplot} as per the results in Section~\ref{subsection:alt}. Note again that the pressure profile is shown for $\mu=0.05$, the worst-case scenario. It is also applied beginning at the center of the drum or $z=24.5$.
 
 \begin{figure}[H]
 	\centering
@@ -127,7 +126,7 @@ Total deformation results are shown below in Figure~\ref{fig:4_R2_def_mu05}. The
  	\label{fig:4_R2_topdefplotmu05}
  \end{figure}
  
-Referring to Table~\ref{table:3_beta} for $t=0.500 \therefore \beta = 0.486 \Rightarrow x= 24.500+12.345 = 37.7$ in for $\beta x \geq 6$. From the above deformation plot, it can be observed that at $z=37.7$, deformation is nearly is zero however loading is not technically zero at this point (see Figure~\ref{fig:4_R2_pvarplot}). These observations follow those from long shell theory.\\
+Referring to Table~\ref{table:3_beta} for $t=0.500 \therefore \beta = 0.486 \Rightarrow x= 24.500+12.345 = 37.7$ in for $\beta x \geq 6$. From the above deformation plot, it can be observed that at $z=37.7$, deformation is nearly zero however loading is not technically zero at this point (see Figure~\ref{fig:4_R2_pvarplot}). These observations follow those from long shell theory.\\
 
 The maximum stress results are shown in Figure~\ref{fig:4_R2_stress_mu05} below for Run 2.
 
@@ -138,7 +137,7 @@ The maximum stress results are shown in Figure~\ref{fig:4_R2_stress_mu05} below 
 	\label{fig:4_R2_stress_mu05}
 \end{figure}
 
-Unlike the results from Run 1, it appears as though the maximum stress occurs after slightly after the location where pressure is maximum. The maximum stress is also much lower. This behavior is next explored.
+Unlike the results from Run 1, it appears that the maximum stress occurs after slightly after the location where pressure is maximum. The maximum stress is also much lower. This behavior is next explored.
 
 \subsection{Parametric Study}
 
@@ -153,7 +152,7 @@ With a range of $t\in [0.15, 1.05]$, and pressure profiles for $\mu =0.05, 0.50$
 
 The main observation from the above sweep summary is that for a Capstan pressure profile beginning at the center of the drum ($z=24.5$) regardless of the end conditions. This observation can be validated through thin shell theory (i.e $\beta x \geq 6$) which dictates that internal ladings disappear once a certain distance is reached away from the location of the load application.\\
 
-From the above plot, it appears as though a thickness of $t \geq 0.55 \Unit{in}$ would appear to be sufficient for both fixed (Run 2A) and simply supported ends (Run 2B).\\
+From the above plot, it appears that a thickness of $t \geq 0.55 \Unit{in}$ would appear to be sufficient for both fixed (Run 2A) and simply supported ends (Run 2B).\\
 
 To investigate the effects of the end conditions, the Capstan pressure was applied from $0 \leq z \leq 24.5$ (see Figure~\ref{fig:4_R2_BC_c}). The results for $t=0.500$ and $\mu=0.05$ with simply supported ends is shown in Figure~\ref{fig:4_R2_stress_c} for reference.
 \begin{figure}[H]
@@ -195,7 +194,7 @@ To validate the conclusion made from Section~\ref{section:3_buckle}, Run 3 focus
 
 \subsection{Boundary Conditions}
 
-ANSYS sets the linear static structural analysis system as the pre-stressed state and then peforms the eigenvalue buckling analysis. From this, load factors $\lambda$ are returned by ANSYS. These factors are defined as Equation~\ref{eq:4_loadfactor} \cite{ANSYS}.
+ANSYS sets the linear static structural analysis system as the pre-stressed state and then performs the eigenvalue buckling analysis. From this, load factors $\lambda$ are returned by ANSYS. These factors are defined as Equation~\ref{eq:4_loadfactor} \cite{ANSYS}.
 \begin{equation}
 	\label{eq:4_loadfactor}
 	p' = \lambda \ p_0
@@ -292,7 +291,7 @@ Next, based on the stress results shown for the shaft side of the flange, maximu
 
 \subsection{Parametric Study}
 
-The final parametric study of this section explores flanges thicknesses $\in [0.063, 1.000]$. A second model utilizing the worst case Capstan pressure profile ($\mu=0.05$) instead of the uniform 1376 psi. The results are shown below in Figure~\ref{fig:4_R4_sweep} \cite{EXCEL}.
+The final parametric study of this section explores flanges thicknesses $\in [0.063, 1.000]$. A second model utilizing the worst-case Capstan pressure profile ($\mu=0.05$) instead of the uniform 1376 psi. The results are shown below in Figure~\ref{fig:4_R4_sweep} \cite{EXCEL}.
 
 \begin{figure}[H]
 	\centering
@@ -303,5 +302,5 @@ The final parametric study of this section explores flanges thicknesses $\in [0.
 
 At first glance, the above sweep results do not appear to be relevant however after much discussion with both John Umina and Ephraim Lanford, some sense can be made. Focusing on the uniform pressure results would appear that a thickness of $t\approx$ 0.250 in / 6.4 mm  is the optimal candidate. The reason for the increase in flange stress with thickness could be a result of the effects of the fixed end.\\
 
-As for the Capstan sweep results, the low maximum stress values raise the question of the simulation's validity. Again due to time constraints, these results will not be refined however, should be investigated in the future.
+As for the Capstan sweep results, the low maximum stress values raise the question of the simulation's validity. Again, due to time constraints, these results will not be refined however, should be investigated in the future.
 
