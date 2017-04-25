@@ -148,7 +148,6 @@ From Hooke's law $N_x$ may be also written as Equation~\ref{eq:Hookes_Nx}. Subst
 	N_x = \frac{Eh}{1-\nu^2}\ \left( \varepsilon_x + \nu \varepsilon_\varphi \right) =  \frac{Eh}{1-\nu^2}\ \left( \frac{du}{dx} -\nu \ \frac{w}{a} \right)
 \end{equation} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Solving Equation~\ref{eq:Hookes_Nx} using ~\ref{eq:eqbrm_x2} leaves \ref{eq:Nx_simpl}.
 \begin{equation}
 	\label{eq:Nx_simpl}
@@ -201,6 +200,29 @@ Where $\beta^4$ is some parameter defined as \ref{eq:betaquad}.
 	\beta^4 \triangleq \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
 \end{equation}
 
+The aforementioned parameter is very important in determining if the cylindrical shell is considered to be long. To fall under this classification, $\beta x \geq 6$ where $x$ is the distance between applied loads. This is result of internal loading "dying out". Table~\ref{table:3_beta} below shows tabulated values for $\beta$ (i.e. $\beta = \sqrt[4]{\beta^4}$) for various thicknesses $t/h$ using the previously mentioned $a, \nu$.
+
+\begin{table}[H]
+  \centering
+  \caption{Calculated $\beta$ for various $t$.}
+    \begin{tabular}{cc}
+    \textbf{$t$} & \textbf{$\beta$}\\
+    \hline
+    0.125 & 0.972 \\
+    0.250 & 0.687 \\
+    0.375 & 0.561 \\
+    0.500 & 0.486 \\
+    0.625 & 0.435 \\
+    0.750 & 0.397 \\
+    0.875 & 0.367 \\
+    1.000 & 0.344 \\
+    \end{tabular}%
+  \label{table:3_beta}
+\end{table}
+
+From the above table,it confirms the assumption, as $\beta$ increases, $x$ requires to be greater to classify as a long shell ($\beta x \geq 6$). Intuitively, with a thicker shell, the material stores this loading.\\
+
+
 The solution to this common fourth order, linear, non-homogeneous, ODE in \ref{eq:de1} has a general solution of Equation~\ref{eq:solnDE} \cite{timoshenko1959theory}.
 
 \begin{equation}
@@ -217,7 +239,7 @@ In the following section, a specific solution of this differential equation will
 \section{Roark's Solution}
 \label{section:3_roark}
 
-The previous equation prepared the set up to the solution procedure outlined in Example 3 of Chapter 12, p.538 \cite{roarks}. A similar solution was developped in an Excel \cite{EXCEL} calculator (see Appendix B).The main important factor lies in the assumptions of a long shell(i.e. $\beta l \geq 6$) and a TWPV (i.e $R/t \geq 10$).\\
+The previous equation prepared the set up to the solution procedure outlined in Example 3 of Chapter 12, p.538 \cite{roarks}. A similar solution was developped in an Excel \cite{EXCEL} calculator (see Appendix B).The main important factor lies in the assumptions of a long shell(i.e. $\beta x \geq 6$) and a TWPV (i.e $R/t \geq 10$). Note that $\beta$ is presented as $\lambda$, $y$ as deformation and $\phi$ as slope in \cite{roarks}.\\
 
 Referring to Appendix B, a final calculated value of $t=1.686 \Unit{in}= 42.8 \Unit{mm}$ upon confirming the assumptions.
 
