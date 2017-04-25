@@ -4,7 +4,7 @@ This section uses ANSYS Mechanical FEA software \cite{ANSYS} to validate analyti
   \centering
   \caption{Labeling of FEA runs.}
     \begin{tabular}{cll}
-    \textbf{Run } & \textbf{Focus} & \textbf{Description}\\
+    \textbf{Run} & \textbf{Focus} & \textbf{Description}\\
     \hline
     1A    & Drum Stress & Fixed ends, uniform $p$\\
     1B    & Drum Stress & Simply supported ends, uniform $p$ \\
@@ -127,7 +127,7 @@ Total deformation results are shown below in Figure~\ref{fig:4_R2_def_mu05}. The
  	\label{fig:4_R2_topdefplotmu05}
  \end{figure}
  
-Referring to Table~\ref{table:3_beta} for $t=0.500 \therefore \beta = 0.486 \Rightarrow x= 24.500+12.345 = 37.7$ in for $\beta x \geq 6$.\\
+Referring to Table~\ref{table:3_beta} for $t=0.500 \therefore \beta = 0.486 \Rightarrow x= 24.500+12.345 = 37.7$ in for $\beta x \geq 6$. From the above deformation plot, it can be observed that at $z=37.7$, deformation is nearly is zero however loading is not technically zero at this point (see Figure~\ref{fig:4_R2_pvarplot}). These observations follow those from long shell theory.\\
 
 The maximum stress results are shown in Figure~\ref{fig:4_R2_stress_mu05} below for Run 2.
 
@@ -146,7 +146,7 @@ With a range of $t\in [0.15, 1.05]$, and pressure profiles for $\mu =0.05, 0.50$
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{4_R2_sweep_FE_SSE}
+	\includegraphics[scale=0.75]{4_R2_sweep_FE_SSE}
 	\caption{Results of parametric study for FEA Run 2A-B.}
 	\label{fig:4_R2_sweep}
 \end{figure}
@@ -174,53 +174,48 @@ From this, a similar sweep was performed with the same aforementioned range Figu
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{4_R2_sweep_c}
+	\includegraphics[scale=0.75]{4_R2_sweep_c}
 	\caption{Results of parametric study for FEA Run 2C-D.}
 	\label{fig:4_R2_sweep2}
 \end{figure}
 
-Moving the initial location of the pressure load application from $z=24.5$ to $z=0$ yields required thicknesses of $0.650$ and $0.550$ in for fixed and simply supported ends, respectively.
+Moving the initial location of the pressure load application from $z=24.5$ to $z=0$ yields required thicknesses of $0.650$ and $0.550$ in for fixed (Run 2C) and simply supported ends (Run 2D), respectively.
 
 \section{Run 3: Eigenvalue Buckling}
 \label{section:4_R3}
 
-Buckling mode shapes do not represent actual displacements but help you to visualize how a part or an assembly deforms when buckling. \cite{ANSYS}. \\
-
-Load factors $\lambda$ highly dependent on pre-stressed state, either linear on non linear.\\
-
-In this case linear buckling is utilized for its simplicity. Must have coupled static structural analysis (see Figure~\ref{fig:4_R3_wb}.
+To validate the conclusion made from Section~\ref{section:3_buckle}, Run 3 focuses on performing a linear eigenvalue buckling analysis in ANSYS. The analysis is said to be linear as in ANSYS, it is coupled with a linear static structural analysis system(see Figure~\ref{fig:4_R3_wb}).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R3_wb}
-	\caption{Workbench project schematic.}
+	\caption{ANSYS Workbench project schematic.}
 	\label{fig:4_R3_wb}
 \end{figure}
 
-ANSYS takes in the pre-stressed state and returns load factors $\lambda$ which are defined as follows in Equation~\ref{eq:4_loadfactor}.
+\subsection{Boundary Conditions}
+
+ANSYS sets the linear static structural analysis system as the pre-stressed state and then peforms the eigenvalue buckling analysis. From this, load factors $\lambda$ are returned by ANSYS. These factors are defined as Equation~\ref{eq:4_loadfactor} \cite{ANSYS}.
 \begin{equation}
 	\label{eq:4_loadfactor}
 	p' = \lambda \ p_0
 \end{equation}
 
-For this reason, a unit load pressure of $p_0 = 1\ psi$ will be applied. The boundary conditions will follow those of Section~\ref{subsection:R1BC}.
+The critical buckling pressure $p'$ based on the pre-stressed state is simply a multiplier $\lambda$ of the applied load $p_0$. For this reason, a uniform unit load pressure of $p_0 = 1\Unit{psi}$ is applied in the coupled static structural system. Furthermore, the ends will be simply supported to match the BC from Section~\ref{section:3_buckle}.\\
 
-\subsection{Boundary Conditions}
 
-Boundary conditions of coupled static structural analysis. Ends simply supported (Equation~\ref{eq:2_endBC}) and a unit pressure load applied to external surface (see Figure~\ref{fig:4_R3_BC}). Furthermore, for comparison of critical buckling calculations in Section~\ref{section:3_buckle}, a thickness of $t=0.418\Unit{in}$ was modeled. 
+With the ends simply supported (Equation~\ref{eq:2_endBC}), the unit pressure load is applied to external surface (see Figure~\ref{fig:4_R3_BC}). Also, for comparison of critical buckling calculations in Section~\ref{section:3_buckle}, a thickness of $t=0.418\Unit{in}$ is used in the foregoing results. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R3_BC}
-	\caption{Boundary conditions for Eigenvalue Buckling analysis.}
+	\caption{Eigenvalue buckling analysis BC.}
 	\label{fig:4_R3_BC}
 \end{figure}
 
 \subsection{Results}
 
-Unfortunately, ANSYS is unable to perform a mesh refinement study for a coupled static structural and eigenvalue buckling analysis hence, a much finer initial mesh than that shown in Figure~\ref{fig:4_mesh} was used to assure reasonably accurate results on the first iteration.\\
-
-Results are shown below for the first eigenvalue or mode $\psi = 1$ below in Figure~\ref{fig:4_R3_mode1}.
+Unfortunately, ANSYS is unable to perform a mesh refinement study for a coupled system analysis hence, an initial extra fine mesh is used to assure numerically accurate results on the first iteration. Results are shown below (see Figure~\ref{fig:4_R3_mode1}) for the first eigenvalue or mode $\psi = 1$.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R3_mode1}
@@ -228,11 +223,11 @@ Results are shown below for the first eigenvalue or mode $\psi = 1$ below in Fig
 	\label{fig:4_R3_mode1}
 \end{figure}
 
-From above, it can be seen that a load factor of $\lambda = 1668$ was calculated for $t= 0.418\Unit{in}$. This value is within about $21.2\%$ of the expected analytical results.
+From above, a load factor of $\lambda = 1668$ is calculated for $t= 0.418\Unit{in}$. This value is within about $21.2\%$ of the expected analytical results of Section~\ref{section:3_buckle}, which is a reasonable margin for a first iteration. Note that the above results do not represent actual displacements but simply to visualize how the cylinder would deform when excited to the first mode \cite{ANSYS}.
 
 \subsection{Parametric Study}
 
-For $t\in [0.05, 1.05]$, a parametric study was performed. Results for the first, fifth and tenth mode (i.e. $\psi = 1, 5, 10$) are plotted against the thickness range of interest in Figure~\ref{fig:4_R3_modesweep} below, as per \cite{PYTHON} script in Appendix~\ref{appendix:a4}. The required critical pressure of $p =1376\Unit{psi}$ is also shown for reference.
+Again for $t\in [0.05, 1.05]$, a parametric study is performed. Results for the first, fifth and tenth mode (i.e. $\psi = 1, 5, 10$) are plotted against the thickness range of interest in Figure~\ref{fig:4_R3_modesweep} below, as per \cite{PYTHON} script in Appendix~\ref{appendix:a4}. The required pressure of $p =1376\Unit{psi}$ is also shown for reference.
 
 \begin{figure}[H]
 	\centering
@@ -248,35 +243,35 @@ For $t\in [0.05, 1.05]$, a parametric study was performed. Results for the first
 	\label{fig:4_R3_comp}
 \end{figure}
 
+Focusing on the buckling mode of interest (i.e. $\psi=1$), observations from the above plots confirms the conclusion from Section~\ref{section:3_buckle} that failure by stress will occur before buckling. If anything, FEA results show that the analytical results previously calculated are more conservative however, this could likely be attributed to the numerical error as previously discussed.\\
 
-The main conclusion which can be drawn for the above results confirms those from Section~\ref{section:3_buckle} that buckling will not be the primary failure mode due to the smaller thicknesses required to attain a critical pressure of $p'$ as calculated in Equation~\ref{eq:2_preq}.
+The FEA Run 3 shows that to achieve a critical buckling pressure of $p'=p_{req}$, a thickness of $t=0.375\Unit{in}=9.5\Unit{mm}$ is sufficient.
 
 \section{Run 4: Flanges}
 \label{section:4_R4}
-\subsection{Model}
+Due to time constraints, Run 4 serves as a preliminary benchmark for sizing the thickness of a 36 in OD flange. This foregoing FEA run utilizes a constant barrel $t=0.625\Unit{in}$.\\
 
-In hopes of finding a reasonable estimate for sizing the drum assembly's flanges, a final FEA run is completed. Figure~\ref{fig:4_R4_mesh} below shows the mesh for the modeled assembly. Note that the flanges are also modeled as thin surfaces. Drum barrel has thickness of 0.625 in which will be held constant in this section.
+Expanding on the thin cylindrical geometry from Figure~\ref{fig:4_geom}, circular flanges are added to each end, also modeled as thin surfaces with parameterized thickness. Figure~\ref{fig:4_R4_mesh} below shows the mesh for the modeled assembly. An initial fine mesh  is used again as convergence for numerical precision is not possible for assemblies in ANSYS.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R4_mesh}
-	\caption{Drum assembly mesh.}
+	\caption{Drum assembly fine mesh.}
 	\label{fig:4_R4_mesh}
 \end{figure}
 
 \subsection{Boundary Conditions}
 
-Figure~\ref{fig:4_R4_BC} shows uniform external pressure of $1376 \Unit{psi}$ and fixed circular region on flange face of 5 in.
+The worst case flange loading is explored by applying uniform external pressure of 1376 psi. Also, the circumference of a 5 in OD circular region is held fixed to model the winch shafts (see Figure~\ref{fig:4_R4_BC}).
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{4_R4_BC}
-	\caption{Uniform pressure and fixed flange region.}
+	\caption{Uniform external pressure and fixed shaft flange region.}
 	\label{fig:4_R4_BC}
 \end{figure}
 
-
 \subsection{Results}
 
-Figure~\ref{fig:4_R4_res2} Figure~\ref{fig:4_R4_res1}. Note results shown for flanges of thickness 0.125 in.
+Both maximum stress of entire assembly (see Figure~\ref{fig:4_R4_res2}) and single flange (see Figure~\ref{fig:4_R4_res1}) are shown below. Note these results are for 0.125 in thick flanges.
 
 \begin{figure}[H]
 	\centering
@@ -291,18 +286,22 @@ Figure~\ref{fig:4_R4_res2} Figure~\ref{fig:4_R4_res1}. Note results shown for fl
 	\label{fig:4_R4_res1}
 \end{figure}
 
-Comments, lots of deformation.\\
+The first observation from these above plots is that the drum barrel will experience the highest stress state.\\
+
+Next, based on the stress results shown for the shaft side of the flange, maximum stress is exhibited near the perimeter of the 5 in OD fixed circular region. It must be noted however that even for a relatively thin flange (0.125 in) the maximum stress is still reaches about half ($\approx 50.8\%$) of the allowable limit.
 
 \subsection{Parametric Study}
 
-A parametric study was ran with $t \in [0.0625, 1.00]$. This sweep results are shown below in Figure~\ref{fig:4_R4_sweep} \cite{EXCEL}. The allowable stress limit of Equation~\ref{eq:2_sigall} of $23,333 \Unit{psi}$ is also shown for reference.
+The final parametric study of this section explores flanges thicknesses $\in [0.063, 1.000]$. A second model utilizing the worst case Capstan pressure profile ($\mu=0.05$) instead of the uniform 1376 psi. The results are shown below in Figure~\ref{fig:4_R4_sweep} \cite{EXCEL}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[]{4_R4_sweep}
+	\includegraphics[scale=0.75]{4_R4_sweep}
 	\caption{Results of parametric study for FEA Run 4.}
 	\label{fig:4_R4_sweep}
 \end{figure}
 
-Upon completing this highly simplified simulation, it would appear that a thickness of $t\approx 0.25 \Unit{in}$ is the optimal candidate for the thickness of the flanges, given that a thin circular end of 5 in is held fixed. The reason for the increase in flange stress with thickness could be a result of the effects of the fixed end.
+At first glance, the above sweep results do not appear to be relevant however after much discussion with both John Umina and Ephraim Lanford, some sence can be made. Focusing on the uniform pressure results would appear that a thickness of $t\approx$ 0.250 in / 6.4 mm  is the optimal candidate. The reason for the increase in flange stress with thickness could be a result of the effects of the fixed end.\\
+
+As for the Capstan sweep results, the low maximum stress values raise the question of the simulation's validity. Again due to time constraints, these results will not be refined however, should be investigated in the future.
 
