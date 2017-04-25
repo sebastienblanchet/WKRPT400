@@ -43,7 +43,6 @@
 \nomenclatureitem{ASME}{American Society of Mechanical Engineers}
 \nomenclatureitem{BC}{Boundary Conditions}
 \nomenclatureitem{BPVC}{Boiler and Pressure Vessel Code}
-\nomenclatureitem{CAD}{Computer Aided Design}
 \nomenclatureitem{DNV}{Det Norske Veritas}
 \nomenclatureitem{FEA}{Finite Element Analysis}
 \nomenclatureitem{ID}{Inner Diameter}
@@ -51,6 +50,7 @@
 \nomenclatureitem{ODE}{Ordinary Differential Equation}
 \nomenclatureitem{SF}{Safety Factor}
 \nomenclatureitem{SI}{International System of Units}
+\nomenclatureitem{TMS}{Tether Management System}
 \nomenclatureitem{TWPV}{Thin Walled Pressure Vessel}
 \nomenclatureitem{USC}{United States Customary}
 
@@ -59,12 +59,15 @@
 %%
 \chapter{Summary}
 
-As a result of Altaeros' decision to manufacture the grounded tether management's winch system in house, a complete structural analysis is required to be completed. First, the derivation of the Capstan equation was explored to understand how tether tension of $T=11,525 \Unit{lbs} = 51,264\Unit{N}$ translates to external pressure. From this, a pressure of $p=1376\Unit{psi}= 9.486\Unit{MPa}$ was calculated. From this, existing codes and standards were studied to find an initial benchmark. Upon studying ASME's BPVC, EN, DNV and TWPV a range of thicknesses $t\in [0.825, 1.680]$ (inch) were calculated. \\
+The objective of this report is to perform a structural analysis on Altaeros' grounded TMS winch, focusing on the sizing of drum and flange thicknesses.\\
 
-The governing ODE for thin shell theory was presented and from this, an in depth analysis was completed. Assuming a fixed end cylinder loaded with uniform pressure $p$ returned a thickness of 1.686 in / 42.8 mm matching ASME BPVC VIII-1 calculations. Further buckling analysis was completed to explore other failure modes. Setting the critical buckling pressure to $p'=p$ yielded a critical thickness  of 0.418 in / 10.6 mm, confirming that buckling is not the primary mode of failure.\\
+An external pressure $p=1376\Unit{psi}= 9.486\Unit{MPa}$ is calculated from the Capstan equation as a result of the tethers tension. Initial drum thicknesses are determined by study of ASME's BPVC, EN, DNV and TWPV standards yielding a range of $t\in [0.825, 1.680]$ in / $\in [21.0, 43.2]$ mm.\\
 
-A series of ANSYS FEA runs were completed to understand the equivalent stresses. Run 1 explored uniform pressure $p$ with both fixed and simply supported ends yielding required thicknesses of 1.200 and 0.875 in respectively. Run 2 focused on modeling the exponential decay as per Capstan equation. with simply supported ends yielding a $t=0.550\Unit{in}$. Run 3 focused on a linear eigenvalue buckling analysis to confirm analytical findings. A critical thickness of approximately 0.400 in, converging with preliminary calculations. Run 4 served as a preliminary benchmark for flange design. It was determined that the optimal flange thickness is 0.250 in.\\
+The thin shell theory is presented to setup analytical results of fixed end cylinder loaded with uniform pressure $p$ yielding a drum thickness of 1.686 in / 42.8 mm. Buckling analysis is also completed, resulting in 0.418 in / 10.6 mm for a critical buckling pressure of $p'=p$, confirming that buckling is not the primary mode of failure.\\
 
-In short, based on a tabular summary of all report findings, it was concluded that the winch drum should be manufactured from a Schedule 30 ($t=$ 0.625 in), 28 in OD pipe. Numerical error, material imperfections and non linear buckling were discussed.
+%%%%%
+A series of ANSYS FEA simulations were completed to understand the equivalent stresses for various loading scenarios (focus on USC units). Run 1 explored uniform pressure $p$ with both fixed and simply supported ends yielding required thicknesses of 1.200 \& 0.875 in respectively. Run 2 focused on modeling the exponential decay as per Capstan equation with fixed and simply supported ends yielding 0.650 \& 0.550, respectively. Run 3 focused on a linear eigenvalue buckling analysis to confirm analytical findings. A critical thickness of 0.375 in was yielded. Run 4 served as a preliminary benchmark for flange design. An optimal flange thickness is 0.250 in was observed.\\
 
+In summary, the drum barrel shall be manufactured with a Schedule 30 ($t=$ 0.625 in), 28 in OD pipe. Flanges should be cut from a $3\Unit{feet}^2$ by $0.250\Unit{in}$ thick plate.\\
 
+Future work should focus on flange design, non linear buckling, fatigue analysis and proof testing.

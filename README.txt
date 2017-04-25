@@ -14,6 +14,8 @@ Main File is Report.tex
 
 Press "F1" key to peform quick build, accept all prompts to install packages
 
+A Report.pdf file will appear in $, this is report PDF
+
 Structure is:
 	Report.tex:
 		Tex/Frontpages.tex
