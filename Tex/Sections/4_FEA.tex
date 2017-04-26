@@ -1,4 +1,4 @@
-This section uses ANSYS Mechanical FEA software \cite{ANSYS} to validate analytical findings from previous sections. Please note that all results presented in the foregoing section utilizes USC units however, important results will be converted to their respective SI units. The overall ANSYS geometry is first presented followed by a series of FEA runs which are summarized below (see Table~\ref{table:4_runs}).
+This section uses ANSYS Mechanical FEA software \cite{ANSYS} to validate analytical findings from previous sections. Please note that all results presented in the foregoing section focuses on USC units however, important results will be converted to their respective SI units. The overall ANSYS geometry is first presented followed by a series of FEA runs which are summarized below (see Table~\ref{table:4_runs}).
 
 \begin{table}[H]
   \centering
@@ -21,23 +21,12 @@ This section uses ANSYS Mechanical FEA software \cite{ANSYS} to validate analyti
 
 \section{Model}
 
-Both $D$ and $L$ parameters from Table~\ref{table:prelim_params} are used to model the drum barrel's geometry. The coordinate system adopted in the foregoing analysis is shown below in Figure~\ref{fig:4_geom}. 
+Both $D$ and $L$ parameters from Table~\ref{table:prelim_params} are used to model the drum barrel's geometry. This model utilizes a thin cylindrical surface with inwards parameterized thickness to save computational time. A series of parametric studies will be performed determine how maximum stresses vary with $t$. Note that flanges are not shown in this model as they will be added in the final run. The thin surface also allows for a simple initial ANSYS generated coarse mesh. The preliminary geometry, coordinate system and mesh adopted in the foregoing analysis is shown below in Figure~\ref{fig:4_mesh}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_geom}
-	\caption{Geometry and coordinate system overview.}
-	\label{fig:4_geom}
-\end{figure}
-
-This model utilizes a thin cylindrical surface with inwards parameterized thickness to save computational time. A series of parametric studies will be performed determine how maximum stresses vary with $t$. Note that flanges are not shown in this model as they will be added in the final run.\\
-
-The thin surface also allows for a simple initial ANSYS generated coarse mesh (see Figure~\ref{fig:4_mesh}).
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{4_mesh}
-	\caption{Initial model coarse mesh.}
+	\includegraphics[scale=0.4]{4_mesh}
+	\caption{Initial model geometry, coordinate system and coarse mesh.}
 	\label{fig:4_mesh}
 \end{figure}
 
@@ -46,7 +35,7 @@ Numerical accuracy of results will be assured by performing mesh refinement when
 \section{Run 1: Uniform Pressure}
 \label{section:4_R1}
 
-The first FEA run will explore the simply uniformly loaded drum with both fixed and free ends. 
+The first FEA run will explore the uniform externally pressurized drum with both fixed and simply supported ends. 
 
 \subsection{Boundary Conditions}
 \label{subsection:R1BC}
@@ -54,7 +43,7 @@ The first FEA run will explore the simply uniformly loaded drum with both fixed 
 An initial simulation will be performed with fixed ends (BC as per Equation~\ref{eq:2_fixedBC}) and $t=0.500\Unit{in}$. Figure~\ref{fig:4_R1_p} shows the uniform external pressure of $1376 \Unit{psi}$ or $9.484 \Unit{MPa}$ as per \ref{eq:2_preq}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R1_p}
+	\includegraphics[scale=0.4]{4_R1_p}
 	\caption{Uniform external pressure on model.}
 	\label{fig:4_R1_p}
 \end{figure}
@@ -65,7 +54,7 @@ A mesh refinement is completed and yields the equivalent maximum stress results 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R1_stress}
+	\includegraphics[scale=0.4]{4_R1_stress}
 	\caption{Maximum equivalent stress results for Run 1.}
 	\label{fig:4_R1_stress}
 \end{figure}
@@ -78,12 +67,12 @@ A parametric study is performed with a range of $t \in [0.500, 1.750]$ for both 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.75]{4_R1_sweep}
+	\includegraphics[scale=0.65]{4_R1_sweep}
 	\caption{Results the parametric sweep for Run 1.}
 	\label{fig:4_R1_sweep}
 \end{figure}
 
-From the above plot, thicknesses of $1.250 \Unit{in}$ and $0.875\Unit{in}$ are required for a uniformly loaded cylinder with fixed (Run 1A) and simply supported ends (Run 1B) respectively. These results are relatively close to their analytical counterparts. Several sources of error could be a reason for the discrepancies , those of which will be discussed in Section~\ref{subsection:5_numerr}.
+From the above plot, thicknesses of $1.250 \Unit{in}$ and $0.875\Unit{in}$ are required for a uniformly loaded cylinder with fixed (Run 1A) and simply supported ends (Run 1B), respectively. These results are relatively close to their analytical counterparts. Several sources of error could be the reason for discrepancies, those of which will be further discussed in Section~\ref{subsection:5_numerr}.
 
 \section{Run 2: Capstan Pressure}
 \label{section:4_R2}
@@ -93,20 +82,22 @@ The second run elaborates on the results determined from Run 1. The aim of Run 2
 
 Initial results are shown for simply supported ends (i.e. BC as per Equation~\ref{eq:2_endBC} ) and a thickness of $0.500$ in.\\
 
-The variable Capstan pressure is shown applied to the external surface of the cylinder in Figure~\ref{fig:4_R2_pvar}. This pressure profile is also shown in Figure~\ref{fig:4_R2_pvarplot} as per the results in Section~\ref{subsection:alt}. Note again that the pressure profile is shown for $\mu=0.05$, the worst-case scenario. It is also applied beginning at the center of the drum or $z=24.5$.
+The variable Capstan pressure is shown applied to the external surface of the cylinder in Figure~\ref{fig:4_R2_pvar}. This pressure profile is also shown in Figure~\ref{fig:4_R2_pvarplot} as per the results in Section~\ref{subsection:alt}. Note that the pressure profile is shown for $\mu=0.05$, the worst-case scenario. It is also applied beginning at the center of the drum or at $z=24.5$.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R2_pvar}
-	\caption{Variable Capstan pressure for $\mu=0.05$.}
+	\includegraphics[scale=0.4]{4_R2_pvar}
+	\caption{Variable Capstan pressure for $\mu=0.05$ at $z=24.5$.}
 	\label{fig:4_R2_pvar}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{4_R2_pvarplot}
+	\includegraphics[scale=0.5]{4_R2_pvarplot}
 	\caption{Variable Capstan pressure $p(z)$.}
 	\label{fig:4_R2_pvarplot}
 \end{figure}
+
+Again, note from above that $p(24.5)=1376$ psi.
 
 \subsection{Results}
 
@@ -114,25 +105,25 @@ Total deformation results are shown below in Figure~\ref{fig:4_R2_def_mu05}. The
 
 \begin{figure}[H]
 	\centering
- 	\includegraphics[scale=0.5]{4_R2_def_mu05}
+ 	\includegraphics[scale=0.4]{4_R2_def_mu05}
  	\caption{Total deformation results for Run 2.}
  	\label{fig:4_R2_def_mu05}
  \end{figure}
  
  \begin{figure}[H]
  	\centering
- \includegraphics[scale=0.6]{4_R2_topdefplotmu05}
+ \includegraphics[scale=0.5]{4_R2_topdefplotmu05}
  	\caption{Total deformation in $y$ as a function of $z$.}
  	\label{fig:4_R2_topdefplotmu05}
  \end{figure}
  
-Referring to Table~\ref{table:3_beta} for $t=0.500 \therefore \beta = 0.486 \Rightarrow x= 24.500+12.345 = 37.7$ in for $\beta x \geq 6$. From the above deformation plot, it can be observed that at $z=37.7$, deformation is nearly zero however loading is not technically zero at this point (see Figure~\ref{fig:4_R2_pvarplot}). These observations follow those from long shell theory.\\
+Referring to Table~\ref{table:3_beta} for $t=0.500 \therefore \beta = 0.486 \Rightarrow x= 24.500+12.345 = 37.7$ in for $\beta x \geq 6$. From the above deformation plot, it can be observed that at $x=z=37.7$, deformation is nearly zero however loading is not technically zero at this point (see Figure~\ref{fig:4_R2_pvarplot}). These observations follow those from long shell theory.\\
 
 The maximum stress results are shown in Figure~\ref{fig:4_R2_stress_mu05} below for Run 2.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R2_stress_mu05}
+	\includegraphics[scale=0.4]{4_R2_stress_mu05}
 	\caption{Maximum equivalent stress results for Run 2.}
 	\label{fig:4_R2_stress_mu05}
 \end{figure}
@@ -145,35 +136,35 @@ With a range of $t\in [0.15, 1.05]$, and pressure profiles for $\mu =0.05, 0.50$
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.75]{4_R2_sweep_FE_SSE}
+	\includegraphics[scale=0.65]{4_R2_sweep_FE_SSE}
 	\caption{Results of parametric study for FEA Run 2A-B.}
 	\label{fig:4_R2_sweep}
 \end{figure}
 
-The main observation from the above sweep summary is that for a Capstan pressure profile beginning at the center of the drum ($z=24.5$) regardless of the end conditions. This observation can be validated through thin shell theory (i.e $\beta x \geq 6$) which dictates that internal ladings disappear once a certain distance is reached away from the location of the load application.\\
+The main observation from the above sweep summary is that for a Capstan pressure profile beginning at the center of the drum ($z=24.5$), maximum stress is not dependent on the end conditions. This observation can be validated through thin shell theory (i.e $\beta x \geq 6$) which dictates that internal loadings disappear once a certain distance from the point of load application is reached.\\
 
 From the above plot, it appears that a thickness of $t \geq 0.55 \Unit{in}$ would appear to be sufficient for both fixed (Run 2A) and simply supported ends (Run 2B).\\
 
-To investigate the effects of the end conditions, the Capstan pressure was applied from $0 \leq z \leq 24.5$ (see Figure~\ref{fig:4_R2_BC_c}). The results for $t=0.500$ and $\mu=0.05$ with simply supported ends is shown in Figure~\ref{fig:4_R2_stress_c} for reference.
+To investigate end conditions effects, the Capstan pressure is applied from $0 \leq z \leq 24.5$ (see Figure~\ref{fig:4_R2_BC_c}). The results for $t=0.500$ and $\mu=0.05$ with simply supported ends are shown in Figure~\ref{fig:4_R2_stress_c} for reference.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R2_BC_c}
+	\includegraphics[scale=0.4]{4_R2_BC_c}
 	\caption{Variable Capstan pressure.}
 	\label{fig:4_R2_BC_c}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R2_stress_c}
+	\includegraphics[scale=0.4]{4_R2_stress_c}
 	\caption{Total stress results.}
 	\label{fig:4_R2_stress_c}
 \end{figure}
 
-From this, a similar sweep was performed with the same aforementioned range Figure~\ref{fig:4_R2_sweep2}. With a Capstan pressure profile load applied from $0 \leq z \leq 24.5$ with $\mu=0.05$, the sweep was performed to determine the effects of the end conditions.
+From this, a similar sweep was performed with the same aforementioned range and loading scenario (see Figure~\ref{fig:4_R2_sweep2}).
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.75]{4_R2_sweep_c}
+	\includegraphics[scale=0.65]{4_R2_sweep_c}
 	\caption{Results of parametric study for FEA Run 2C-D.}
 	\label{fig:4_R2_sweep2}
 \end{figure}
@@ -183,18 +174,18 @@ Moving the initial location of the pressure load application from $z=24.5$ to $z
 \section{Run 3: Eigenvalue Buckling}
 \label{section:4_R3}
 
-To validate the conclusion made from Section~\ref{section:3_buckle}, Run 3 focuses on performing a linear eigenvalue buckling analysis in ANSYS. The analysis is said to be linear as in ANSYS, it is coupled with a linear static structural analysis system(see Figure~\ref{fig:4_R3_wb}).
+To validate the conclusion made from Section~\ref{section:3_buckle}, Run 3 focuses on performing a linear eigenvalue buckling analysis in ANSYS. The analysis is said to be linear as in ANSYS, it is coupled with a linear static structural analysis system (see Figure~\ref{fig:4_R3_wb}).
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R3_wb}
+	\includegraphics[scale=0.4]{4_R3_wb}
 	\caption{ANSYS Workbench project schematic.}
 	\label{fig:4_R3_wb}
 \end{figure}
 
 \subsection{Boundary Conditions}
 
-ANSYS sets the linear static structural analysis system as the pre-stressed state and then performs the eigenvalue buckling analysis. From this, load factors $\lambda$ are returned by ANSYS. These factors are defined as Equation~\ref{eq:4_loadfactor} \cite{ANSYS}.
+ANSYS sets the linear static structural analysis system as the pre-stressed state and then performs the eigenvalue buckling analysis. From this, load factors $\lambda$ are returned. These factors are defined as Equation~\ref{eq:4_loadfactor} \cite{ANSYS}.
 \begin{equation}
 	\label{eq:4_loadfactor}
 	p' = \lambda \ p_0
@@ -207,7 +198,7 @@ With the ends simply supported (Equation~\ref{eq:2_endBC}), the unit pressure lo
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R3_BC}
+	\includegraphics[scale=0.4]{4_R3_BC}
 	\caption{Eigenvalue buckling analysis BC.}
 	\label{fig:4_R3_BC}
 \end{figure}
@@ -217,7 +208,7 @@ With the ends simply supported (Equation~\ref{eq:2_endBC}), the unit pressure lo
 Unfortunately, ANSYS is unable to perform a mesh refinement study for a coupled system analysis hence, an initial extra fine mesh is used to assure numerically accurate results on the first iteration. Results are shown below (see Figure~\ref{fig:4_R3_mode1}) for the first eigenvalue or mode $\psi = 1$.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R3_mode1}
+	\includegraphics[scale=0.4]{4_R3_mode1}
 	\caption{Total deformation results for mode $\psi = 1$.}
 	\label{fig:4_R3_mode1}
 \end{figure}
@@ -226,18 +217,18 @@ From above, a load factor of $\lambda = 1668$ is calculated for $t= 0.418\Unit{i
 
 \subsection{Parametric Study}
 
-Again for $t\in [0.05, 1.05]$, a parametric study is performed. Results for the first, fifth and tenth mode (i.e. $\psi = 1, 5, 10$) are plotted against the thickness range of interest in Figure~\ref{fig:4_R3_modesweep} below, as per \cite{PYTHON} script in Appendix~\ref{appendix:a4}. The required pressure of $p =1376\Unit{psi}$ is also shown for reference.
+Again for $t\in [0.05, 1.05]$, a parametric study is performed. Results for the first, fifth and tenth mode (i.e. $\psi = 1, 5, 10$) are plotted against the thickness range of interest in Figure~\ref{fig:4_R3_modesweep} below, as per \cite{PYTHON} script in Appendix~\ref{appendix:a4}. The required pressure of $p =1376\Unit{psi}$ is also shown for reference in Figure~\ref{fig:4_R3_comp} where analytical and FEA results are compared.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.75]{4_R3_modesweep}
+	\includegraphics[scale=0.65]{4_R3_modesweep}
 	\caption{Parametric sweep results for various $t, \psi$.}
 	\label{fig:4_R3_modesweep}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.75]{4_R3_comp}
+	\includegraphics[scale=0.65]{4_R3_comp}
 	\caption{Comparison of analytical and FEA results.}
 	\label{fig:4_R3_comp}
 \end{figure}
@@ -250,20 +241,20 @@ The FEA Run 3 shows that to achieve a critical buckling pressure of $p'=p_{req}$
 \label{section:4_R4}
 Due to time constraints, Run 4 serves as a preliminary benchmark for sizing the thickness of a 36 in OD flange. This foregoing FEA run utilizes a constant barrel $t=0.625\Unit{in}$.\\
 
-Expanding on the thin cylindrical geometry from Figure~\ref{fig:4_geom}, circular flanges are added to each end, also modeled as thin surfaces with parameterized thickness. Figure~\ref{fig:4_R4_mesh} below shows the mesh for the modeled assembly. An initial fine mesh  is used again as convergence for numerical precision is not possible for assemblies in ANSYS.
+Expanding on the thin cylindrical geometry from Figure~\ref{fig:4_mesh}, circular flanges are added to each end, also modeled as thin surfaces with parameterized thickness. Figure~\ref{fig:4_R4_mesh} below shows the mesh for the modeled assembly. An initial fine mesh  is used again as convergence for numerical precision is not possible for assemblies in ANSYS.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R4_mesh}
+	\includegraphics[scale=0.4]{4_R4_mesh}
 	\caption{Drum assembly fine mesh.}
 	\label{fig:4_R4_mesh}
 \end{figure}
 
 \subsection{Boundary Conditions}
 
-The worst case flange loading is explored by applying uniform external pressure of 1376 psi. Also, the circumference of a 5 in OD circular region is held fixed to model the winch shafts (see Figure~\ref{fig:4_R4_BC}).
+The worst-case flange loading is explored by applying uniform external pressure of 1376 psi on the drum. Also, the circumference of a 5 in OD circular region is held fixed to model the winch shafts (see Figure~\ref{fig:4_R4_BC}).
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R4_BC}
+	\includegraphics[scale=0.4]{4_R4_BC}
 	\caption{Uniform external pressure and fixed shaft flange region.}
 	\label{fig:4_R4_BC}
 \end{figure}
@@ -274,13 +265,13 @@ Both maximum stress of entire assembly (see Figure~\ref{fig:4_R4_res2}) and sing
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R4_res2}
+	\includegraphics[scale=0.4]{4_R4_res2}
 	\caption{Drum assembly stress results.}
 	\label{fig:4_R4_res2}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{4_R4_res1}
+	\includegraphics[scale=0.4]{4_R4_res1}
 	\caption{Flange stress results for $t=0.125 \Unit{in}$.}
 	\label{fig:4_R4_res1}
 \end{figure}
@@ -291,11 +282,11 @@ Next, based on the stress results shown for the shaft side of the flange, maximu
 
 \subsection{Parametric Study}
 
-The final parametric study of this section explores flanges thicknesses $\in [0.063, 1.000]$. A second model utilizing the worst-case Capstan pressure profile ($\mu=0.05$) instead of the uniform 1376 psi. The results are shown below in Figure~\ref{fig:4_R4_sweep} \cite{EXCEL}.
+The final parametric study of this section explores flanges thicknesses $\in [0.063, 1.000]$. Results for both uniform and worst-case Capstan pressure profile ($\mu=0.05$) are simulated for comparion. The results are shown below in Figure~\ref{fig:4_R4_sweep} \cite{EXCEL}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.75]{4_R4_sweep}
+	\includegraphics[scale=0.65]{4_R4_sweep}
 	\caption{Results of parametric study for FEA Run 4.}
 	\label{fig:4_R4_sweep}
 \end{figure}

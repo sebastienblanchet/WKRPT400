@@ -1,6 +1,6 @@
 \label{chapt:standards}
 
-The driving parameter for this analysis is the outer diameter (OD) $D$. For the entirety of this report, this value is constant at $D = 28\Unit{in} = 711\Unit{mm}$. Based on this fixed parameter, other relevant values used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \cite{ASMEbvpcIID} for a SA-106 Grade B steel (most commonly used in seamless mechanical pipe). Units shown in both metric (SI) and United States customary (USC).\\
+The driving parameter for this analysis is the drum's outer diameter (OD) $D$. For the entirety of this report, this value is constant at $D = 28\Unit{in} = 711\Unit{mm}$. Based on this fixed parameter, other relevant values used in this report are summarized below in Table~\ref{table:prelim_params}. All material properties selected as per John Umina's  suggestion from Table 1A of \cite{ASMEbvpcIID} for a SA-106 Grade B steel (most commonly used in seamless mechanical pipe). Units shown in both metric (SI) and United States customary (USC).\\
 
 \begin{table}[ht]
 	\caption{Key drum parameters and material properties.}
@@ -23,16 +23,16 @@ The driving parameter for this analysis is the outer diameter (OD) $D$. For the 
 
 The best approach to this problem is to model the drum as an externally pressured vessel. First, in order to make this approximation, it is required to investigate how the tether tension is translated into a pressure. This will be done by reviewing the derivation for the Capstan Equation as per Ephraim Lanford's suggestion.\\ 
 
-Next, using the above parameters and pressure, it was suggested by John Umina that the following codes and standards should be investigated.
+Next, using the above parameters and pressure, it was suggested by John Umina that the following codes and standards should be investigated for determining the required drum barrel thickness.
 \begin{itemize}
 	\item American Society of Mechanical Engineers (ASME):
 	      \begin{itemize}[label=$\bullet$]
-	      	\item Boiler and Pressure Vessel Code, Section VIII, Division 1\cite{ASMEbvpcVII1}
-	      	\item Boiler and Pressure Vessel Code, Section VIII, Division 2\cite{ASMEbvpcVII2}
+	      	\item Boiler and Pressure Vessel Code, Section VIII, Division 1 \cite{ASMEbvpcVII1}
+	      	\item Boiler and Pressure Vessel Code, Section VIII, Division 2 \cite{ASMEbvpcVII2}
 	      \end{itemize}
 	\item European Standard EN
 	      \begin{itemize}[label=$\bullet$]
-	      	\item EN 13445: Unfired Pressure Vessels, Part 3: Design\cite{EN134453}
+	      	\item EN 13445: Unfired Pressure Vessels, Part 3: Design \cite{EN134453}
 	      \end{itemize}
 	\item Det Norske Veritas(DNV)
 	      \begin{itemize}[label=$\bullet$]
@@ -41,10 +41,10 @@ Next, using the above parameters and pressure, it was suggested by John Umina th
 	\item Thin Walled Pressure Vessel (TWPV) Hoop Stress \cite{roarks}\\	
 \end{itemize}
 
-It is to be noted that the used symbols in the foregoing sections will follow those from the references for clarity.
+Please note that all symbols used in the foregoing sections will follow those from their respective references, for clarity.
 %----------------------------------------------------------------------------------------------------------------------
 \section{Capstan Equation}
-It is required to understand how one wrap of tether in tension results in an external pressure $p$ applied to the outer surface of the cylinder. The solution reveals itself into the derivation of the well-known Capstan relation (Equation~\ref{eq:Capstan} \cite{capstanman}).
+It is required to understand how one wrap of tether in tension causes an external pressure $p$ on the outer surface of the drum. The solution reveals itself in the derivation of the well-known Capstan relation or Equation~\ref{eq:Capstan} \cite{capstanman}.
 
 \begin{equation}
 	\label{eq:Capstan}
@@ -67,7 +67,7 @@ From this equation, the free body diagram that leads to the above solutions is p
 	\label{fig:Capstan}
 \end{figure}
 
-From above, it is clear that to extrapolate a pressure $p$ from the applied tension $T$, an equation the equivalent normal force $N$ must be determined. This is done by performing a force balance in the normal direction $\hat{n}$ ($\Sigma F_{\hat{n}} = 0 $) which reduces to Equation~\ref{eq:CapstanSigRad}.
+From above, it is clear that to extrapolate a pressure $p$ from the applied tension $T$, an equation for the equivalent normal force $N$ must be determined. This is done by performing a force balance in the normal direction $\hat{n}$ ($\Sigma F_{\hat{n}} = 0 $) which reduces to Equation~\ref{eq:CapstanSigRad}.
 
 \begin{equation}
 	\label{eq:CapstanSigRad}
@@ -100,13 +100,13 @@ With this resultant normal force over one revolution of tether, it is now appare
 	p=\frac{N}{A}=\frac{2\pi T}{d\pi D}=\frac{2T}{Dd}
 \end{equation}
 
-Using the values from Table~\ref{table:prelim_params} and Equation~\ref{eq:2_preq}, $p=1376\Unit{psi}= 9.484\Unit{MPa}$. 
+Using the values from Table~\ref{table:prelim_params} and Equation~\ref{eq:2_preq}, $p=1376\Unit{psi}= 9.484\Unit{MPa}$. Note that Equation~\ref{eq:2_preq} is independent of the number of tether revolutions (i.e. both $N$ and $A$ scale by a factor of $2\pi n$ wraps). This behavior is next investigated.
 
 %------------------------------------------------------------------------------------------
 \subsection{Alternate Solution}
 \label{subsection:alt}
 
-An alternate solution can be found by substituting \ref{eq:Capstan_mod} in \ref{eq:capstan_integral}, becoming \ref{eq:capstan_integral2} and yielding \ref{eq:CapstanNorm2} (recall $\int e^{ax} dx = 1/a e^{ax} + C$).
+An alternate solution can be found by substituting \ref{eq:Capstan_mod} in \ref{eq:capstan_integral}, becoming \ref{eq:capstan_integral2} and yielding \ref{eq:CapstanNorm2} (recall $\int e^{ax} dx = \tfrac{1}{a} e^{ax} + C$).
 
 \begin{equation}
 	\label{eq:capstan_integral2}
@@ -121,14 +121,14 @@ An alternate solution can be found by substituting \ref{eq:Capstan_mod} in \ref{
 	N = \frac{T_{0}}{\mu} \left( 1 - e^{-\mu \theta} \right)
 \end{equation}
 
-This equation represents the stored normal force given a contact angle $\theta$. To find the $p$ as a function $\theta$, $N$ is distributed over the cumulative area as seen in Equation~\ref{eq:2_preq2}.
+This equation represents the stored normal force given a contact angle $\theta$. To find $p$ as a function $\theta$, $N$ is distributed over the cumulative area as seen in Equation~\ref{eq:2_preq2}.
 
 \begin{equation}
 	\label{eq:2_preq2}
 	p=\frac{N}{A}= \frac{T_{0} \left( 1 - e^{-\mu \theta} \right)}{\mu d R \theta}
 \end{equation}
 
-Using a \cite{PYTHON} script from Appendix~\ref{appendix:a0}, the following plots in Figures~\ref{fig:2_nvar} and \ref{fig:2_pvar} below show the variation in normal force $N$ and pressure $p$ for coefficient of friction values $\mu \in [0.05, 0.50]$.
+Using a Python script \cite{PYTHON} from Appendix~\ref{appendix:a0}, the following plots in Figures~\ref{fig:2_nvar} and \ref{fig:2_pvar} below show the variation in normal force $N$ and pressure $p$ for coefficient of friction values $\mu \in [0.05, 0.50]$.
 
 \begin{figure}[H]
 	\centering
@@ -144,28 +144,28 @@ Using a \cite{PYTHON} script from Appendix~\ref{appendix:a0}, the following plot
 	\label{fig:2_pvar}
 \end{figure}
 
-Several observations may be made from these plots. For instance, as the contact angle increases, the stored normal force has an asymptomatic behavior. This behavior coupled with the increase in area results in a pressure which goes to zero after several wraps (i.e. $2 \pi N \Unit{Radians}$. Furthermore, as the coefficient of friction between the tether and the drum increases, the decay in pressure is quicker. A key observation to be made is that regardless of the $\mu$, all initial pressures $p(\theta)$ start at the value calculated from Equation~\ref{eq:2_preq}.  
+Several observations may be made from these plots. For instance, as the contact angle increases, the stored normal force has an asymptomatic behavior. This behavior coupled with the increase in area results in a pressure which goes to zero after several wraps $n$ (i.e. $2 \pi n \Unit{Radians}$). Furthermore, as the coefficient of friction between the tether and the drum increases, the decay in pressure is quicker. A key observation to be made is that regardless of the $\mu$, all initial pressures $p(0)$ start at the value calculated from Equation~\ref{eq:2_preq}.  
 
 %%----------------------------------------------------------------------------------------------------------------------
 \section{ASME's BPVC}
 
-The ASME codes listed in the beginning of this chapter will be extensively studied. Note that for all iteration procedures in this report, an initial thickness of $t_0 =0.500\Unit{in}= 12.7 \Unit{mm}$ with a step of  $0.01\Unit{in} \ / \ 0.254\Unit{mm}$. Python scripts utilized for implementing solving algorithms can be found in Appendix~A and developed with \cite{PYTHON}. 
+The ASME Boiler and Pressure Vessel Codes (BPVC) listed at the beginning of this chapter are next extensively studied. Note that for all iteration procedures in the following subsections, an initial thickness of $t_0 =0.500\Unit{in}= 12.7 \Unit{mm}$ with a step of  $0.01\Unit{in} \ / \ 0.254\Unit{mm}$ is used. Python scripts \cite{PYTHON} utilized for implementing the solving algorithms are found in Appendix~A. 
 \subsection{Section VIII: Division 1}
 \label{section:2_VIII1}
-As per UG-28 of \cite{ASMEbvpcVII1}, the following procedure was used to calculate the required thickness.
+As per subsection UG-28 of \cite{ASMEbvpcVII1}, the following procedure is used to calculate the required thickness.
 
 \begin{enumerate}
-	\item Assume initial thickness value of $t$
+	\item Assume initial thickness value of $t_0$
 	\item Calculate $D/t$ ratio and assure $D/t \geq 10$.
 	\item Calculate $L/D$ ratio, if $L/D \geq 50 \Rightarrow 50$ or  $L/D \leq 0.05 \Rightarrow 0.05$
-	\item With above ratios, go to Figure G of \cite{ASMEbvpcIID} and get value for $A$
-	\item With $A$ from above go to chart CS-2 $\because sigma_y \geq 30,000 \Unit{psi}$ to get $B$
+	\item With the above ratios, go to Figure G of \cite{ASMEbvpcIID} and get value for $A$
+	\item With $A$ from above go to chart CS-2 $\because \sigma_y \geq 30,000 \Unit{psi}$ to get $B$
 	\item Use Equation \ref{eq:2_VII1_pa} with $B$ to calculate allowable pressure $p_a$:
 	      \begin{equation}
 	      	\label{eq:2_VII1_pa}
 	      	p_a = \frac{4B}{3 \left(D/t\right)}
 	      \end{equation}
-	\item Check that $p_a \geq p_{req}$ as calculated from Equation~\ref{eq:2_preq}, if not, increase $t$ and go to Step 2\\
+	\item Check that $p_a \geq p_{req}$ as calculated from Equation~\ref{eq:2_preq}, if not, increase $t$, go to Step 2 and repeat\\
 	      	
 \end{enumerate}
 
@@ -182,27 +182,27 @@ From this plot, the script converged at thickness of $t = 1.680\Unit{in} = 43.7\
 
 \subsection{Section VIII: Division 2}
 \label{section:2_VIII2}
-As per subsection 4.4.5 of \cite{ASMEbvpcVII2}, the following procedure was used to calculate the required thickness. Note that only the main formulas will be presented. For intermediate steps, see  the Python script in Appendix~\ref{appendix:a2}.
+As per subsection 4.4.5 of \cite{ASMEbvpcVII2}, the following procedure is used to calculate the required thickness. Note that only the main formulas will be presented. For intermediate steps, see  the Python script in Appendix~\ref{appendix:a2}.
 \begin{enumerate}
-	\item Assume initial thickness value of $t$
+	\item Assume initial thickness value of $t_0$
 	\item Calculate elastic buckling stress $F_{he}$ with Equation~\ref{eq:2_VII2_4419}
 	      \begin{equation}
 	      	\label{eq:2_VII2_4419}
 	      	F_{he} = \frac{1.6\ C_h E_y t}{D}
 	      \end{equation}
-	\item Based on $\sigma_y$ and $F_{he}$, calculate the predicted buckling stress $F_{ic}$ \ref{eq:2_VII2_4419}
+	\item Based on $\sigma_y$ and $F_{he}$, calculate the predicted buckling stress $F_{ic}$
 	\item With subsection 4.4.2 of \cite{ASMEbvpcVII2}, compute the design factor $FS$
 	\item Calculate allowable pressure $p_a$ with Equation~\ref{eq:2_VII2_4428}
 	      \begin{equation}
 	      	\label{eq:2_VII2_4428}
 	      	p_a = 2 F_{ha} \left(\frac{t}{D}\right)
 	      \end{equation}
-	\item Check if $p_a \geq p_{req}$ as calculated from \ref{eq:2_preq}, if not, increase $t$ and go to Step 2 \\
+	\item Check if $p_a \geq p_{req}$ as calculated from \ref{eq:2_preq}, if not, increase $t$, return to Step 2 and repeat \\
 	      	
 \end{enumerate}
 
 %%on page~\pageref{fig:2_vii2_cnvg} for page ref
-The script in Appendix~\ref{appendix:a2} returned the following convergence plot as seen in Figure~\ref{fig:2_vii2_cnvg}.
+The script in Appendix~\ref{appendix:a2} plots convergence as seen in Figure~\ref{fig:2_vii2_cnvg}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.75]{2_vii2_cnvg}
@@ -210,14 +210,14 @@ The script in Appendix~\ref{appendix:a2} returned the following convergence plot
 	\label{fig:2_vii2_cnvg}
 \end{figure}
 
-Convergence was reached at a thickness of $t = 0.920\Unit{in}= 23.4\Unit{mm}$ when $p_a\geq p_{req}$, after $n=43$ iterations. 
+Convergence is reached at a thickness of $t = 0.920\Unit{in}= 23.4\Unit{mm}$ when $p_a\geq p_{req}$, after $n=43$ iterations. 
 
 
 %%----------------------------------------------------------------------------------------------------------------------
 \section{European Standard}
 \subsection{EN-13445-3}
 \label{section:2_EN}
-As per subsection 8.5.2.2 of \cite{EN134453}, the following procedure was used to calculate the required thickness $e_a$. Note that the script in Appendix~\ref{appendix:a3} utilizes SI units as per \cite{EN134453}.
+As per subsection 8.5.2.2 of \cite{EN134453}, the following procedure is used to calculate the required thickness $e_a$. Note that the script in Appendix~\ref{appendix:a3} utilizes SI units as per \cite{EN134453}.
 
 \begin{enumerate}
 	\item Assume initial thickness value of $e_a$ and calculate $p_y$ with \ref{eq:2_EN_py}
@@ -236,10 +236,10 @@ As per subsection 8.5.2.2 of \cite{EN134453}, the following procedure was used t
 	      	\label{eq:2_EN_pa}
 	      	p = \frac{p_r}{S}
 	      \end{equation}
-	\item Check if $p \geq p_{req}$ as calculated from \ref{eq:2_preq}, if not, increase $e_a$ and go to Step 2\\
+	\item Check if $p \geq p_{req}$ as calculated from \ref{eq:2_preq} otherwise, increase $e_a$, return to Step 2 and repeat\\
 \end{enumerate}
 
-Again, with script from Appendix~\ref{appendix:a3}, a convergence plot is shown(see Figure~\ref{fig:2_en13445_cnvg}).
+Again, with the script from Appendix~\ref{appendix:a3}, convergence is shown(see Figure~\ref{fig:2_en13445_cnvg}).
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.75]{2_en13445_cnvg}
@@ -284,14 +284,14 @@ Rearranging Equation~\ref{eq:2_DNV_hoop} for $t$ and setting $\sigma_h$ to the a
 \section{TWPV Hoop Stress}
 \label{section:2_TWPV}
 
-A final preliminary benchmarking lies in the hoop stress equation \cite{roarks} for a TWPV. From this, Equation~\ref{eq:2_hoop} is presented as follows.
+A final preliminary benchmarking step studies the hoop stress equation \cite{roarks} for a TWPV. From this, Equation~\ref{eq:2_hoop} is presented as follows.
 
 \begin{equation}
 	\label{eq:2_hoop}
 	\sigma_h = \frac{pR}{t}
 \end{equation}
 
-Again, rearranging for $t$ , $\sigma_h=\sigma_a$ and using the pressure $p$ calculated from Equation~\ref{eq:2_preq} yields a valid value of $t =0.825 \Unit{in}=21.0\Unit{mm}$. Note that $\because R/t = 17 \geq 10$, the assumption of a TWPV is valid.
+Again, rearranging for $t$ , $\sigma_h=\sigma_a$ and using the pressure $p$ calculated from Equation~\ref{eq:2_preq}, a value of $t =0.825 \Unit{in}=21.0\Unit{mm}$ is calculated. Note that $\because R/t = 17 \geq 10$, the assumption of a TWPV is valid.
 
 %%----------------------------------------------------------------------------------------------------------------------
 \section{Comparison}
@@ -299,7 +299,7 @@ Again, rearranging for $t$ , $\sigma_h=\sigma_a$ and using the pressure $p$ calc
 Based on the results determined in this section, a summary is presented in Table~\ref{table:2_comp} below.
 \begin{table}[H]
 	\centering
-	\caption{Comparison of required $t$ with method used.}
+	\caption{Comparison of calculated $t$ with corresponding method.}
 	\begin{tabular}{lccc}
 		\textbf{Method}  & \textbf{$mm$} & \textbf{$in$} & \textbf{$n$} \\
 		\midrule
@@ -312,7 +312,7 @@ Based on the results determined in this section, a summary is presented in Table
 	\label{table:2_comp}%
 \end{table}%
 
-The following observations can be made from this tabular summary:
+The following observations are made from this tabular summary:
 \begin{itemize}
 	\item ASME's BPVC VIII-1 yields the most conservative $t$
 	\item TWPV Hoop Stress \& ASME's BPVC VIII-2 yield both low $t$ values 

@@ -1,9 +1,9 @@
 
-This section aims to discuss and compare all results from the previous sections of this report.
+This section aims to discuss and compare all results from previous sections.
 
 \section{Drum Thickness Summary}
 
-A summary of all report results for the required drum barrel thickness is shown below in Table~\ref{table:5_sum}.
+A summary of all results for the drum barrel thickness is shown below in Table~\ref{table:5_sum}.
 
 \begin{table}[H]
   \centering
@@ -30,17 +30,17 @@ A summary of all report results for the required drum barrel thickness is shown 
   \label{table:5_sum}
 \end{table}%
 
-With this wide range of drum thicknesses ($t\in[0.375,1.686]$ in), the reality of these loading scenarios (BC, pressure profile) must be discussed. For most of the results in Section 2, a uniformly loaded external pressure vessel is assumed hence, resulting in such large values. These results serve a safe upper bound however, likely will result an in over designed drum. These results are further validated in FEA Run 1.\\
+With this wide range of drum thicknesses ($t\in[0.375,1.686]$ in), the reality of these loading scenarios (BC, pressure profile) must be discussed. For most of the results in Section 2, a uniformly loaded external pressure vessel is assumed resulting in large values. These results serve a safe upper bound however, will likely result as an over designed drum. These results are further validated in FEA Run 1.\\
 
-The most realistic scenario likely represents that from FEA Run 2 with the Capstan pressure profile. In reality, the actual stresses would likely somewhere in between the results from FEA Run 2A/2B and Run 2C/2D. Simply stated, an optimal range of $t\in[0.550,0.650]$ in is determined.\\
+The most realistic scenario is that from FEA Run 2 with the Capstan pressure profile. In reality, stresses would vary some where between FEA Run 2A/2B and Run 2C/2D. Simply stated, an optimal range of $t\in[0.550,0.650]$ in is determined.\\
 
 As for buckling, both analytical calculations and FEA appear to agree that a very low thickness is required to prevent buckling. \\
 
-From these conclusions, it is realistic to say that a thickness of $t \approx 0.600\Unit{in} /\/ 15.2\Unit{mm}$ as it represents the most realistic loading scenarios (i.e. between Run 2A-C/2B-D). 
+From these conclusions, it is realistic to say that a thickness of $t \approx 0.600\Unit{in} /\/ 15.2\Unit{mm}$ is appropriate as it represents the most realistic loading scenario. 
 
 \section{Flange Thickness Summary}
 
-The work completed on flange sizing was indeed brief due to aforementioned time constrains. Based on the simplistic FEA model and parametric sweep, an initial thickness of $t=0.250\Unit{in}=6.4\Unit{mm}$ appears to be a safe estimate however, more work should be completed on to valid this conclusion.
+The work completed on flange sizing was indeed brief due to aforementioned time constrains. Based on the simplistic FEA model and parametric sweep, an initial thickness of $t=0.250\Unit{in}=6.4\Unit{mm}$ appears to be a safe estimate however, more work should be completed on the analysis to validate this conclusion.
 
 \section{Manufacturing}
 
@@ -68,11 +68,11 @@ As for the flanges, the 36 in OD circular shape could easily but cut out of a $3
 
 \section{Numerical Error}
 \label{subsection:5_numerr}
-Due to the wide range of BC, many simulations were performed (i.e. 132 total). To save computational time, the error margins used for the numerical convergence of mesh refinements were set to be relatively high (i.e. 20\%). Consequently, there is likely to be a significant numerical error associated to the FEA results. These discrepancies observed have been discussed in previous sections however, this is must be understood as a part of the previous conclusions.
+Due to the wide range of BC, many simulations were performed (i.e. 132 total). To save computational time, the error margins used for the numerical convergence of mesh refinements were set to be relatively high (i.e. 20\%). Consequently, there is likely to be a significant numerical error associated to the FEA results. These discrepancies observed have been discussed in previous sections however, this must be understood as a part of the previous conclusions.
 
 
 \section{Other Considerations}
 Asides from erroneous values attained from software and calculation, there are other factors to consider which may skew the results. For instance, most analytical methods used in Sections 2 and 3 assume very thin cylindrical shells. A key part of this assumption lies in the fact that bending stresses do not develop axially (see Section~\ref{section:3_shells}) \cite{timoshenko1959theory}, which realistically may not be the case.\\
 
-In addition, material imperfections could result in higher stress concentrations. This phenomenon highly affects the results determined from a buckling analysis. It is these imperfections that cause the nonlinear effects and prevent most real-world structures from achieving their theoretical elastic buckling strength \cite{ANSYS}.
+In addition, material imperfections could result in higher stress concentrations. This phenomenon highly affects the results determined in the buckling analysis. It is these imperfections that cause the nonlinear effects and prevent most real-world structures from achieving their theoretical elastic buckling strength \cite{ANSYS}.
 

@@ -11,11 +11,11 @@ It is numbers like these that have inspired \Company to begin research and devel
 	\label{fig:1_companypic}
 \end{figure}
 
-From the above figure, the grounded tether management system (TMS) can be observed. This report will focus on the structural design of one of this system's components.
+From the above figure, the grounded tether management system (TMS) can be observed. This report will focus on the structural design of a subcomponent.
 
 \section{Background} 
 
-A key TMS component responsible for full control of the aerostat is the winch system. An overview of similar system used by Altaeros is shown below in Figure~\ref{fig:1_winch}.
+A key TMS subcomponent responsible for the aersotat's control is the winch system. An overview of similar system used by Altaeros is shown below in Figure~\ref{fig:1_winch}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.2]{1_winch}
@@ -25,13 +25,13 @@ A key TMS component responsible for full control of the aerostat is the winch sy
 
 From above, a tether or cable is wound on the winch drum. As required, this tether is reeled in or out to control the altitude of the aerostat.\\
 
-In the past, these winch systems were purchased from a third-party vendor. After much though, it was deemed feasible that Altaeros could manufacture a more custom, cheaper and efficient winch system. To assure that the system is can handle the large aerodynamic loads translated by the tether, a complete structural analysis must be completed.
+In the past, these winch systems were purchased from a third-party vendor. After much though, it was deemed feasible that Altaeros could manufacture a more custom, cheaper and efficient winch system. To assure that the system can handle the large aerodynamic loads translated by the tether, a complete structural analysis must be completed.
 
 \section{Purpose}
 
-The purpose of this report is to perform a structural analysis to assure that the winch drum assembly can handle the maximum tether load. This analysis will focus on sizing the thickness of both the drum barrel and flanges.\\
+The purpose of this report is to perform a structural analysis on the winch drum assembly, assuring that it is capable of handling the stresses caused by the maximum tether load. This analysis will focus on sizing the thickness of both the drum barrel and flanges.\\
 
-An overview of the winch's drum assembly is shown in the 3D computer aided design (CAD) model \cite{INVENTOR} in Figure~\ref{fig:1_drum}.
+An overview of the winch drum assembly is shown in the 3D computer aided design (CAD) model \cite{INVENTOR} in Figure~\ref{fig:1_drum}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{1_drum}
@@ -39,8 +39,8 @@ An overview of the winch's drum assembly is shown in the 3D computer aided desig
 	\label{fig:1_drum}
 \end{figure}
 
-It is important to realize that most of loading from the tether will be translated as pressure onto the barrel. This loading scenario will be investigated to properly size the winch barrel thickness.
+It is important to realize that most of loading from the tether will be translated as external pressure onto the barrel. This loading scenario will be investigated to properly size the winch barrel thickness.
 
 \section{Scope}
 
-In the following sections of this report, the relevant assembly parameters, loads and material properties will be presented. A preliminary analysis will be completed to investigate how tether tension translates to external pressure. Furthermore, existing codes and standards will be explored to serve as a benchmark. From this, a more advanced analytical approach will be studied. These results will then be compared and validated through a series finite element analysis (FEA) runs. The report will conclude with a summary of all results as  well as relevant discussion, conclusions and recommendations points. Please note that most of this report will utilize imperial units however, relevant findings will be converted to metric equivalents.
+In the following sections of this report, the relevant assembly parameters, loads and material properties will be presented. A preliminary analysis will be completed to investigate how tether tension translates to external pressure. Furthermore, existing codes and standards will be explored to serve as a benchmark. From this, a more advanced analytical approach will be studied. These results will then be compared and validated through a series finite element analysis (FEA) simulations. The report will conclude with a summary of all results, relevant discussion topics and recommendations. Please note that most of this report will focus on imperial units because Altaeros is located in the United States however, relevant findings will be converted to metric equivalents.

@@ -5,7 +5,7 @@ In this foregoing section, methods used to set up the analytical approach are di
 %----------------------------------------------------------------------------------------------------------------------
 \section{Deflection \& Differential Relations}
 
-The first key equation to setting up the differential relations is taken from \cite{nisbett2014shigley}. Equation~\ref{eq:Mcurve} shows the relationship between internal bending moment on a beam and its radius of curvature. 
+The first key equation to setting up the differential relations is taken from \cite{nisbett2014shigley}. Equation~\ref{eq:Mcurve} shows the relationship between internal bending moment of a beam and its radius of curvature. 
 
 \begin{equation}
 	\label{eq:Mcurve}
@@ -19,7 +19,7 @@ Where $1/\rho$ is the radius of curvature defined as Equation~\ref{eq:curve} \ci
 	\frac{1}{\rho}=\frac{d^2y/dx^2}{\left( 1 +(dy/dx)^2 \right)^\frac{3}{2}} \approx \frac{d^2y}{dx^2}
 \end{equation}
 
-From Equation~\ref{eq:curve} deflection $y(x)$ relations for slope \ref{eq:slope}, moment \ref{eq:mmt} and shearing force \ref{eq:shr} as a consequence \cite{nisbett2014shigley}.
+As a consequence Equation~\ref{eq:curve}, deflection $y(x)$ relations for slope \ref{eq:slope}, moment \ref{eq:mmt} and shearing force \ref{eq:shr} are presented\cite{nisbett2014shigley}.
 
 \begin{equation}
 	\label{eq:slope}
@@ -36,7 +36,7 @@ From Equation~\ref{eq:curve} deflection $y(x)$ relations for slope \ref{eq:slope
 	V(x) = \frac{dM(x)}{dx} = EI\ \frac{d^3y}{dx^3}
 \end{equation}
 
-The above listed equations are important for understand how deflection translates to other internal loading.\\
+The above listed equations are important for understanding how deflection translates to other internal loadings.\\
 
 Furthermore, boundary conditions (BC) may be derived as a result. The following equations assume that the boundary in question is located at $x_0$.\\
 
@@ -79,7 +79,9 @@ The equations from this subsection serve as an important set up for the more com
 \section{Theory of Cylindrical Shells}
 \label{section:3_shells}
 
-As per \cite{timoshenko1959theory}, this section covers the method of approximating the drum barrel as a long thin cylindrical shell. With this assumption, the governing ordinary differential equation (ODE) is derived. First, the following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below. Note that all symbols and steps in this subsequent derivation will follow \cite{timoshenko1959theory}.
+As per \cite{timoshenko1959theory}, this section covers the method of approximating the drum barrel as a long thin cylindrical shell. With this assumption, the governing ordinary differential equation (ODE) is derived.\\
+
+First, the following coordinate system is presented as per Figure~\ref{fig:CoordSyst} below. Note that all symbols and steps in this subsequent derivation will follow \cite{timoshenko1959theory}.
 
 \begin{figure}[H]
 	\centering
@@ -95,7 +97,7 @@ From the above figure, the differential area of the cylindrical shell is present
 	dA = dS\ dx = a\ d\varphi \ dx   
 \end{equation}
 
-Equilibrium is performed as a force balance in the $x, z$ axes and moment balance about the $y$ axis and presented as Equations ~\ref{eq:eqbrm_x}, ~\ref{eq:eqbrm_z}, ~\ref{eq:eqbrm_y} respectively. Note that $Z$ denotes and external pressure applied to the shell (not shown in Figure~\ref{fig:CoordSyst}).
+Equilibrium is performed as a force balance in the $x, z$ axes (Equations ~\ref{eq:eqbrm_x}, ~\ref{eq:eqbrm_z}) and a moment balance about the $y$ axis (Equation~\ref{eq:eqbrm_y}). Note that $Z$ denotes and external pressure applied to the shell (not shown in Figure~\ref{fig:CoordSyst}).
 
 \begin{equation}
 	\label{eq:eqbrm_x}
@@ -112,7 +114,7 @@ Equilibrium is performed as a force balance in the $x, z$ axes and moment balanc
 	\frac{dM_x}{dx}\ a\ d\varphi \ dx- Q_x\ a\ d\varphi \ dx= 0
 \end{equation}
 
-First looking at \ref{eq:eqbrm_x}, the axial force $N_x$ is determined by taking the integral with respect to $x$ \ref{eq:eqbrm_x2}. 
+First looking at \ref{eq:eqbrm_x}, the axial force $N_x$ is determined by taking the integral with respect to $x$ yielding \ref{eq:eqbrm_x2}. 
 
 \begin{equation}
 	\label{eq:eqbrm_x2}
@@ -132,7 +134,7 @@ Similarly with \ref{eq:eqbrm_z} and \ref{eq:eqbrm_y}, simplifications will lead 
 	\frac{dM_x}{dx}- Q_x= 0
 \end{equation} 
 
-Next, differential relations between displacement and strain are presented in Equation~\ref{eq:strain_xphi}. Note $u$ and $w$ are displacements in both $x$ and $z$ directions.
+Next, differential relations between displacement and strain are presented in Equation~\ref{eq:strain_xphi}. Note $u$ and $w$ are displacements in both $x$ and $z$ directions, respectively.
 
 \begin{equation}
 	\label{eq:strain_xphi}
@@ -193,37 +195,37 @@ Simplifying \ref{eq:eqbrm_z2} to get $Q_x = \frac{dM_x}{dx}$, the following is p
 	\end{aligned}
 \end{equation} 
 
-Where $\beta^4$ is some parameter defined as \ref{eq:betaquad}.
+Where $\beta^4$ is some shell parameter defined as \ref{eq:betaquad}.
 
 \begin{equation}
 	\label{eq:betaquad}
 	\beta^4 \triangleq \frac{Eh}{4a^2D}= \frac{3(1-\nu^2)}{a^2h^2}
 \end{equation}
 
-This parameter is very important in determining if the cylindrical shell is considered to be long. To fall under this classification, $\beta x \geq 6$ where $x$ is the distance between applied loads. This is result of internal loading dissipating itself in the material. Table~\ref{table:3_beta} below shows tabulated values for $\beta$ (i.e. $\beta = \sqrt[4]{\beta^4}$) for various thicknesses $t/h$ using the previously mentioned $a, \nu$.
+This parameter is very important in determining if the cylindrical shell is considered to be long. To fall under this classification, $\beta x \geq 6$ where $x$ is the distance between applied loads \cite{timoshenko1959theory}. This is because the internal loading dissipates itself within the material. Table~\ref{table:3_beta} below shows tabulated values for $\beta$ (i.e. $\beta = \sqrt[4]{\beta^4}$) for various thicknesses $t/h$ using the previously mentioned $a, \nu$.
 
 \begin{table}[H]
   \centering
-  \caption{Calculated $\beta$ for various $t$.}
-    \begin{tabular}{cc}
-    \textbf{$t$} & \textbf{$\beta$}\\
+  \caption{Calculated $\beta$, $x$ for various $t$.}
+    \begin{tabular}{ccc}
+    \textbf{$t$} & \textbf{$\beta$} & \textbf{$x=\tfrac{6}{\beta}$}\\
     \hline
-    0.125 & 0.972 \\
-    0.250 & 0.687 \\
-    0.375 & 0.561 \\
-    0.500 & 0.486 \\
-    0.625 & 0.435 \\
-    0.750 & 0.397 \\
-    0.875 & 0.367 \\
-    1.000 & 0.344 \\
+    0.125 & 0.972 & 6.175 \\
+    0.250 & 0.687 & 8.733 \\
+    0.375 & 0.561 & 10.695 \\
+    0.500 & 0.486 & 12.350 \\
+    0.625 & 0.435 & 13.807 \\
+    0.750 & 0.397 & 15.125 \\
+    0.875 & 0.367 & 16.337 \\
+    1.000 & 0.344 & 17.465 \\
     \end{tabular}%
   \label{table:3_beta}
 \end{table}
 
-From the above table,it confirms the assumption, as $\beta$ increases, $x$ requires to be greater to classify as a long shell ($\beta x \geq 6$). Intuitively, with a thicker shell, the material stores this loading.\\
+From the above table, as $\beta$ increases, $x$ must be larger to classify as a long shell ($\beta x \geq 6$).\\
 
 
-The solution to this common fourth order, linear, non-homogeneous, ODE in \ref{eq:de1} has a general solution of Equation~\ref{eq:solnDE} \cite{timoshenko1959theory}.
+The solution to the fourth order, linear, non-homogeneous, ODE in \ref{eq:de1} has a general solution of Equation~\ref{eq:solnDE} \cite{timoshenko1959theory}.
 
 \begin{equation}
 	\label{eq:solnDE}
@@ -239,16 +241,16 @@ In the following section, a specific solution of this differential equation will
 \section{Roark's Solution}
 \label{section:3_roark}
 
-The previous equation prepared the set up to the solution procedure outlined in Example 3 of Chapter 12, p.538 \cite{roarks}. A similar solution was developed in an Excel \cite{EXCEL} calculator (see Appendix B).The main important factor lies in the assumptions of a long shell(i.e. $\beta x \geq 6$) and a TWPV (i.e $R/t \geq 10$). Note that $\beta$ is presented as $\lambda$, $y$ as deformation and $\psi$ as slope in \cite{roarks}.\\
+The previous section prepared the set up to the solution procedure outlined in Example 3 of Chapter 12, p.538 \cite{roarks}. A similar solution was developed in an Excel \cite{EXCEL} calculator (see Appendix B). The most important factor to understand is the assumptions of a long shell (i.e. $\beta x \geq 6$) and a TWPV (i.e $R/t \geq 10$). Note that $\beta$ is presented as $\lambda$, $y$ as deformation and $\psi$ as slope in \cite{roarks}.\\
 
-Referring to Appendix B, a final calculated value of $t=1.686 \Unit{in}= 42.8 \Unit{mm}$ upon confirming the assumptions.
+Referring to Appendix B, a final calculated value of $t=1.686 \Unit{in}= 42.8 \Unit{mm}$ deemed as valid upon confirmation of the assumptions.
 
 \section{Roark's Buckling}
 \label{section:3_buckle}
 
-Up to this point, all values for calculating the drum barrel thickness have focused on the stress state. It was proposed by John Umina to investigate buckling. To confirm that stress is primary mode of failure, a linear buckling analysis is completed.\\
+Up to this point, all values for calculating the drum barrel thickness have focused on the stress state. It was proposed by John Umina to investigate buckling to confirm that stress is the primary mode of failure.\\
 
-With equations from Table 35 of \cite{roarks}, the following relations are presented. First, Equation~\ref{eq:3_buckle1} is presented for a long thin tube under uniform external pressure with ends simply supported.
+A linear buckling analysis is completed with equations from Table 35 of \cite{roarks}, as follows. First, Equation~\ref{eq:3_buckle1} is presented for a long thin tube under uniform external pressure with ends simply supported.
 \begin{equation}
 	\label{eq:3_buckle1}
 	p' =\frac{1}{4} \frac{E}{1-\nu^2} \frac{t^3}{R^3}
@@ -260,7 +262,7 @@ To classify as a long tube, the length of the barrel $L$ must be greater the cri
 	L' = 4.90 R \sqrt{\frac{R}{t}}
 \end{equation}
 
-For the studied range of $t \in [0.05, 1.05] \Rightarrow L < L' \therefore$ Equation~\ref{eq:3_buckle2} must is to calculate the critical buckling pressure for a short thin cylinder.
+For the studied range of $t \in [0.05, 1.05] \Rightarrow L < L' \therefore$ Equation~\ref{eq:3_buckle2}, is used to calculate the critical buckling pressure for a short thin cylinder.
 
 \begin{equation}
 	\label{eq:3_buckle2}
@@ -276,9 +278,8 @@ With \ref{eq:3_buckle2} and the aforementioned thickness range, critical pressur
 	\label{fig:3_buckling}
 \end{figure}
 
-As depicted in the above figure, a very low thickness is required to achieve a critical buckling pressure $p'$ of $137\Unit{psi} \/\ 9.484\Unit{MPa}$ (as per Equation~\ref{eq:2_preq}).\\
+As depicted in the above figure, a very low thickness is required to achieve a critical buckling pressure $p'$ of $1376\Unit{psi} \/\ 9.484\Unit{MPa}$ (as per Equation~\ref{eq:2_preq}).\\
 
-By rearranging, \ref{eq:3_buckle2} for $t$ and setting $p'=1376\Unit{psi}$, a critical thickness of $0.418\Unit{in}= 10.6\Unit{mm}$ is required to avoid buckling. Based on these conclusions, buckling will not be the primary failure mode for the drum barrel given the loading scenario. The following section will validate all conclusions with a series of FEA simulations.
+By rearranging, \ref{eq:3_buckle2} for $t$ and setting $p'=1376\Unit{psi}$, a critical thickness of $0.418\Unit{in}= 10.6\Unit{mm}$ is required to avoid buckling. Based on these results, buckling will not be the primary failure mode for the drum barrel given the loading scenario.\\
 
-
-
+The following section will aim to validate all conclusions made in this section with a series of FEA simulations.
